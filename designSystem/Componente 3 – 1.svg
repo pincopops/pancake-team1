@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470.5" height="679.316" viewBox="0 0 470.5 679.316">
+  <g id="Componente_3_1" data-name="Componente 3 – 1" transform="translate(0.5)">
+    <text id="Color" transform="translate(0.5 20)" fill="rgba(0,0,0,0.9)" font-size="18" font-family="Kanit-Medium, Kanit" font-weight="500"><tspan x="0" y="0">COLOR</tspan></text>
+    <text id="Primary_F34E4E" data-name="Primary #F34E4E" transform="translate(77.926 81.277)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Primary</tspan><tspan x="0" y="16">#666171</tspan></text>
+    <text id="Secondary_FFF6EA" data-name="Secondary #FFF6EA" transform="translate(77.926 162.093)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Gray</tspan><tspan x="0" y="16">#999999</tspan></text>
+    <text id="Action_7BB9FA" data-name="Action #7BB9FA" transform="translate(77.926 241.97)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">VioletBrand</tspan><tspan x="0" y="16">#9a6aff</tspan></text>
+    <text id="Grey_D0D0D0" data-name="Grey #D0D0D0" transform="translate(77.926 322.786)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">BlueBrand</tspan><tspan x="0" y="16">#1155cc</tspan></text>
+    <text id="Black_282828" data-name="Black #282828" transform="translate(77.926 403.603)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">LightGray</tspan><tspan x="0" y="16">#cccccc</tspan></text>
+    <rect id="Primary" width="60" height="60" transform="translate(0.5 57)" fill="#666171"/>
+    <rect id="Secondary" width="60" height="60" transform="translate(0.5 137.484)" fill="#999"/>
+    <rect id="Action" width="60" height="60" transform="translate(0.5 217.032)" fill="#9a6aff"/>
+    <rect id="Grey" width="60" height="60" transform="translate(0.5 297.516)" fill="#15c"/>
+    <rect id="Black" width="60" height="60" transform="translate(0.5 378)" fill="#ccc"/>
+    <path id="Line_Copy" data-name="Line Copy" d="M.5.5H470" transform="translate(-0.5 38)" fill="none" stroke="#282828" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+    <text id="BlackBrand_191326" data-name="BlackBrand #191326" transform="translate(231.898 81.277)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">BlackBrand</tspan><tspan x="0" y="16">#191326</tspan></text>
+    <text id="Ocra_ffb237" data-name="Ocra #ffb237" transform="translate(231.898 162.093)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Ocra</tspan><tspan x="0" y="16">#ffb237</tspan></text>
+    <text id="WhiteBrand_ffffff" data-name="WhiteBrand #ffffff" transform="translate(231.898 241.97)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">WhiteBrand</tspan><tspan x="0" y="16">#ffffff</tspan></text>
+    <text id="TiffanyBrand_1fc7d4" data-name="TiffanyBrand #1fc7d4" transform="translate(231.898 322.786)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">TiffanyBrand</tspan><tspan x="0" y="16">#1fc7d4</tspan></text>
+    <text id="LightBlack_222222" data-name="LightBlack #222222" transform="translate(231.898 403.603)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">LightBlack</tspan><tspan x="0" y="16">#222222</tspan></text>
+    <rect id="BlackBrand" width="60" height="60" transform="translate(149.884 57)" fill="#191326"/>
+    <rect id="Ocra" width="60" height="60" transform="translate(149.884 137.484)" fill="#ffb237"/>
+    <rect id="WhiteBrand" width="60" height="60" transform="translate(149.884 217.032)" fill="#fff"/>
+    <rect id="TiffanyBrand" width="60" height="60" transform="translate(149.884 297.516)" fill="#1fc7d4"/>
+    <rect id="LightBlack" width="60" height="60" transform="translate(149.884 378)" fill="#222"/>
+    <text id="PinkBrand_ed4b9e" data-name="PinkBrand #ed4b9e" transform="translate(77.926 483.286)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">PinkBrand</tspan><tspan x="0" y="16">#ed4b9e</tspan></text>
+    <rect id="PinkBrand" width="60" height="60" transform="translate(0.5 458.016)" fill="#ed4b9e"/>
+    <g id="Raggruppa_2" data-name="Raggruppa 2" transform="translate(0 1)">
+      <text id="LightViolet_f4eeff" data-name="LightViolet #f4eeff" transform="translate(77.926 563.103)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">LightViolet</tspan><tspan x="0" y="16">#f4eeff</tspan></text>
+      <rect id="LightViolet" width="60" height="60" transform="translate(0.5 537.5)" fill="#f4eeff"/>
+    </g>
+    <g id="Raggruppa_3" data-name="Raggruppa 3" transform="translate(0 81)">
+      <text id="LightViolet_f4eeff-2" data-name="LightViolet #f4eeff" transform="translate(77.926 563.103)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">LightViolet2</tspan><tspan x="0" y="16">#b8add2</tspan></text>
+      <rect id="LightViolet-2" data-name="LightViolet" width="60" height="60" transform="translate(0.5 537.5)" fill="#b8add2"/>
+    </g>
+    <text id="DarkGray_27262c" data-name="DarkGray #27262c" transform="translate(231.898 483.286)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">DarkGray</tspan><tspan x="0" y="16">#27262c</tspan></text>
+    <text id="DarkBlue_280d5f" data-name="DarkBlue #280d5f" transform="translate(231.898 564.103)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">DarkBlue</tspan><tspan x="0" y="16">#280d5f</tspan></text>
+    <rect id="DarkGray" width="60" height="60" transform="translate(149.884 458.016)" fill="#27262c"/>
+    <rect id="DarkBlue" width="60" height="60" transform="translate(149.884 538.5)" fill="#280d5f"/>
+    <text id="GreenBrand_29910d" data-name="GreenBrand #29910d" transform="translate(395.5 81.277)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">GreenBrand</tspan><tspan x="0" y="16">#29910d</tspan></text>
+    <text id="DarkGray3_383241" data-name="DarkGray3 #383241" transform="translate(395.5 162.093)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">DarkGray3</tspan><tspan x="0" y="16">#383241</tspan></text>
+    <text id="DarkBlue2_3c1716" data-name="DarkBlue2 #3c1716" transform="translate(395.5 241.97)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">DarkBlue2</tspan><tspan x="0" y="16">#3c1786</tspan></text>
+    <text id="DarkGrey2_3c3742" data-name="DarkGrey2 #3c3742" transform="translate(395.5 322.786)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">DarkGray2</tspan><tspan x="0" y="16">#3c3742</tspan></text>
+    <text id="DarkBlack_08060b" data-name="DarkBlack #08060b" transform="translate(395.5 403.603)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">DarkBlack</tspan><tspan x="0" y="16">#08060b</tspan></text>
+    <rect id="GreenBrand" width="60" height="60" transform="translate(313.486 57)" fill="#29910d"/>
+    <rect id="darkGray3" width="60" height="60" transform="translate(313.486 137.484)" fill="#383241"/>
+    <rect id="DarkBlue2" width="60" height="60" transform="translate(313.486 217.032)" fill="#3c1786"/>
+    <rect id="DarkGray2" width="60" height="60" transform="translate(313.486 297.516)" fill="#3c3742"/>
+    <rect id="DarkBlack" width="60" height="60" transform="translate(313.486 378)" fill="#222"/>
+    <text id="Trasparency_000000_opacity_0_" data-name="Trasparency #000000 opacity 0%" transform="translate(395.5 483.286)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Trasparency</tspan><tspan x="0" y="16">#000000</tspan><tspan x="0" y="32">opacity 0%</tspan></text>
+    <text id="HoverEffect_08060b_opacity_60.0_" data-name="HoverEffect #08060b opacity 60.0%" transform="translate(395.5 564.103)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">HoverEffect</tspan><tspan x="0" y="16">#08060b</tspan><tspan x="0" y="32">opacity 60.0%</tspan></text>
+    <rect id="Trasparency" width="60" height="60" transform="translate(313.486 458.016)" opacity="0"/>
+    <rect id="HoverEffect" width="60" height="60" transform="translate(313.486 538.5)" fill="#08060b" opacity="0.6"/>
+    <text id="DarkBlue_280d5f-2" data-name="DarkBlue #280d5f" transform="translate(232.898 644.119)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">TabBlue</tspan><tspan x="0" y="16">#372f47</tspan></text>
+    <path id="DarkBlue-2" data-name="DarkBlue" d="M0,0H60V60H0Z" transform="translate(150.884 618.516)" fill="#372f47"/>
+    <text id="DarkBlue_280d5f-3" data-name="DarkBlue #280d5f" transform="translate(395.5 644.919)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">tabGrey</tspan><tspan x="0" y="16">#27262c</tspan></text>
+    <path id="DarkBlue-3" data-name="DarkBlue" d="M0,0H60V60H0Z" transform="translate(313.486 619.316)" fill="#27262c"/>
+    <g id="Raggruppa_4" data-name="Raggruppa 4" transform="translate(0 81)">
+      <text id="LightViolet_f4eeff-3" data-name="LightViolet #f4eeff" transform="translate(77.926 563.103)" fill="rgba(0,0,0,0.9)" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">LightViolet2</tspan><tspan x="0" y="16">#b8add2</tspan></text>
+      <rect id="LightViolet-3" data-name="LightViolet" width="60" height="60" transform="translate(0.5 537.5)" fill="#b8add2"/>
+    </g>
+  </g>
+</svg>

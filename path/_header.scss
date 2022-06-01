@@ -1,0 +1,42 @@
+header{
+    @include flexCenter;
+    
+    .container-button{
+        @include flexSpaceBetween;
+        gap: 20px;
+        width: min-content;
+        height: max-content;
+        padding: 50px;
+        background-color: black;
+        border-radius: 16px;
+        
+
+    .button1{
+        @include b-selector(defoult);
+    }
+
+    .button2{
+        @include b-selector(alternative);
+    }
+
+    .button3{
+        @include b-selector(info);
+    }
+
+    .button4{
+        @include b-selector(connect);
+    }
+    }
+
+    .menu{
+        @extend %verticalMenu;
+    }
+    .tab{
+        @extend %verticalTab;
+        .triangolo{
+        @extend %triangle;
+        }
+    }
+}
+
+

@@ -1,0 +1,5 @@
+#navbar{
+    .button4{
+        @include b-selector(info);
+    }
+}

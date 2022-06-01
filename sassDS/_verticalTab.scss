@@ -1,0 +1,41 @@
+
+
+/*Vertical Tabs*/
+
+%verticalTab {
+  @include flexStart;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  border: 0.1rem solid $borderBlack;
+  background-color: $tabBlue;
+  color: $lightViolet;
+  font-size: 1.6rem;
+  width: 13rem;
+  overflow: hidden;
+
+  * {
+    @include flexSpaceBetween;
+    width: 100%;
+    height: max-content;
+    line-height: 3rem;
+    padding-left: 1rem;
+    &:hover {
+      background-color: $borderBlack;
+    }
+
+    :first-child {
+      margin-left: -10px;
+    }
+
+    %triangle {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #fff;
+      padding-left: 0px;
+      margin-right: 10px;
+    }
+  }
+}

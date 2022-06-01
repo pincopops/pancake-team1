@@ -1,14 +1,14 @@
 header{
     @include flexCenter;
-    
     .container-button{
         @include flexSpaceBetween;
         gap: 20px;
         width: min-content;
         height: max-content;
         padding: 50px;
-        background-color: black;
+        background-color: white;
         border-radius: 16px;
+        background-color: rgba(0, 0, 0, 0.589);
         
 
     .button1{
@@ -37,6 +37,7 @@ header{
         @extend %triangle;
         }
     }
+
 }
 
 

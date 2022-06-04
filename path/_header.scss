@@ -1,5 +1,24 @@
 header{
     @include flexCenter;
+
+    #moonSection{
+    @include flexSpaceBetween;
+        #moonContent{
+            @include flex(column, center, left);
+            #moonButtonContainer{
+                @include flex(row, center, left);
+                width: 100%;
+                height: max-content;
+                .defoultB{
+                    @include b-selector(defoult);
+                }
+                .alternativeB{
+                    @include b-selector(alternative);
+                }
+            }
+        }
+    display: none;
+    }
     .container-button{
         @include flexSpaceBetween;
         gap: 20px;
@@ -33,6 +52,12 @@ header{
     }
     .tab{
         @extend %verticalTab;
+        .tabHeader{
+            @extend %tabHeader;
+        }
+        .tabContent{
+            @extend %tabContent;
+        }
         .triangolo{
         @extend %triangle;
         }

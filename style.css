@@ -65,7 +65,7 @@ a {
 }
 
 /*Buttons*/
-header .container-button .button4, #navbar .button4, header .container-button .button3, header .container-button .button2, header .container-button .button1 {
+header .container-button .button4, #navbar .button4, header .container-button .button3, header .container-button .button2, header #moonSection #moonContent #moonButtonContainer .alternativeB, header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,21 +79,23 @@ header .container-button .button4, #navbar .button4, header .container-button .b
   text-align: center;
   letter-spacing: 0.48px;
 }
-header .container-button .button1 {
+header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
 }
-header .container-button .button1:hover {
+header .container-button .button1:hover, header #moonSection #moonContent #moonButtonContainer .defoultB:hover {
   background-color: rgba(31, 200, 212, 0.637);
+  transition: 400ms;
 }
-header .container-button .button2 {
+header .container-button .button2, header #moonSection #moonContent #moonButtonContainer .alternativeB {
   color: #1fc7d4;
   border: 2px solid #1fc7d4;
   background-color: rgba(0, 0, 0, 0);
 }
-header .container-button .button2:hover {
+header .container-button .button2:hover, header #moonSection #moonContent #moonButtonContainer .alternativeB:hover {
   background-color: rgba(8, 6, 11, 0.65);
+  transition: 400ms;
 }
 #navbar .button4, header .container-button .button3 {
   height: 4.8rem;
@@ -108,6 +110,7 @@ header .container-button .button2:hover {
 }
 #navbar .button4:hover, header .container-button .button3:hover {
   background-color: rgba(8, 6, 11, 0.65);
+  transition: 400ms;
 }
 header .container-button .button4 {
   height: 3.2rem;
@@ -121,6 +124,7 @@ header .container-button .button4 {
 }
 header .container-button .button4:hover {
   background-color: rgba(31, 200, 212, 0.637);
+  transition: 400ms;
 }
 
 /*MIXIN BUTTONS SELECTOR*/
@@ -143,7 +147,7 @@ header .menu * {
   width: 100%;
 }
 header .menu * * {
-  padding: 12px 0px 12px 16px;
+  padding: 6px 0px 6px 8px;
   cursor: pointer;
 }
 header .menu * *:hover {
@@ -156,13 +160,13 @@ header .tab {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  border-radius: 0.8rem;
-  border: 0.1rem solid #262130;
-  background-color: #372f47;
-  color: #f4eeff;
-  font-size: 1.6rem;
   width: 13rem;
-  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  overflow: visible;
+}
+header .tab:hover .tabHeader {
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
 header .tab * {
   display: flex;
@@ -173,13 +177,53 @@ header .tab * {
   height: -moz-max-content;
   height: max-content;
   line-height: 3rem;
-  padding-left: 1rem;
 }
-header .tab *:hover {
+header .tab .tabContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  display: none;
+  position: absolute;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  border: 0.1rem solid #262130;
+  background-color: #372f47;
+  color: #f4eeff;
+  font-size: 1.6rem;
+  width: 13rem;
+  top: 100%;
+}
+header .tab .tabContent :last-child {
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+header .tab *.tabContent:hover {
+  display: block;
+}
+header .tab .tabContent :hover {
   background-color: #262130;
 }
-header .tab * :first-child {
-  margin-left: -10px;
+header .tab .tabHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #262130;
+  background-color: #372f47;
+  color: #f4eeff;
+  font-size: 1.6rem;
+}
+header .tab *.tabHeader:hover {
+  background-color: #262130;
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
+}
+header .tab *.tabHeader:hover + .tabContent {
+  display: block;
+}
+header .tab * * {
+  padding-left: 0.5rem;
 }
 header .tab * .triangolo {
   content: "";
@@ -191,7 +235,6 @@ header .tab * .triangolo {
   padding-left: 0px;
   margin-right: 10px;
 }
-
 /*Text input*/
 input[type=text] {
   background-color: #372f47;
@@ -265,6 +308,28 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+header #moonSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+header #moonSection #moonContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+header #moonSection #moonContent #moonButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 header .container-button {
   display: flex;

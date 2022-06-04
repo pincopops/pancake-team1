@@ -65,19 +65,19 @@ a {
 }
 
 /*Buttons*/
-header .container-button .button4, #navbar .button4, header .container-button .button3, header .container-button .button2, header #moonSection #moonContent #moonButtonContainer .alternativeB, header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
+header .container-button .button4, header .container-button .button3, header .container-button .button2, header #moonSection #moonContent #moonButtonContainer .alternativeB, header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4.9rem;
-  min-width: 12rem;
-  max-width: 16rem;
+  height: 4.8rem;
+  width: 16.5rem;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
   border-radius: 1.6rem;
   line-height: 1.6rem;
   font-size: 1.6rem;
   text-align: center;
   letter-spacing: 0.48px;
+  padding-inline: 2frem;
 }
 header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
   color: #fff;
@@ -97,7 +97,7 @@ header .container-button .button2:hover, header #moonSection #moonContent #moonB
   background-color: rgba(8, 6, 11, 0.65);
   transition: 400ms;
 }
-#navbar .button4, header .container-button .button3 {
+header .container-button .button3 {
   height: 4.8rem;
   max-width: 4.1rem;
   min-width: 4rem;
@@ -108,7 +108,7 @@ header .container-button .button2:hover, header #moonSection #moonContent #moonB
   border: 0px #1fc7d4;
   background-color: rgba(8, 6, 11, 0);
 }
-#navbar .button4:hover, header .container-button .button3:hover {
+header .container-button .button3:hover {
   background-color: rgba(8, 6, 11, 0.65);
   transition: 400ms;
 }
@@ -306,30 +306,53 @@ label {
 /*PATH*/
 header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #1c152d;
+  width: 1400px;
+  padding: 10rem;
+  /*ESEMPIO GREZZO DI UNA SEZIONE*/
+  /*CONTENITORE BOTTONI DEL SITO*/
+  /*MENU VERTICALE*/
+  /*TAB VERTICALE*/
+  /*IL FORM VIENE STILIZZATO DIRETTAMENTE DALL'HTML
+  ATTRAVERSO IL FOGLIO DI STILE DEDICATO '_FORM.SCSS'*/
 }
 header #moonSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  display: none;
 }
 header #moonSection #moonContent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  padding: 3rem;
+}
+header #moonSection #moonContent * {
+  padding: 1rem;
+}
+header #moonSection #moonContent h1 {
+  color: #9a6aff;
+}
+header #moonSection #moonContent h3 {
+  color: #f2ecfd;
 }
 header #moonSection #moonContent #moonButtonContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: left;
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  gap: 1rem;
+}
+header #moonSection #moonImage {
+  height: 50rem;
 }
 header .container-button {
   display: flex;

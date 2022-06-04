@@ -1,5 +1,6 @@
 /*Buttons*/
 
+/*BOOKMARK BUTTON STYLE*/
 %button {
   @include flexCenter;
   height: 4.8rem;
@@ -12,30 +13,31 @@
   letter-spacing: 0.48px;
   padding-inline: 2frem;
 
+/*SET DEFOULT STYLE*/
   &-defoult {
     @extend %button;
     color: #fff;
     background-color: $tiffanyBrand;
     border: 0px #fff;
-
+/*SET DEFOULT STYLE HOVER*/
     &:hover {
       background-color: rgba(31, 200, 212, 0.637);
       transition: 400ms;
     }
   }
-
+/*SET ALT STYLE*/
   &-alternative {
     @extend %button;
     color: $tiffanyBrand;
     border: 2px solid $tiffanyBrand;
     background-color: $trasparency;
-
+/*SET ALT STYLE HOVER*/
     &:hover {
       background-color: rgba(8, 6, 11, 0.65);
       transition: 400ms;
     }
   }
-
+/*SET INFO STYLE*/
   &-info {
     @extend %button;
     height: 4.8rem;
@@ -47,13 +49,13 @@
     color: $tiffanyBrand;
     border: 0px $tiffanyBrand;
     background-color: #08060b00;
-
+/*SET INFO STYLE HOVER*/
     &:hover {
       background-color: rgba(8, 6, 11, 0.65);
       transition: 400ms;
     }
   }
-
+/*SET CONNECT STYLE*/
   &-connect {
     @extend %button;
     height: 3.2rem;
@@ -64,7 +66,7 @@
     letter-spacing: normal;
     color: #fff;
     background-color: $tiffanyBrand;
-
+/*SET CONNECT STYLE HOVER*/
     &:hover {
       background-color: rgba(31, 200, 212, 0.637);
       transition: 400ms;

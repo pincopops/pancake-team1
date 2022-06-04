@@ -2,21 +2,24 @@ header{
     @include flex(column,center,center);
     background-color: #1c152d;
     width: 1400px;
-    padding: 10rem;
 
     /*ESEMPIO GREZZO DI UNA SEZIONE*/
     #moonSection{
     @include flexSpaceBetween;
+    height: 50rem;
+    position: relative;
+    margin-right: 50%;
         #moonContent{
             @include flex(column, center, left);
             padding: 3rem;
             *{
-                padding: 1rem
+                padding: 1rem;
             }
             h1{
                 color: #9a6aff;
             }
-            h3{color: #f2ecfd}
+            h3{color: #f2ecfd};
+
             #moonButtonContainer{
                 @include flex(row, left, left);
                 width: 100%;
@@ -30,9 +33,20 @@ header{
                 }
             }
         }
-    #moonImage{
-        height: 50rem;
-    }
+    #moonImageContainer{
+        overflow: visible;
+        height: 100%;
+        img{ 
+            width: 50rem;
+            position: absolute;
+        }
+        #moonImage{
+            @include noGravity;
+            };
+        #moonImage2{@include ghost;height: 50rem;};
+        #moonImage3{@include ghost;height: 50rem;};
+        #moonImage4{@include ghost;height: 50rem;};
+    }   
     }
 
     /*CONTENITORE BOTTONI DEL SITO*/

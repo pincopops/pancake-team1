@@ -26,6 +26,28 @@
     align-items: $ai;
   }
 
+  /*animotions*/
+
+  @mixin ghost{
+    animation: ghost 5s ease-in-out 0.66s infinite normal none running ;
+    @keyframes ghost {
+      0%{opacity: 0.9;};
+      50%{opacity: 0.1;};
+      100%{opacity: 0.9;};
+    }  
+  }
+
+
+  @mixin noGravity{
+    animation: noGravity 3.5s ease-in-out 0s infinite normal none running ;
+
+    @keyframes noGravity {
+      0%{transform: translate(0px)};
+      50%{transform: translate(-5px, -5px)};
+      100%{transform: translate(0px)};
+    }
+  }
+
 
 
 

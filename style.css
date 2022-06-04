@@ -15,6 +15,7 @@ html {
 /* COLORS */
 /* MIXIN */
 /* FLEX MIXINS*/
+/*animotions*/
 /* FONT */
 /*DESiGN SYSTEM*/
 /* Font style*/
@@ -336,7 +337,6 @@ header {
   align-items: center;
   background-color: #1c152d;
   width: 1400px;
-  padding: 10rem;
   /*ESEMPIO GREZZO DI UNA SEZIONE*/
   /*CONTENITORE BOTTONI DEL SITO*/
   /*MENU VERTICALE*/
@@ -348,6 +348,9 @@ header #moonSection {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50rem;
+  position: relative;
+  margin-right: 50%;
 }
 header #moonSection #moonContent {
   display: flex;
@@ -376,8 +379,98 @@ header #moonSection #moonContent #moonButtonContainer {
   height: max-content;
   gap: 1rem;
 }
-header #moonSection #moonImage {
+header #moonSection #moonImageContainer {
+  overflow: visible;
+  height: 100%;
+}
+header #moonSection #moonImageContainer img {
+  width: 50rem;
+  position: absolute;
+}
+header #moonSection #moonImageContainer #moonImage {
+  -webkit-animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
+          animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
+}
+@-webkit-keyframes noGravity {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes noGravity {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+header #moonSection #moonImageContainer #moonImage2 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
   height: 50rem;
+}
+@-webkit-keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+header #moonSection #moonImageContainer #moonImage3 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+  height: 50rem;
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+header #moonSection #moonImageContainer #moonImage4 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+  height: 50rem;
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
 }
 header .container-button {
   display: flex;

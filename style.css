@@ -417,6 +417,8 @@ header #moonSection #moonImageContainer #moonImage2 {
   -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
           animation: ghost 5s ease-in-out 0.66s infinite normal none running;
   height: 50rem;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 @-webkit-keyframes ghost {
   0% {
@@ -444,6 +446,8 @@ header #moonSection #moonImageContainer #moonImage3 {
   -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
           animation: ghost 5s ease-in-out 0.66s infinite normal none running;
   height: 50rem;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 @keyframes ghost {
   0% {

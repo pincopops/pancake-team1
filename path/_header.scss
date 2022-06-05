@@ -43,8 +43,8 @@ header{
         #moonImage{
             @include noGravity;
             };
-        #moonImage2{@include ghost;height: 50rem;};
-        #moonImage3{@include ghost;height: 50rem;};
+        #moonImage2{@include ghost;height: 50rem;animation-delay: 1.5s};
+        #moonImage3{@include ghost;height: 50rem;animation-delay: 3s};
         #moonImage4{@include ghost;height: 50rem;};
     }   
     }

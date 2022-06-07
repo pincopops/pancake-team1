@@ -1,6 +1,4 @@
 
-@import url(./_variables.scss);
-
 /* FLEX MIXINS*/
 
 @mixin flexSpaceBetween {
@@ -28,187 +26,31 @@
     align-items: $ai;
   }
 
-/* Font style*/
+  /*animotions*/
 
-@mixin text-assets($text:#fff, $bg:transparent, $font:2rem, $padding:0, $margin:0) {
-    color: $text;
-    background-color: $bg;
-    font-size: $font;
-    padding: $padding;
-    margin: $margin;
-}
-
-/*LINK*/
-
-a{
-  @include flex(unset, unset, center);
-  text-decoration: none;
-  color: inherit;
-}
+  @mixin ghost{
+    animation: ghost 5s ease-in-out 0.66s infinite normal none running ;
+    @keyframes ghost {
+      0%{opacity: 0.9;};
+      50%{opacity: 0.1;};
+      100%{opacity: 0.9;};
+    }  
+  }
 
 
-/*Buttons*/
+  @mixin noGravity{
+    animation: noGravity 3.5s ease-in-out 0s infinite normal none running ;
 
-%button {
-    @include flexCenter;
-    height: 4.9rem;
-    min-width: 12rem;
-    max-width: 16rem;
-    box-shadow: rgba(14,14,44,0.4) 0px -1px 0px 0px inset;
-    border-radius: 1.6rem;
-    line-height: 1.6rem;
-    font-size: 1.6rem;
-    text-align: center;
-    letter-spacing: 0.48px;
-
-    &-defoult{
-      @extend %button;
-      color: #fff;
-      background-color: $tiffanyBrand;
-      border: 0px #fff;
-    
-      &:hover{
-          background-color: rgba(31, 200, 212, 0.637);
-      }
-    }
-    
-
-    &-alternative{
-      @extend %button;
-      color : $tiffanyBrand;
-      border : 2px solid $tiffanyBrand;
-      background-color: $trasparency;
-
-      &:hover{
-        background-color: rgba(8, 6, 11, 0.650);
-      }
-    }
-
-    &-info{
-      @extend %button;
-      height: 4.8rem;
-      max-width: 4.1rem;
-      min-width: 4rem;
-      padding: 0px 0px;
-      line-height: 2.4rem;
-      letter-spacing: normal;
-      color: $tiffanyBrand;
-      border: 0px $tiffanyBrand;
-      background-color: #08060b00;
-
-      &:hover{
-        background-color: rgba(8, 6, 11, 0.650);
-      }
-    }
-
-    &-connect{
-      @extend %button;
-      height: 3.2rem;
-      max-width: 10.7rem;
-      min-width: 12rem;
-      padding: 0px 16px 0px 16px;
-      line-height: 1.6rem;
-      letter-spacing: normal;
-      color: #fff;
-      background-color: $tiffanyBrand;
-      
-      &:hover{
-        background-color: rgba(31, 200, 212, 0.637);
+    @keyframes noGravity {
+      0%{transform: translate(0px)};
+      50%{transform: translate(-5px, -5px)};
+      100%{transform: translate(0px)};
     }
   }
-} 
-
-/*MIXIN BUTTONS SELECTOR*/
-
-@mixin b-selector ($selector){
-  @if $selector == alternative {
-    @extend %button-alternative;
-  }
-  @else if $selector == info {
-    @extend %button-info;
-  }
-  @else if $selector == defoult{
-    @extend %button-defoult;
-  }
-  @else if $selector == connect{
-    @extend %button-connect;
-  }
-  @else {
-    @extend %button-defoult;
-  }
-}
-
-/*Vertical Menù*/
-
-%verticalMenu{
-  @include flexStart;
-  flex-direction: column;
-  border-radius: 1.6rem;
-  border: 0px $borderGray;
-  background-color: #27262c;
-  width: 28rem;
-  color: $lightViolet2;
-  overflow: hidden;
-  font-size: 1.6rem;
 
 
 
-    *{
-      list-style-type: none;
-      width: 100%;
-      
 
-      *{
-        padding: 12px 0px 12px 16px;
-        cursor: pointer;
-
-        &:hover{
-          background-color: $hoverMenu;
-        }
-      }
-  }
-}
-
-/*Vertical Tabs*/
-
-%verticalTab{
-  @include flexStart;
-  flex-direction: column;
-  border-radius: 0.8rem;
-  border: 0.1rem solid $borderBlack;
-  background-color: $tabBlue;
-  color: $lightViolet;
-  font-size: 1.6rem;
-  width: 13rem;
-  overflow: hidden;
-
-  *{
-    @include flexSpaceBetween;
-    width: 100%;
-    height: max-content;
-    line-height: 3rem;
-    padding-left: 1rem;
-    &:hover{
-      background-color: $borderBlack;
-    }
-
-    :first-child{
-      margin-left: -10px;
-    }
-
-    %triangle{
-      content: "";
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid #fff;
-      padding-left: 0px;
-      margin-right: 10px;
-      }
-  }
-
-}
 
 
 

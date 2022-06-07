@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(./_variables.scss);
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 * {
   padding: 0;
@@ -16,7 +15,46 @@ html {
 /* COLORS */
 /* MIXIN */
 /* FLEX MIXINS*/
+/*animotions*/
+/* FONT */
+/*DESiGN SYSTEM*/
 /* Font style*/
+h1 {
+  font-size: 48px;
+  line-height: 52.8px;
+  letter-spacing: normal;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 35.2px;
+  letter-spacing: normal;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: normal;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+}
+
+.p {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: normal;
+}
+
+.subP {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: normal;
+}
+
 /*LINK*/
 a {
   display: flex;
@@ -28,37 +66,46 @@ a {
 }
 
 /*Buttons*/
-header .container-button .button4, #navbar .button4, header .container-button .button3, header .container-button .button2, header .container-button .button1 {
+/*BOOKMARK BUTTON STYLE*/
+header .container-button .button4, header .container-button .button3, header .container-button .button2, header #moonSection #moonContent #moonButtonContainer .alternativeB, header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4.9rem;
-  min-width: 12rem;
-  max-width: 16rem;
+  height: 4.8rem;
+  width: 16.5rem;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
   border-radius: 1.6rem;
   line-height: 1.6rem;
   font-size: 1.6rem;
   text-align: center;
   letter-spacing: 0.48px;
+  padding-inline: 2frem;
+  /*SET DEFOULT STYLE*/
+  /*SET ALT STYLE*/
+  /*SET INFO STYLE*/
+  /*SET CONNECT STYLE*/
 }
-header .container-button .button1 {
+header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
+  /*SET DEFOULT STYLE HOVER*/
 }
-header .container-button .button1:hover {
+header .container-button .button1:hover, header #moonSection #moonContent #moonButtonContainer .defoultB:hover {
   background-color: rgba(31, 200, 212, 0.637);
+  transition: 400ms;
 }
-header .container-button .button2 {
+header .container-button .button2, header #moonSection #moonContent #moonButtonContainer .alternativeB {
   color: #1fc7d4;
   border: 2px solid #1fc7d4;
   background-color: rgba(0, 0, 0, 0);
+  /*SET ALT STYLE HOVER*/
 }
-header .container-button .button2:hover {
+header .container-button .button2:hover, header #moonSection #moonContent #moonButtonContainer .alternativeB:hover {
   background-color: rgba(8, 6, 11, 0.65);
+  transition: 400ms;
 }
-#navbar .button4, header .container-button .button3 {
+header .container-button .button3 {
   height: 4.8rem;
   max-width: 4.1rem;
   min-width: 4rem;
@@ -68,9 +115,11 @@ header .container-button .button2:hover {
   color: #1fc7d4;
   border: 0px #1fc7d4;
   background-color: rgba(8, 6, 11, 0);
+  /*SET INFO STYLE HOVER*/
 }
-#navbar .button4:hover, header .container-button .button3:hover {
+header .container-button .button3:hover {
   background-color: rgba(8, 6, 11, 0.65);
+  transition: 400ms;
 }
 header .container-button .button4 {
   height: 3.2rem;
@@ -81,9 +130,11 @@ header .container-button .button4 {
   letter-spacing: normal;
   color: #fff;
   background-color: #1fc7d4;
+  /*SET CONNECT STYLE HOVER*/
 }
 header .container-button .button4:hover {
   background-color: rgba(31, 200, 212, 0.637);
+  transition: 400ms;
 }
 
 /*MIXIN BUTTONS SELECTOR*/
@@ -100,32 +151,38 @@ header .menu {
   color: #b8add2;
   overflow: hidden;
   font-size: 1.6rem;
+  /*set childs style*/
 }
 header .menu * {
   list-style-type: none;
   width: 100%;
+  /*set childs of childs style*/
 }
 header .menu * * {
-  padding: 12px 0px 12px 16px;
+  padding: 6px 0px 6px 8px;
   cursor: pointer;
+  /*set childs of childs hover*/
 }
 header .menu * *:hover {
   background-color: #353547;
 }
 
 /*Vertical Tabs*/
+/*set vertical tab*/
 header .tab {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  border-radius: 0.8rem;
-  border: 0.1rem solid #262130;
-  background-color: #372f47;
-  color: #f4eeff;
-  font-size: 1.6rem;
   width: 13rem;
-  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  overflow: visible;
+  /*set vertical tab hover*/
+  /*set all childs of verticalTab*/
+}
+header .tab:hover .tabHeader {
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
 }
 header .tab * {
   display: flex;
@@ -136,13 +193,62 @@ header .tab * {
   height: -moz-max-content;
   height: max-content;
   line-height: 3rem;
-  padding-left: 1rem;
+  /*set child of verticalTab with bookmark %tabContent */
+  /*set child of verticalTab with bookmark %tabHeader */
+  /*set all childs of childs */
+  /*set child 'with bookmark %triangle' of childs of verticalTab */
 }
-header .tab *:hover {
+header .tab .tabContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  display: none;
+  position: absolute;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  border: 0.1rem solid #262130;
+  background-color: #372f47;
+  color: #f4eeff;
+  font-size: 1.6rem;
+  width: 100%;
+  top: 100%;
+  /*set tabContent last child*/
+  /*set tabContent hover*/
+  /*set tabContent's childs hover*/
+}
+header .tab .tabContent :last-child {
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+header .tab *.tabContent:hover {
+  display: block;
+}
+header .tab .tabContent :hover {
   background-color: #262130;
 }
-header .tab * :first-child {
-  margin-left: -10px;
+header .tab .tabHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-radius: 0.8rem;
+  border: 0.1rem solid #262130;
+  background-color: #372f47;
+  color: #f4eeff;
+  font-size: 1.6rem;
+  /*set tabHeader hover*/
+}
+header .tab *.tabHeader:hover {
+  background-color: #262130;
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
+  /*set tabContent effect in tabHeader hover */
+}
+header .tab *.tabHeader:hover + .tabContent {
+  display: block;
+}
+header .tab * * {
+  padding-left: 0.5rem;
 }
 header .tab * .triangolo {
   content: "";
@@ -155,25 +261,303 @@ header .tab * .triangolo {
   margin-right: 10px;
 }
 
-/* FONT */
+/*Text input*/
+input[type=text] {
+  background-color: #372f47;
+  border-radius: 16px;
+  line-height: 3.5rem;
+  text-align: left;
+  font-weight: 500;
+  padding: 0px 16px;
+  color: #f4eeff;
+  outline: none;
+  border: none;
+  margin-block: 1rem;
+  font-size: 1.6rem;
+}
+input[type=text]:focus {
+  box-shadow: #7645d9 0px 0px 0px 2.5px;
+  outline: none;
+}
+
+/*checkbox input*/
+header .checkbox {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.8rem;
+  box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
+  background-color: #eeeaf4;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  padding: 0px 6px;
+}
+header .checkbox:checked {
+  background-color: #29910d;
+}
+header .checkbox:checked::before {
+  content: "✓";
+  position: absolute;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  color: #eeeaf4;
+}
+
+/*Radio Input*/
+input[type=radio] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
+  background-color: #372f47;
+  border-radius: 50%;
+}
+input[type=radio]:checked {
+  box-shadow: #29910d 0px 0px 0px 4px inset;
+  border: 2px solid #29910d;
+}
+input[type=radio]:focus {
+  border: 2px solid #7645d9;
+}
+
+/*Label*/
+label {
+  color: #f4eeff;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  cursor: pointer;
+}
+.switch .switchInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch .switchInput:checked + .slider:after {
+  transform: translateX(16px);
+}
+.switch .switchInput:checked + .slider:before {
+  box-shadow: rgb(118, 69, 217) 0px 0px 0px 1px, rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
+}
+.switch .switchInput:focus + .slider:after {
+  transform: translateX(16px);
+}
+.switch .switchInput:focus + .slider:before {
+  box-shadow: rgb(118, 69, 217) 0px 0px 0px 1px, rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
+}
+.switch .switchInput:checked + .slider:before {
+  transform: translateX(16px);
+}
+.switch .switchInput:checked + .slider {
+  background-color: rgb(49, 208, 170);
+}
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #372f47;
+  border-radius: 34px;
+  background-color: #372f47;
+  transition: background-color 0.2s ease 0s;
+  box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 0px;
+  bottom: 2px;
+  background-color: #27262c;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.switch .slider:hover:before {
+  box-shadow: rgb(118, 69, 217) 0px 0px 0px 1px, rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
+  transition: box-shadow 0s;
+  transition: transform 0.4s;
+}
+
 /*PATH*/
-header {
+body {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c152d;
+  width: 1400px;
+  /*ESEMPIO GREZZO DI UNA SEZIONE*/
+  /*CONTENITORE BOTTONI DEL SITO*/
+  /*MENU VERTICALE*/
+  /*TAB VERTICALE*/
+  /*FORM */
+}
+header #moonSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50rem;
+  position: relative;
+  margin-right: 50%;
+}
+header #moonSection #moonContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 3rem;
+}
+header #moonSection #moonContent * {
+  padding: 1rem;
+}
+header #moonSection #moonContent h1 {
+  color: #9a6aff;
+}
+header #moonSection #moonContent h3 {
+  color: #f2ecfd;
+}
+header #moonSection #moonContent #moonButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  gap: 1rem;
+}
+header #moonSection #moonImageContainer {
+  overflow: visible;
+  height: 100%;
+}
+header #moonSection #moonImageContainer img {
+  width: 50rem;
+  position: absolute;
+}
+header #moonSection #moonImageContainer #moonImage {
+  -webkit-animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
+          animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
+}
+@-webkit-keyframes noGravity {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes noGravity {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+header #moonSection #moonImageContainer #moonImage2 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+  height: 50rem;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+@-webkit-keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+header #moonSection #moonImageContainer #moonImage3 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+  height: 50rem;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+header #moonSection #moonImageContainer #moonImage4 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+  height: 50rem;
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
 }
 header .container-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   padding: 50px;
-  background-color: black;
+  background-color: white;
   border-radius: 16px;
-}/*# sourceMappingURL=style.css.map */
+  background-color: rgba(0, 0, 0, 0.589);
+}
+/* SWITCH*//*# sourceMappingURL=style.css.map */

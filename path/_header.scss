@@ -1,14 +1,68 @@
+body{
+    @include flex(row,center,center)
+}
+
 header{
-    @include flexCenter;
-    
+    @include flex(column,center,center);
+    background-color: #1c152d;
+    width: 1400px;
+
+    /*ESEMPIO GREZZO DI UNA SEZIONE*/
+    #moonSection{
+    @include flexSpaceBetween;
+    height: 50rem;
+    position: relative;
+    margin-right: 50%;
+        #moonContent{
+            @include flex(column, center, left);
+            padding: 3rem;
+            *{
+                padding: 1rem;
+            }
+            h1{
+                color: #9a6aff;
+            }
+            h3{color: #f2ecfd};
+
+            #moonButtonContainer{
+                @include flex(row, left, left);
+                width: 100%;
+                height: max-content;
+                gap: 1rem;
+                .defoultB{
+                    @include b-selector(defoult);
+                }
+                .alternativeB{
+                    @include b-selector(alternative);
+                }
+            }
+        }
+    #moonImageContainer{
+        overflow: visible;
+        height: 100%;
+        img{ 
+            width: 50rem;
+            position: absolute;
+        }
+        #moonImage{
+            @include noGravity;
+            };
+        #moonImage2{@include ghost;height: 50rem;animation-delay: 1.5s};
+        #moonImage3{@include ghost;height: 50rem;animation-delay: 3s};
+        #moonImage4{@include ghost;height: 50rem;};
+    }   
+}
+
+    /*CONTENITORE BOTTONI DEL SITO*/
     .container-button{
         @include flexSpaceBetween;
         gap: 20px;
-        width: min-content;
+        width: 100%;
         height: max-content;
         padding: 50px;
-        background-color: black;
+        background-color: white;
         border-radius: 16px;
+        background-color: rgba(0, 0, 0, 0.589);
         
 
     .button1{
@@ -27,15 +81,40 @@ header{
         @include b-selector(connect);
     }
     }
-
+    /*MENU VERTICALE*/
     .menu{
         @extend %verticalMenu;
     }
+
+    /*TAB VERTICALE*/
     .tab{
         @extend %verticalTab;
+        .tabHeader{
+            @extend %tabHeader;
+        }
+        .tabContent{
+            @extend %tabContent;
+        }
         .triangolo{
         @extend %triangle;
         }
+    }
+
+    /*FORM */
+    .checkbox{
+        @extend %checkbox;
+    }
+}
+
+/* SWITCH*/
+
+.switch{
+    @extend %switch;
+    .switchInput{
+        @extend %switchInput;
+    }
+    .slider{
+        @extend %slider;
     }
 }
 

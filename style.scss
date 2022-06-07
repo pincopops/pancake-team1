@@ -17,6 +17,15 @@
   
   /* FONT */
   @import "./sass/font";
+
+  /*DESiGN SYSTEM*/
+
+  @import "./sassDS/typography.scss";
+  @import "./sassDS/button.scss";
+  @import "./sassDS/verticalMenu.scss";
+  @import "./sassDS/verticalTab.scss";
+  @import "./sassDS/form.scss";
+  @import "./sassDS/switch.scss";
   
   /*PATH*/
   @import "./path/header";
@@ -29,4 +38,6 @@
   @import "./path/buyCakeSection";
   @import "./path/loginSection";
   @import "./path/footer";
+
+
   

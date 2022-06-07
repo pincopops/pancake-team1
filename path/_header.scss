@@ -47,7 +47,7 @@ header{
         #moonImage3{@include ghost;height: 50rem;animation-delay: 3s};
         #moonImage4{@include ghost;height: 50rem;};
     }   
-    }
+}
 
     /*CONTENITORE BOTTONI DEL SITO*/
     .container-button{
@@ -96,8 +96,22 @@ header{
         }
     }
 
-    /*IL FORM VIENE STILIZZATO DIRETTAMENTE DALL'HTML
-    ATTRAVERSO IL FOGLIO DI STILE DEDICATO '_FORM.SCSS'*/
+    /*IL FORM */
+    .checkbox{
+        @extend %checkbox;
+    }
+}
+
+/* SWITCH*/
+
+.switch{
+    @extend %switch;
+    .switchInput{
+        @extend %switchInput;
+    }
+    .slider{
+        @extend %slider;
+    }
 }
 
 

@@ -211,7 +211,7 @@ header .tab .tabContent {
   background-color: #372f47;
   color: #f4eeff;
   font-size: 1.6rem;
-  width: 13rem;
+  width: 100%;
   top: 100%;
   /*set tabContent last child*/
   /*set tabContent hover*/
@@ -394,6 +394,13 @@ label {
 }
 
 /*PATH*/
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -405,7 +412,7 @@ header {
   /*CONTENITORE BOTTONI DEL SITO*/
   /*MENU VERTICALE*/
   /*TAB VERTICALE*/
-  /*IL FORM */
+  /*FORM */
 }
 header #moonSection {
   display: flex;
@@ -544,9 +551,7 @@ header .container-button {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;

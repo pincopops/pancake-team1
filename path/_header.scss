@@ -1,3 +1,7 @@
+body{
+    @include flex(row,center,center)
+}
+
 header{
     @include flex(column,center,center);
     background-color: #1c152d;
@@ -53,7 +57,7 @@ header{
     .container-button{
         @include flexSpaceBetween;
         gap: 20px;
-        width: min-content;
+        width: 100%;
         height: max-content;
         padding: 50px;
         background-color: white;
@@ -96,7 +100,7 @@ header{
         }
     }
 
-    /*IL FORM */
+    /*FORM */
     .checkbox{
         @extend %checkbox;
     }

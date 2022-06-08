@@ -29,8 +29,8 @@ header{
                 width: 100%;
                 height: max-content;
                 gap: 1rem;
-                .defoultB{
-                    @include b-selector(defoult);
+                .defaultB{
+                    @include b-selector(default);
                 }
                 .alternativeB{
                     @include b-selector(alternative);
@@ -66,11 +66,11 @@ header{
         
 
     .button1{
-        @include b-selector(defoult);
+        @include b-selector(default);
     }
 
     .button2{
-        @include b-selector(alternative);
+        @include b-selector(default);
     }
 
     .button3{

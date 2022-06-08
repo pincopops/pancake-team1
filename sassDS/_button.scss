@@ -13,13 +13,13 @@
   letter-spacing: 0.48px;
   padding-inline: 2frem;
 
-/*SET DEFOULT STYLE*/
-  &-defoult {
+/*SET DEFAULT STYLE*/
+  &-default {
     @extend %button;
     color: #fff;
     background-color: $tiffanyBrand;
     border: 0px #fff;
-/*SET DEFOULT STYLE HOVER*/
+/*SET DEFAULT STYLE HOVER*/
     &:hover {
       background-color: rgba(31, 200, 212, 0.637);
       transition: 400ms;
@@ -81,11 +81,11 @@
     @extend %button-alternative;
   } @else if $selector == info {
     @extend %button-info;
-  } @else if $selector == defoult {
-    @extend %button-defoult;
+  } @else if $selector == default {
+    @extend %button-default;
   } @else if $selector == connect {
     @extend %button-connect;
   } @else {
-    @extend %button-defoult;
+    @extend %button-default;
   }
 }

@@ -1,7 +1,3 @@
-body{
-    @include flex(row,center,center)
-}
-
 header{
     @include flex(column,center,center);
     background-color: #1c152d;

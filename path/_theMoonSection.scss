@@ -1,9 +1,9 @@
-#theMoonSection{
+.theMoonSection{
     @include flexCenter;
     width: 100vw;
     height: 100rem;
 
-&-external-container{
+    &-external-container{
     @include flexSpaceBetween;
     width: 115rem;
     height: 58rem;

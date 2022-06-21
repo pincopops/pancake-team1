@@ -1,0 +1,95 @@
+#bettingSection {
+    background: linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%);
+    @include flexCenter;
+}
+
+.bettingSectionContainer {
+    @include flexCenter;
+    background-color: $darkBlackTransp;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 72px;
+    border: 1px solid $darkGray3;
+
+    h2 {
+        color: $whiteBrand;
+    }
+
+    span {
+        color: $violetBrand;
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: 16px;
+        color: $lightViolet2;
+    }
+
+
+}
+
+.bettingSectionDoubleCard {
+    @include flexCenter;
+
+    .bettingSectionFirstCard {
+        display: flex;
+        flex: 1 1 0%;
+
+        .firstCardRotate,
+        .firstCardImg {
+            transform: rotate(-2.36deg);
+        }
+
+        .firstCardContent {
+            background: linear-gradient($ocra 0%, $ocra2 51.17%, $ocra3 100%);
+            padding: 24px;
+            border-radius: 27px;
+        }
+
+        .firstCardImg {
+            @include flex(row, flex-end, normal);
+        }
+
+        .firstCardP {
+            p {
+                color: $darkBlue;
+                font-weight: 600;
+                line-height: 1.5;
+                font-size: 16px;
+            }
+
+            span {
+                font-weight: 400;
+                line-height: 1.5;
+                margin-bottom: 40px;
+                font-size: 16px;
+            }
+
+        }
+
+        .cardButton {
+            button {
+                @include b-selector(defoult);
+                color: $blackBrand;
+                font-weight: 600;
+                line-height: 1.5;
+                font-size: 16px;
+
+            }
+
+            a{
+                @include flex(row, center, normal);
+            }
+
+        }
+    }
+
+    .bettingSectionSecondCard {
+        background: $darkBlue2;
+
+        .secondCardRotate {
+            transform: rotate(2.36deg);
+        }
+    }
+}

@@ -26,7 +26,7 @@
     align-items: $ai;
   }
 
-  /*animotions*/
+  /*animations*/
 
   @mixin ghost{
     animation: ghost 5s ease-in-out 0.66s infinite normal none running ;
@@ -47,6 +47,9 @@
       100%{transform: translate(0px)};
     }
   }
+
+  /*day theme*/
+
 
 
 

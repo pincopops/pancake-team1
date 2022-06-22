@@ -1,0 +1,55 @@
+h2{
+    font-size: 4rem;
+}
+
+
+.feedbackSection{
+
+    width: 100vw;
+    height: 100rem;
+
+    .feedbackSection-external-container{
+
+        @include flexCenter;
+        text-align: center;
+        flex-direction: column;
+
+        .feedbackSection-external-title{
+            margin: 2rem;
+        }
+
+        .feedbackSection-card-container{
+            margin: 2rem;
+            @include flexSpaceBetween;
+            gap: 3rem;
+
+            .feedbackSection-card-shadow{
+
+                height: fit-content;
+                
+                .feedbackSection-card{
+                    @include flex (column,space-between,start);
+                    height: 28.5rem;
+                    width: 28.2rem;
+                    position: relative;
+                    padding: 2.4rem;
+                    background: $darkGray3 none repeat scroll 0% 0%;;
+                    border-radius: 2.4rem;
+                    color: rgb(244, 238, 255);
+    
+                    img{
+                        align-self: flex-end;
+                    }
+                    
+                    .feedbackSection-card-title{
+                        @include flex (column,center,start);
+                    }
+                }
+
+            }
+            
+        }
+
+    }
+}
+

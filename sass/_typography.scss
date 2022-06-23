@@ -2,14 +2,16 @@
 
 h1{
   font-size: 48px;
-  line-height: 52.8px;
+  font-weight: 600;
+  line-height: 1.1;
   letter-spacing: normal
 }
 
 h2{
   font-size: 32px;
-  line-height: 35.2px;
-  letter-spacing: normal
+  line-height: 1.1;
+  letter-spacing: normal;
+  font-weight: 600;
 }
 
 h3{
@@ -44,3 +46,36 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+/*OTHERS*/
+
+%subTitle {
+color: $subTitleViolet;
+font-weight: 400;
+line-height: 1.5;
+font-size: 16px;
+
+&-highlighted{
+  @extend %subTitle;
+  font-weight: 600;
+}
+}
+
+/*MARGINS*/
+
+%largeMargin {
+  margin-bottom: 3.2rem;
+}
+
+%smallMargin {
+  margin-bottom: 2rem;
+}
+
+%mediumMargin {
+  margin-bottom: 2.4rem;
+}
+
+
+
+
+

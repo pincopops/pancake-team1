@@ -13,22 +13,40 @@ html {
 
 /* VARIABLES */
 /* COLORS */
+.tiffanyBrand {
+  color: #1fc7d4;
+  fill: #1fc7d4;
+}
+
+.pinkBrand {
+  color: #ed4b9e;
+  fill: #ed4b9e;
+}
+
+.violetBrand {
+  color: #7645d9;
+  fill: #7645d9;
+}
+
 /* MIXIN */
 /* FLEX MIXINS*/
-/*animotions*/
+/*animations*/
+/*day theme*/
 /* FONT */
 /*DESiGN SYSTEM*/
 /* Font style*/
 h1 {
   font-size: 48px;
-  line-height: 52.8px;
+  font-weight: 600;
+  line-height: 1.1;
   letter-spacing: normal;
 }
 
 h2 {
   font-size: 32px;
-  line-height: 35.2px;
+  line-height: 1.1;
   letter-spacing: normal;
+  font-weight: 600;
 }
 
 h3 {
@@ -65,9 +83,29 @@ a {
   color: inherit;
 }
 
+/*OTHERS*/
+#feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-subTitle, #feedbackSection .external-container .title-container .subTitle, #feedbackSection .external-container .title-container .subTitle-highlighted {
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+#feedbackSection .external-container .title-container .subTitle-highlighted {
+  font-weight: 600;
+}
+
+/*MARGINS*/
+#feedbackSection .external-container .title-container .title, #feedbackSection .external-container .icon {
+  margin-bottom: 3.2rem;
+}
+
+#feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-title.marginBottom {
+  margin-bottom: 2.4rem;
+}
+
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
-header .container-button .button4, header .container-button .button3, header .container-button .button2, header #moonSection #moonContent #moonButtonContainer .alternativeB, header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
+header .container-button .button4, header .container-button .button3, .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,28 +118,29 @@ header .container-button .button4, header .container-button .button3, header .co
   text-align: center;
   letter-spacing: 0.48px;
   padding-inline: 2frem;
+  cursor: pointer;
   /*SET DEFOULT STYLE*/
   /*SET ALT STYLE*/
   /*SET INFO STYLE*/
   /*SET CONNECT STYLE*/
 }
-header .container-button .button1, header #moonSection #moonContent #moonButtonContainer .defoultB {
+.theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
   /*SET DEFOULT STYLE HOVER*/
 }
-header .container-button .button1:hover, header #moonSection #moonContent #moonButtonContainer .defoultB:hover {
+.theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
-header .container-button .button2, header #moonSection #moonContent #moonButtonContainer .alternativeB {
+.theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2 {
   color: #1fc7d4;
   border: 2px solid #1fc7d4;
   background-color: rgba(0, 0, 0, 0);
   /*SET ALT STYLE HOVER*/
 }
-header .container-button .button2:hover, header #moonSection #moonContent #moonButtonContainer .alternativeB:hover {
+.theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2:hover, header .container-button .button2:hover {
   background-color: rgba(8, 6, 11, 0.65);
   transition: 400ms;
 }
@@ -393,71 +432,171 @@ label {
   transition: transform 0.4s;
 }
 
-/*PATH*/
-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+#feedbackSection .external-container .card-external-container .card-wrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 24px;
+  color: #280d5f;
+  overflow: hidden;
+  position: relative;
+  padding: 1px 1px 4px;
+  margin-bottom: 16px;
+  background: #e7e3eb none repeat scroll 0% 0%;
 }
-
-header {
+#feedbackSection .external-container .card-external-container .card-wrapper .card-container {
+  width: 100%;
+  height: 100%;
+  overflow: inherit;
+  border-radius: 24px;
+  padding: 2.4rem;
+  background: #ffffff none repeat scroll 0% 0%;
+}
+#feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #1c152d;
-  width: 1400px;
-  /*ESEMPIO GREZZO DI UNA SEZIONE*/
+  justify-content: flex-end;
+  align-items: unset;
+  min-width: 232px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 6.4rem;
+  min-height: 16.8rem;
+}
+#feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-image {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  width: 3.6rem;
+}
+
+/*PATH*/
+header {
   /*CONTENITORE BOTTONI DEL SITO*/
   /*MENU VERTICALE*/
   /*TAB VERTICALE*/
   /*FORM */
 }
-header #moonSection {
+header .container-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50rem;
-  position: relative;
-  margin-right: 50%;
-}
-header #moonSection #moonContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  padding: 3rem;
-}
-header #moonSection #moonContent * {
-  padding: 1rem;
-}
-header #moonSection #moonContent h1 {
-  color: #9a6aff;
-}
-header #moonSection #moonContent h3 {
-  color: #f2ecfd;
-}
-header #moonSection #moonContent #moonButtonContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: left;
+  gap: 20px;
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  padding: 50px;
+  background-color: white;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.589);
+}
+/* SWITCH*/
+.theMoonSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100rem;
+}
+.theMoonSection-external-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 115rem;
+  height: 58rem;
+}
+.theMoonSection-external-container .theMoonSection-leftTitle-container {
+  padding-inline: 2rem;
+}
+.theMoonSection-external-container .theMoonSection-leftTitle-container h1 {
+  color: #7645d9;
+  font-size: 6.4rem;
+}
+.theMoonSection-external-container .theMoonSection-leftTitle-container h3 {
+  padding-block: 3rem;
+}
+.theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   gap: 1rem;
 }
-header #moonSection #moonImageContainer {
-  overflow: visible;
+.theMoonSection-external-container .theMoonSection-floatingimgs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
   height: 100%;
+  position: relative;
 }
-header #moonSection #moonImageContainer img {
-  width: 50rem;
+.theMoonSection-external-container .theMoonSection-floatingimgs-container img {
+  width: 100%;
+  height: 100%;
   position: absolute;
 }
-header #moonSection #moonImageContainer #moonImage {
+.theMoonSection-external-container .theMoonSection-floatingimgs-container .theMoonSection-star1 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+@-webkit-keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+.theMoonSection-external-container .theMoonSection-floatingimgs-container .theMoonSection-star2 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+.theMoonSection-external-container .theMoonSection-floatingimgs-container .theMoonSection-star3 {
+  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
+}
+@keyframes ghost {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+.theMoonSection-external-container .theMoonSection-floatingimgs-container .theMoonSection-rabbit1 {
   -webkit-animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
           animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
 }
@@ -483,81 +622,37 @@ header #moonSection #moonImageContainer #moonImage {
     transform: translate(0px);
   }
 }
-header #moonSection #moonImageContainer #moonImage2 {
-  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
-          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
-  height: 50rem;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+
+#feedbackSection {
+  width: 100vw;
+  height: 100rem;
 }
-@-webkit-keyframes ghost {
-  0% {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.9;
-  }
+#feedbackSection .external-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-@keyframes ghost {
-  0% {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.9;
-  }
+#feedbackSection .external-container .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-header #moonSection #moonImageContainer #moonImage3 {
-  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
-          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
-  height: 50rem;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+#feedbackSection .external-container .title-container .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #280d5f;
 }
-@keyframes ghost {
-  0% {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.9;
-  }
+#feedbackSection .external-container .title-container .subTitle-highlighted {
+  margin: 2rem 0rem 2.4rem 0rem;
 }
-header #moonSection #moonImageContainer #moonImage4 {
-  -webkit-animation: ghost 5s ease-in-out 0.66s infinite normal none running;
-          animation: ghost 5s ease-in-out 0.66s infinite normal none running;
-  height: 50rem;
-}
-@keyframes ghost {
-  0% {
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.9;
-  }
-}
-header .container-button {
+#feedbackSection .external-container .card-external-container {
+  margin: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  padding: 50px;
-  background-color: white;
-  border-radius: 16px;
-  background-color: rgba(0, 0, 0, 0.589);
-}
-/* SWITCH*//*# sourceMappingURL=style.css.map */
+  gap: 3rem;
+}/*# sourceMappingURL=style.css.map */

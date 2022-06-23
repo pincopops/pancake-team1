@@ -623,10 +623,6 @@ header .container-button {
   }
 }
 
-h2 {
-  font-size: 4rem;
-}
-
 #feedbackSection {
   width: 100vw;
   height: 100rem;
@@ -638,7 +634,6 @@ h2 {
   flex-direction: column;
 }
 #feedbackSection .external-container .title-container {
-  margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -1,6 +1,3 @@
-h2 {
-  font-size: 4rem;
-}
 
 #feedbackSection {
   width: 100vw;
@@ -10,12 +7,12 @@ h2 {
     @include flexCenter;
     flex-direction: column;
 
+
     .icon {
       @extend %largeMargin;
     }
 
     .title-container {
-      margin: 2rem;
       @include flex (column,center,center);
 
       .title {

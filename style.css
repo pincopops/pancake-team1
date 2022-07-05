@@ -28,8 +28,9 @@ h1 {
 
 h2 {
   font-size: 32px;
-  line-height: 35.2px;
+  line-height: 1.1;
   letter-spacing: normal;
+  font-weight: 600;
 }
 
 h3 {
@@ -42,6 +43,7 @@ h4 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: normal;
+  font-weight: 400;
 }
 
 .p {
@@ -429,6 +431,7 @@ header .container-button {
   justify-content: space-between;
   align-items: center;
   width: 115rem;
+  min-width: 115rem;
   height: 58rem;
 }
 .theMoonSection-external-container .theMoonSection-leftTitle-container {
@@ -545,4 +548,57 @@ header .container-button {
   100% {
     transform: translate(0px);
   }
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+.feedbackSection {
+  width: 100vw;
+  height: 100rem;
+}
+.feedbackSection .feedbackSection-external-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.feedbackSection .feedbackSection-external-container .feedbackSection-external-title {
+  margin: 2rem;
+}
+.feedbackSection .feedbackSection-external-container .feedbackSection-card-container {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.feedbackSection .feedbackSection-external-container .feedbackSection-card-container .feedbackSection-card-shadow {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.feedbackSection .feedbackSection-external-container .feedbackSection-card-container .feedbackSection-card-shadow .feedbackSection-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 28.5rem;
+  width: 28.2rem;
+  position: relative;
+  padding: 2.4rem;
+  background: rgb(56, 50, 65) none repeat scroll 0% 0%;
+  border-radius: 2.4rem;
+  color: rgb(244, 238, 255);
+}
+.feedbackSection .feedbackSection-external-container .feedbackSection-card-container .feedbackSection-card-shadow .feedbackSection-card img {
+  align-self: flex-end;
+}
+.feedbackSection .feedbackSection-external-container .feedbackSection-card-container .feedbackSection-card-shadow .feedbackSection-card .feedbackSection-card-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }/*# sourceMappingURL=style.css.map */

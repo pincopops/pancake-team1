@@ -45,6 +45,7 @@ h4{
 a{
   @include flex(unset, unset, center);
   text-decoration: none;
+  width: fit-content;
   color: inherit;
 }
 

@@ -1,78 +1,97 @@
-.theMoonSection{
-    @include flexCenter;
-    width: 100vw;
+.theMoonSection-wrapper{
+    @include flex(column, center, center);
+    position: relative;
     height: 100rem;
 
-    &-external-container{
-    @include flexSpaceBetween;
-    width: 115rem;
-    min-width: 115rem;
-    height: 58rem;
-
-
-    .theMoonSection-leftTitle-container{
-        padding-inline: 2rem;
-
-
-        h1{
-           color: $violetBrand;
-           font-size: 6.4rem;
-        }
-
-        h3{
-            padding-block: 3rem;
-        }
-
-        .theMoonSection-buttons-container{
-            @include flexStart;
-            gap: 1rem;
-
-            .theMoonSection-button1{
-                @include b-selector(default);
-            }
-
-            .theMoonSection-button2{
-                @include b-selector(alternative);
-            }
-        }
-    
+    .svgMoonSectionSeparator{
+        fill: $darkBlue;
+        width: 100%;
+        position: absolute;
+        margin-bottom: 150rem;
     }
     
-    .theMoonSection-floatingimgs-container{
+    .theMoonSection{
         @include flexCenter;
-        width: 80%;
-        height: 100%;
+        width: 100vw;
+        height: 100rem;
         position: relative;
-
-        img{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-
-        }
-
-        .theMoonSection-star1{
-            @include ghost;
-            animation-delay: 2s;
-        }
-
-        .theMoonSection-star2{
-            @include ghost;
-            animation-delay: 3s;
-        }
-
-        .theMoonSection-star3{
-            @include ghost;
-        }
-
-        .theMoonSection-rabbit1{
-            @include noGravity;
-        }
-
+    
         
+        &-external-container{
+        @include flexSpaceBetween;
+        width: 115rem;
+        min-width: 115rem;
+        height: 58rem;
+    
+    
+        .theMoonSection-leftTitle-container{
+            padding-inline: 2rem;
+    
+    
+            h1{
+               color: $violetBrand;
+               font-size: 6.4rem;
+            }
+    
+            h3{
+                padding-block: 3rem;
+            }
+    
+            .theMoonSection-buttons-container{
+                @include flexStart;
+                gap: 1rem;
+    
+                .theMoonSection-button1{
+                    @include b-selector(default);
+                }
+    
+                .theMoonSection-button2{
+                    @include b-selector(alternative);
+                }
+            }
+        
+        }
+        
+        .theMoonSection-floatingimgs-container{
+            @include flexCenter;
+            width: 80%;
+            height: 100%;
+            position: relative;
+    
+            img{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+    
+            }
+    
+            .theMoonSection-star1{
+                @include ghost;
+                animation-delay: 2s;
+            }
+    
+            .theMoonSection-star2{
+                @include ghost;
+                animation-delay: 3s;
+            }
+    
+            .theMoonSection-star3{
+                @include ghost;
+            }
+    
+            .theMoonSection-rabbit1{
+                @include noGravity;
+            }
+    
+            
+        }
+    
+    
+    }
+    
     }
 
-
+    
 }
 
-}
+

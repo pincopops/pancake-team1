@@ -1,55 +1,73 @@
-h2{
-    font-size: 4rem;
+
+h2 {
+  font-size: 4rem;
 }
 
+#feedbackSection {
+  width: 100vw;
+  height: 100rem;
 
-.feedbackSection{
+  .external-container {
+    @include flexCenter;
+    flex-direction: column;
 
-    width: 100vw;
-    height: 100rem;
-
-    .feedbackSection-external-container{
-
-        @include flexCenter;
-        text-align: center;
-        flex-direction: column;
-
-        .feedbackSection-external-title{
-            margin: 2rem;
-        }
-
-        .feedbackSection-card-container{
-            margin: 2rem;
-            @include flexSpaceBetween;
-            gap: 3rem;
-
-            .feedbackSection-card-shadow{
-
-                height: fit-content;
-                
-                .feedbackSection-card{
-                    @include flex (column,space-between,start);
-                    height: 28.5rem;
-                    width: 28.2rem;
-                    position: relative;
-                    padding: 2.4rem;
-                    background: darkGray3 none repeat scroll 0% 0%;;
-                    border-radius: 2.4rem;
-                    color: rgb(244, 238, 255);
-    
-                    img{
-                        align-self: flex-end;
-                    }
-                    
-                    .feedbackSection-card-title{
-                        @include flex (column,center,start);
-                    }
-                }
-
-            }
-            
-        }
-
+    .icon {
+      @extend %largeMargin;
     }
+
+    .title-container {
+      margin: 2rem;
+      @include flex (column,center,center);
+
+      .title {
+        @extend %largeMargin;
+        @include flex (column,center,center);
+        color: $darkBlue;
+      }
+
+      .subTitle {
+        @extend %subTitle;
+
+        &-highlighted {
+          margin: 2rem 0rem 2.4rem 0rem;
+          @extend %subTitle-highlighted;
+        }
+      }
+    }
+
+    .card-external-container {
+      margin: 2rem;
+      @include flexSpaceBetween;
+      gap: 3rem;
+
+      .card-wrapper {
+        @extend %card-wrapper;
+
+        .card-container {
+          @extend %card-container;
+
+          .card-content {
+
+            @extend %card-content;
+
+            .card-title {
+
+              &.marginBottom{
+                @extend %mediumMargin;
+              }
+            }
+
+            .card-subTitle {
+              @extend %subTitle;
+            }
+
+            .card-image {
+                @extend %card-image
+            }
+          }
+        }
+      }
+    }
+  }
 }
 

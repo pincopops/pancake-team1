@@ -88,7 +88,7 @@ a {
 }
 
 /*OTHERS*/
-#tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-subtitle-container .subTitle, #feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-subTitle, #feedbackSection .external-container .title-container .subTitle, #feedbackSection .external-container .title-container .subTitle-highlighted {
+.tradeSection-content-title-subtitle .subTitle, #feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-subTitle, #feedbackSection .external-container .title-container .subTitle, #feedbackSection .external-container .title-container .subTitle-highlighted {
   color: #7a6eaa;
   font-weight: 400;
   line-height: 1.5;
@@ -109,7 +109,7 @@ a {
 
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
-header .container-button .button4, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, #tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-button-container .tradeSection-buttonDefault, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
+header .container-button .button4, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,13 +128,13 @@ header .container-button .button4, header .container-button .button3, .theMoonSe
   /*SET INFO STYLE*/
   /*SET CONNECT STYLE*/
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-button-container .tradeSection-buttonDefault, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
+.tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
   /*SET DEFOULT STYLE HOVER*/
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-button-container .tradeSection-buttonDefault:hover, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover {
+.tradeSection-content-title .tradeSection-button-container-default:hover, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
@@ -681,20 +681,20 @@ h2 {
   align-items: center;
   gap: 3rem;
 }
-#tradeSection {
+.tradeSection {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 62.2rem;
 }
-#tradeSection .tradeSection-external-container {
+.tradeSection-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 92rem;
   height: 43rem;
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container {
+.tradeSection-content-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -702,36 +702,37 @@ h2 {
   height: 23.2rem;
   width: 42.8rem;
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container h2 {
+.tradeSection-content-title h2 {
   font-size: 4rem;
   color: #280d5f;
   margin-bottom: 2.4rem;
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container h2 span {
+.tradeSection-content-title h2 span {
   color: #7645d9;
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-subtitle-container .subTitle {
+.tradeSection-content-title-subtitle .subTitle {
   margin-bottom: 2.4rem;
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-button-container {
+.tradeSection-content-title .tradeSection-button-container {
   display: flex;
   justify-content: start;
   align-items: center;
   width: 100%;
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-button-container .tradeSection-buttonDefault {
+.tradeSection-content-title .tradeSection-button-container-default {
   margin-right: 1.6rem;
+  width: 12.9rem;
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-button-container .tradeSection-link {
+.tradeSection-content-title .tradeSection-button-container-link {
   color: rgb(31, 199, 212);
   font-weight: 600;
   line-height: 1.5;
   font-size: 16px;
 }
-#tradeSection .tradeSection-external-container .tradeSection-title-container .tradeSection-button-container .tradeSection-link:hover {
+.tradeSection-content-title .tradeSection-button-container-link:hover {
   text-decoration: underline;
 }
-#tradeSection .tradeSection-external-container .tradeSection-images-container {
+.tradeSection-content-images {
   display: flex;
   flex-direction: unset;
   justify-content: end;
@@ -742,7 +743,7 @@ h2 {
   width: fit-content;
   height: 42.8rem;
 }
-#tradeSection .tradeSection-external-container .tradeSection-images-container img {
+.tradeSection-content-images img {
   -webkit-animation: bouncing 3s ease-in-out 0.66s infinite normal none running;
           animation: bouncing 3s ease-in-out 0.66s infinite normal none running;
   position: absolute;
@@ -771,11 +772,11 @@ h2 {
     transform: translate(0px);
   }
 }
-#tradeSection .tradeSection-external-container .tradeSection-images-container .img1 {
+.tradeSection-content-images .img1 {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
-#tradeSection .tradeSection-external-container .tradeSection-images-container .img2 {
+.tradeSection-content-images .img2 {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }/*# sourceMappingURL=style.css.map */

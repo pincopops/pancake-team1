@@ -500,24 +500,24 @@ header .container-button {
 .theMoonSection-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   position: relative;
   height: 100rem;
+  background-color: #eef5ff;
 }
 .theMoonSection-wrapper .svgMoonSectionSeparator {
-  fill: #280d5f;
   width: 100%;
   position: absolute;
-  margin-bottom: 150rem;
+  z-index: 0;
 }
 .theMoonSection-wrapper .theMoonSection {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100rem;
+  height: 83rem;
   position: relative;
+  width: 100%;
 }
 .theMoonSection-wrapper .theMoonSection-external-container {
   display: flex;
@@ -526,6 +526,7 @@ header .container-button {
   width: 115rem;
   min-width: 115rem;
   height: 58rem;
+  z-index: 1;
 }
 .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container {
   padding-inline: 2rem;
@@ -648,7 +649,6 @@ h2 {
 }
 
 #feedbackSection {
-  width: 100vw;
   height: 79.3rem;
 }
 #feedbackSection .external-container {
@@ -685,7 +685,6 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   height: 62.2rem;
 }
 #tradeSection .tradeSection-external-container {

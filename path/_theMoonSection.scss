@@ -1,20 +1,20 @@
 .theMoonSection-wrapper{
-    @include flex(column, center, center);
+    @include flex(column, end, center);
     position: relative;
     height: 100rem;
+    background-color: #eef5ff;
 
     .svgMoonSectionSeparator{
-        fill: $darkBlue;
         width: 100%;
         position: absolute;
-        margin-bottom: 150rem;
+        z-index: 0;
     }
     
     .theMoonSection{
         @include flexCenter;
-        width: 100vw;
-        height: 100rem;
+        height: 83rem;
         position: relative;
+        width: 100%;
     
         
         &-external-container{
@@ -22,6 +22,7 @@
         width: 115rem;
         min-width: 115rem;
         height: 58rem;
+        z-index: 1;
     
     
         .theMoonSection-leftTitle-container{

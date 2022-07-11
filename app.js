@@ -36,6 +36,7 @@ const colorsArr = [
 ];
 
 const unitColor = document.querySelectorAll(".wrapper-colors-unit");
+
 unitColor.forEach((item, i) => {
   const itemPalette = item.querySelector(".wrapper-colors-unit-palette");
   itemPalette.style.backgroundColor = colorsArr[i].hex;
@@ -45,12 +46,19 @@ unitColor.forEach((item, i) => {
     <p>${colorsArr[i].hex}</p>`;
 });
 
+const colorsWrapperEl = document.querySelector(".colors-container");
+const colorsTitle = document.createElement("h1");
+colorsTitle.innerText = "Colors";
+colorsWrapperEl.insertBefore(colorsTitle, colorsWrapperEl.firstChild);
 
 /**
  * ?Icons
  */
 
  const wrapperIcons = document.querySelector(".wrapper-icons");
+     const iconsTitle = document.createElement("h1");
+     iconsTitle.innerText = "Icons";
+     wrapperIcons.insertBefore(iconsTitle, wrapperIcons.firstChild);
 
 
 
@@ -202,6 +210,14 @@ class Icon {
 
      const typographyEl = document.querySelector(".wrapper-typography");
 
+     typographyEl.innerHTML = `<h1>Typography</h1>`;
+
+     const unitWrapper = document.createElement("div");
+     unitWrapper.classList.add("wrapper-typography-unitContainer");
+     typographyEl.appendChild(unitWrapper);
+
+
+
      class Typography {
 
           fontWeight = "";
@@ -212,9 +228,8 @@ class Icon {
                this.lineHeight = lineHeight;
                this.letterSpacing = letterSpacing;
           }
-          get fontWeight() {
-               return this.fontWeight;
-          }
+
+
           set fontWeight(value) {
                this.fontWeight = value;
           }
@@ -240,7 +255,7 @@ class Icon {
           const itemTypography = document.createElement("div");
           itemTypography.classList.add("wrapper-typography-unit");
           itemTypography.innerHTML = `<${item.name} class="${typographyArr[i].name}">${typographyArr[i].name}</${item.name}>`;
-          typographyEl.appendChild(itemTypography);
+          unitWrapper.appendChild(itemTypography);
           const itemTypographyFontSize = document.createElement("div");
           itemTypographyFontSize.classList.add("wrapper-typography-unit-fontSize");
           itemTypographyFontSize.innerHTML = `<span>fontSize:</span> <span> ${typographyArr[i].fontSize}</span>`;
@@ -260,6 +275,11 @@ class Icon {
                itemTypography.appendChild(itemTypographyFontWeight);
           }
      })
+
+     /**
+      * !COLORS
+      */
+
 
 
 

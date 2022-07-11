@@ -7,17 +7,13 @@
     grid-template: 'typography colors icons';
 
 &-typography{
-    display: flex;
-    flex-wrap: wrap;
+    @include flex(column,start,start);
     width: 50rem;
     gap: 2rem;
     height: min-content;
-    justify-content: flex-start;
-    align-items: flex-end;
 
-    &-unit{
-        @include flexCenter;
-        flex-direction: column;
+    &-unitContainer{
+        @include flexStart;
         width: fit-content;
         height: fit-content;
         gap: .5rem;
@@ -26,36 +22,42 @@
     }
 }
 
-&-colors{
-    grid-area: colors;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-gap: .2rem;
-    height: fit-content;
-    width: 50rem;
+.colors-container{
 
-    &-unit{
-        @include flexSpaceBetween;
-        padding: .1rem;
-        width: 100%;
-        height: 100%;
+    @include flex(column,start,start);
 
-        &-palette{
-            width: 4rem;
-            height: 4rem;
-        }
-
-        &-info{
-            width: fit-content;
+    .wrapper-colors{
+        grid-area: colors;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: .2rem;
+        height: fit-content;
+        width: 50rem;
+    
+        &-unit{
+            @include flexSpaceBetween;
+            padding: .1rem;
+            width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            font-size: 1.2rem;
+    
+            &-palette{
+                width: 4rem;
+                height: 4rem;
+            }
+    
+            &-info{
+                width: fit-content;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                font-size: 1.2rem;
+            }
         }
     }
 }
+
 
 &-icons{
     grid-area: icons;
@@ -66,6 +68,10 @@
     align-items: center;
     height: fit-content;
     width: 50rem;
+
+    h1{
+        width: 100%;
+    }
 
         &-unit{
             width: fit-content;

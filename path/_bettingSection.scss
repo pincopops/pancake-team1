@@ -71,7 +71,7 @@
         .cardButton {
             button {
                 @include b-selector(defoult);
-                color: $whiteBrand!important;
+                color: $whiteBrand;
                 font-weight: 600;
                 line-height: 1.5;
                 font-size: 16px;
@@ -81,6 +81,11 @@
             a{
                 @include flex(row, center, normal);
             }
+
+            .svg .fill-white{
+                fill:white;
+            }
+
 
         }
     }
@@ -93,3 +98,16 @@
         }
     }
 }
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    -webkit-mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+    mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: white;
+  }
+  
+

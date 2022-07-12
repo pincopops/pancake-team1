@@ -416,7 +416,7 @@ header .container-button {
 }
 /* SWITCH*/
 #bettingSection {
-  background: linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%);
+  background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -482,7 +482,7 @@ header .container-button {
   font-size: 16px;
 }
 .bettingSectionDoubleCard .bettingSectionFirstCard .cardButton button {
-  color: #191326;
+  color: #ffffff;
   font-weight: 600;
   line-height: 1.5;
   font-size: 16px;
@@ -493,9 +493,23 @@ header .container-button {
   justify-content: center;
   align-items: normal;
 }
+.bettingSectionDoubleCard .bettingSectionFirstCard .cardButton .svg .fill-white {
+  fill: white;
+}
 .bettingSectionDoubleCard .bettingSectionSecondCard {
   background: #3c1786;
 }
 .bettingSectionDoubleCard .bettingSectionSecondCard .secondCardRotate {
   transform: rotate(2.36deg);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  -webkit-mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */

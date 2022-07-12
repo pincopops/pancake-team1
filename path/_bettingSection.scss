@@ -12,7 +12,17 @@
     border: 1px solid $darkGray3;
 
     h2 {
-        color: $whiteBrand;
+        &.first-child{
+            color: $whiteBrand; 
+        }
+       
+
+        &.last-child{
+
+            background: linear-gradient(#ffd800 0%, #fdab32 100%);            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;    
+        }
     }
 
     span {
@@ -31,40 +41,51 @@
 
 .bettingSectionDoubleCard {
     @include flexCenter;
+    max-width: 300px;
 
 
 
     .bettingSectionCardWrapper {
         @extend %card-wrapper;
+        
+
 
         &.first-child {
             transform: rotate(-2.36deg);
-            background-color: blue;
+            background-color: $ocra;
+
+        
 
             .CardContainer {
 
                 background: linear-gradient($ocra 0%, $ocra2 51.17%, $ocra3 100%);
-                
-            
+
             }
         }
 
         &.last-child {
             transform: rotate(1.43deg);
-            background-color: black;
+            background-color: $darkBlue2;
+            display: flex;
+            flex: 1 1 0%;
+        
 
-        }
 
+            
         .CardContainer {
-            background-color: #6fb6f1;
+            background: linear-gradient($violetBrand 0%, $violetBrand3 100%);
 
         }
+
+        }
+
 
         .CardContainer {
             @extend %card-wrapper-container;
 
             .CardContent {
                 @extend %card-wrapper-container-content;
+                min-height: 30rem;
             }
         }
 
@@ -80,6 +101,11 @@
                 font-weight: 600;
                 line-height: 1.5;
                 font-size: 16px;
+
+
+
+
+
             }
 
             span {
@@ -92,6 +118,11 @@
         }
 
         .cardButton {
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
             button {
                 @include b-selector(defoult);
                 color: $whiteBrand;

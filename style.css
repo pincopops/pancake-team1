@@ -492,8 +492,14 @@ header .container-button {
   border-radius: 72px;
   border: 1px solid #383241;
 }
-.bettingSectionContainer h2 {
+.bettingSectionContainer h2.first-child {
   color: #ffffff;
+}
+.bettingSectionContainer h2.last-child {
+  background: linear-gradient(#ffd800 0%, #fdab32 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .bettingSectionContainer span {
   color: #7645d9;
@@ -509,20 +515,26 @@ header .container-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 300px;
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper.first-child {
   transform: rotate(-2.36deg);
-  background-color: blue;
+  background-color: #ffb237;
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper.first-child .CardContainer {
   background: linear-gradient(#ffb237 0%, #ffcd51 51.17%, #ffe76a 100%);
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper.last-child {
   transform: rotate(1.43deg);
-  background-color: black;
+  background-color: #3c1786;
+  display: flex;
+  flex: 1 1 0%;
 }
-.bettingSectionDoubleCard .bettingSectionCardWrapper .CardContainer {
-  background-color: #6fb6f1;
+.bettingSectionDoubleCard .bettingSectionCardWrapper.last-child .CardContainer {
+  background: linear-gradient(#7645d9 0%, #5121b1 100%);
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardContainer .CardContent {
+  min-height: 30rem;
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper .CardP p {
   color: #280d5f;
@@ -535,6 +547,11 @@ header .container-button {
   line-height: 1.5;
   margin-bottom: 40px;
   font-size: 16px;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button {
   color: #ffffff;

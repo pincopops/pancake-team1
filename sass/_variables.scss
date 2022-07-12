@@ -36,3 +36,12 @@ $greenBrand : #29910d;
 $trasparency : #00000000; 
 $hoverEffect : #08060b00;
 
+$bgCardContainer : $whiteBrand none repeat scroll 0% 0%;
+$bgCardWrapper : #e7e3eb none repeat scroll 0% 0%;
+
+
+body.dark, body[data-theme="dark"] {
+
+    $bgCardContainer : $darkGray none repeat scroll 0% 0%;
+    $bgCardWrapper : $darkGray3 none repeat scroll 0% 0%;
+}

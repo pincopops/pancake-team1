@@ -15,9 +15,11 @@ $gray : #999999;
 $lightGray : #cccccc;
 $borderGray : #565065;
 
-$violetBrand : #9a6aff;
+$violetBrand : #7645d9;
+$violetBrand2 : #9a6aff;
 $lightViolet : #f4eeff;
 $lightViolet2 : #b8add2;
+$subTitleViolet : #7a6eaa;
 
 $blueBrand : #1155cc;
 $darkBlue : #280d5f;
@@ -35,6 +37,23 @@ $greenBrand : #29910d;
 
 $trasparency : #00000000; 
 $hoverEffect : #08060b00;
+
+
+.tiffanyBrand {
+    color: $tiffanyBrand;
+    fill: $tiffanyBrand;
+}
+
+.pinkBrand {
+    color: $pinkBrand;
+    fill: $pinkBrand;
+}
+
+.violetBrand {
+    color : $violetBrand;
+    fill : $violetBrand;
+}
+
 
 $bgCardContainer : $whiteBrand none repeat scroll 0% 0%;
 $bgCardWrapper : #e7e3eb none repeat scroll 0% 0%;

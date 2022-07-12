@@ -13,22 +13,40 @@ html {
 
 /* VARIABLES */
 /* COLORS */
+.tiffanyBrand {
+  color: #1fc7d4;
+  fill: #1fc7d4;
+}
+
+.pinkBrand {
+  color: #ed4b9e;
+  fill: #ed4b9e;
+}
+
+.violetBrand {
+  color: #7645d9;
+  fill: #7645d9;
+}
+
 /* MIXIN */
 /* FLEX MIXINS*/
-/*animotions*/
+/*animations*/
+/*day theme*/
 /* FONT */
 /*DESiGN SYSTEM*/
 /* Font style*/
 h1 {
   font-size: 48px;
-  line-height: 52.8px;
+  font-weight: 600;
+  line-height: 1.1;
   letter-spacing: normal;
 }
 
 h2 {
   font-size: 32px;
-  line-height: 35.2px;
+  line-height: 1.1;
   letter-spacing: normal;
+  font-weight: 600;
 }
 
 h3 {
@@ -65,6 +83,8 @@ a {
   color: inherit;
 }
 
+/*OTHERS*/
+/*MARGINS*/
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
 header .container-button .button4, header .container-button .button3, header .container-button .button2, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button, header .container-button .button1 {
@@ -80,6 +100,7 @@ header .container-button .button4, header .container-button .button3, header .co
   text-align: center;
   letter-spacing: 0.48px;
   padding-inline: 2frem;
+  cursor: pointer;
   /*SET DEFOULT STYLE*/
   /*SET ALT STYLE*/
   /*SET INFO STYLE*/
@@ -475,7 +496,7 @@ header .container-button {
   color: #ffffff;
 }
 .bettingSectionContainer span {
-  color: #9a6aff;
+  color: #7645d9;
 }
 .bettingSectionContainer p {
   font-weight: 400;

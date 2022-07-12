@@ -32,26 +32,24 @@
 .bettingSectionDoubleCard {
     @include flexCenter;
 
-    .bettingSectionFirstCard {
-        display: flex;
-        flex: 1 1 0%;
-
-        .firstCardRotate,
-        .firstCardImg {
-            transform: rotate(-2.36deg);
-        }
-
-        .firstCardContent {
+    .bettingSectionCardWrapper {
+        @extend %card-wrapper;
+        transform: rotate(-2.36deg);
+  
+        .CardContainer {
+            @extend %card-wrapper-container;
             background: linear-gradient($ocra 0%, $ocra2 51.17%, $ocra3 100%);
-            padding: 24px;
-            border-radius: 27px;
+            
+            .CardContent{
+              @extend  %card-wrapper-container-content;
+            }
         }
 
-        .firstCardImg {
-            @include flex(row, flex-end, normal);
+        .CardImg {
+            @extend %card-wrapper-container-content-image;
         }
 
-        .firstCardP {
+        .CardP {
             p {
                 color: $darkBlue;
                 font-weight: 600;
@@ -80,10 +78,6 @@
 
             a{
                 @include flex(row, center, normal);
-            }
-
-            .svg .fill-white{
-                fill:white;
             }
 
 

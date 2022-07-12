@@ -510,11 +510,19 @@ header .container-button {
   justify-content: center;
   align-items: center;
 }
-.bettingSectionDoubleCard .bettingSectionCardWrapper {
+.bettingSectionDoubleCard .bettingSectionCardWrapper.first-child {
   transform: rotate(-2.36deg);
+  background-color: blue;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper.first-child .CardContainer {
+  background: linear-gradient(#ffb237 0%, #ffcd51 51.17%, #ffe76a 100%);
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper.last-child {
+  transform: rotate(1.43deg);
+  background-color: black;
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper .CardContainer {
-  background: linear-gradient(#ffb237 0%, #ffcd51 51.17%, #ffe76a 100%);
+  background-color: #6fb6f1;
 }
 .bettingSectionDoubleCard .bettingSectionCardWrapper .CardP p {
   color: #280d5f;
@@ -548,12 +556,27 @@ header .container-button {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
   display: inline-block;
-  -webkit-mask: url("assets/asset 46.svg") no-repeat 50% 50%;
-  mask: url("assets/asset 46.svg") no-repeat 50% 50%;
   -webkit-mask-size: cover;
   mask-size: cover;
   background-color: white;
+}
+.icon.arrow-right {
+  -webkit-mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+  width: 20px;
+  height: 20px;
+}
+.icon.ticket {
+  -webkit-mask: url("assets/asset 57.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 57.svg") no-repeat 50% 50%;
+  width: 50px;
+  height: 50px;
+}
+.icon.magic-sphere {
+  -webkit-mask: url("assets/asset 55.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 55.svg") no-repeat 50% 50%;
+  width: 50px;
+  height: 50px;
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */

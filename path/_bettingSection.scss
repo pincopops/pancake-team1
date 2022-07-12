@@ -1,5 +1,5 @@
 #bettingSection {
-    background: linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%);
+    background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);
     @include flexCenter;
 }
 
@@ -71,7 +71,7 @@
         .cardButton {
             button {
                 @include b-selector(defoult);
-                color: $blackBrand;
+                color: $whiteBrand!important;
                 font-weight: 600;
                 line-height: 1.5;
                 font-size: 16px;

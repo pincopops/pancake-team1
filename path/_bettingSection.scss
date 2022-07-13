@@ -1,19 +1,43 @@
 #bettingSection {
     background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);
     @include flexCenter;
+    padding: 48px 0px;
 }
 
 .bettingSectionContainer {
     @include flexCenter;
-    background-color: $darkBlackTransp;
+    background-color: $ligthTransp;
     flex-direction: column;
     width: 50%;
     border-radius: 72px;
-    border: 1px solid $darkGray3;
+    border: 1px solid #e7e3eb;
+    padding: 40px;
+
+
+
+    h2{
+        color:$violetBrand1;
+    }
+
+    span{
+        color: $violetBrand;
+    }
+
+    p{
+        color: $subTitleViolet;
+    }
+}
+
+.bettingSectionContainerDescription{
+    p{
+        text-align: center;
+    }
+}
 
     h2 {
+        font-size: 40px;
         &.first-child{
-            color: $whiteBrand; 
+            color: $darkBlue; 
         }
        
 
@@ -26,34 +50,45 @@
     }
 
     span {
-        color: $violetBrand;
+        color: $darkBlue;
     }
 
     p {
         font-weight: 400;
         line-height: 1.5;
         font-size: 16px;
+        &.first-child{
+
         color: $lightViolet2;
+        }
+
+        &.last-child{
+        color:$whiteBrand;
+        }
+
     }
 
 
-}
+
 
 .bettingSectionDoubleCard {
     @include flexCenter;
-    max-width: 300px;
+    
 
 
 
     .bettingSectionCardWrapper {
         @extend %card-wrapper;
         
+        max-width: 275px;
 
 
         &.first-child {
             transform: rotate(-2.36deg);
             background-color: $ocra;
-
+            display: flex;
+            flex: 1 1 0%;
+            margin-right: 24px;
         
 
             .CardContainer {
@@ -85,7 +120,7 @@
 
             .CardContent {
                 @extend %card-wrapper-container-content;
-                min-height: 30rem;
+                
             }
         }
 
@@ -97,10 +132,17 @@
 
         .CardP {
             p {
-                color: $darkBlue;
                 font-weight: 600;
                 line-height: 1.5;
                 font-size: 16px;
+                margin-bottom: 40px;
+                &.first-child{
+                    color: $darkBlue;
+                }
+                &.last-child{
+                    color: $whiteBrand;
+                }
+                
 
 
 
@@ -111,24 +153,28 @@
             span {
                 font-weight: 400;
                 line-height: 1.5;
-                margin-bottom: 40px;
                 font-size: 16px;
+
+                &.first-child{
+                    color: $darkBlue;
+                }
+
+                &.last-child{
+                    color: $whiteBrand;
+                }
             }
 
         }
 
         .cardButton {
-            display: flex;
-            -webkit-box-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            justify-content: center;
+            margin-top: 40px;
             button {
                 @include b-selector(defoult);
                 color: $whiteBrand;
                 font-weight: 600;
                 line-height: 1.5;
                 font-size: 16px;
+                width: 100%;
 
             }
 

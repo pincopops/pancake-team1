@@ -277,8 +277,57 @@ class Icon {
      })
 
      /**
-      * !COLORS
+      * ?BUTTONS
       */
+
+     class Button {
+
+          properties = {
+               width : "120/170px",
+               height : "48px",
+               padding : "0px 24px",
+               boxShadow : "rgba(14,44,4,0.4) 0px -1px 0px 0px inset",
+               borderRadius : "16px"
+          }
+
+          typeface = {
+               fontFamily : "kanit,sans-serif",
+               fontSize : "16px",
+               lineHeight : "16px",
+               textAlign : "center",
+               letterSpacing : "0.48px",
+               color : this.fontColor
+          }
+
+          colors = {
+               border : this.border,
+               borderColor : this.borderColor,
+               background : this.backgroundColor,
+               effect : "HOVER",
+               effectBackground : this.effectBackground,
+               effectOpacity : this.effectOpacity,
+          }
+
+          constructor(name, fontColor, backgroundColor, border, borderColor, effectBackground, effectOpacity){
+               this.name = name
+               this.typeface.color = fontColor
+               this.colors.background = backgroundColor
+               this.colors.border = border
+               this.colors.borderColor = borderColor
+               this.colors.effectBackground = effectBackground
+               this.colors.effectOpacity = effectOpacity
+          }
+     }
+
+     const buttonDefault = new Button ('deafult','#ffffff','#1fc7d4','0px','#ffffff', '#1fc7d4','65%')
+     const buttonAlternative = new Button ('alternative','#1fc7d4','#08060b00', '2px solid', '#1fc7d4', '#08060b', '65%')
+     const infoButton = new Button ('info', '#1fc7d4', '#08060b00', '0px', '#1fc7d4', '#08060b', '65%')
+     infoButton.properties.width = "41px"
+     infoButton.typeface.lineHeight = "24px"
+
+     console.log(buttonDefault);
+
+     const buttonContainer = document.createElement('div')
 
 
 

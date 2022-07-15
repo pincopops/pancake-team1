@@ -1,110 +1,139 @@
-.wrapper{
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 2rem;
+	grid-template: "typography colors icons";
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
-    grid-template: 'typography colors icons';
+	&-typography {
+		@include flex(column, start, start);
+		width: 50rem;
+		gap: 2rem;
+		height: min-content;
 
-&-typography{
-    @include flex(column,start,start);
-    width: 50rem;
-    gap: 2rem;
-    height: min-content;
+		&-unitContainer {
+			@include flexStart;
+			width: fit-content;
+			height: fit-content;
+			gap: 0.5rem;
+			align-items: flex-end;
+			font-size: 1.2rem;
+		}
+	}
 
-    &-unitContainer{
-        @include flexStart;
-        width: fit-content;
-        height: fit-content;
-        gap: .5rem;
-        align-items: flex-end;
-        font-size: 1.2rem;
-    }
-}
+	.colors-container {
+		@include flex(column, start, start);
 
-.colors-container{
+		.wrapper-colors {
+			grid-area: colors;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+			grid-gap: 0.2rem;
+			height: fit-content;
+			width: 50rem;
 
-    @include flex(column,start,start);
+			&-unit {
+				@include flexSpaceBetween;
+				padding: 0.1rem;
+				width: 100%;
+				height: 100%;
 
-    .wrapper-colors{
-        grid-area: colors;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        grid-gap: .2rem;
-        height: fit-content;
-        width: 50rem;
-    
-        &-unit{
-            @include flexSpaceBetween;
-            padding: .1rem;
-            width: 100%;
-            height: 100%;
-    
-            &-palette{
-                width: 4rem;
-                height: 4rem;
-            }
-    
-            &-info{
-                width: fit-content;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-end;
-                font-size: 1.2rem;
-            }
-        }
-    }
-}
+				&-palette {
+					width: 4rem;
+					height: 4rem;
+				}
 
+				&-info {
+					width: fit-content;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-end;
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
 
-&-icons{
-    grid-area: icons;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    height: fit-content;
-    width: 50rem;
+	&-icons {
+		grid-area: icons;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		height: fit-content;
+		width: 50rem;
 
-    h1{
-        width: 100%;
-    }
+		h1 {
+			width: 100%;
+		}
 
-        &-unit{
-            width: fit-content;
-            height: 3rem;
+		&-unit {
+			width: fit-content;
+			height: 3rem;
 
-            img{
-                height: 100%;
-                width: 100%;
-            }
-        }
-}
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
 
-&-form-tab{
+	&-form-tab {
+	}
 
-}
+	&-button {
+		width: fit-content;
 
-&-button{
+		&-container {
+			@include flex(row, space-between, top);
+			width: fit-content;
+			gap: 20px;
 
-}
+			&-content {
+				@include flex(column, space-between, top);
 
-&-horizontal-tab{
+                &-wrapper{
 
-}
+                    @include flex(row, space-between, top);
 
-&-vertical-tab{
+                    gap: 2rem;
+                   .button-default-actived {
+					@include b-selector(default);
+				}
 
-}
+				.button-alternative-actived {
+					@include b-selector(alternative);
+				}
+				.button-info-actived {
+					@include b-selector(info);
+				}
 
-&-vertical-menu{
+				.button-connect-actived {
+					@include b-selector(connect);
+				}
 
-}
+                .wrapper-button-container-content-paragraph{
+                    padding : 1rem;
+                } 
+                }
 
-&-card{
+				
+			}
+		}
+	}
 
-}
+	&-horizontal-tab {
+	}
+
+	&-vertical-tab {
+	}
+
+	&-vertical-menu {
+	}
+
+	&-card {
+	}
 }

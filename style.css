@@ -84,10 +84,16 @@ a {
 }
 
 /*OTHERS*/
+.earnSection-content-title-subtitle .subTitle {
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
 /*MARGINS*/
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
-header .container-button .button4, header .container-button .button3, header .container-button .button2, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button, header .container-button .button1 {
+header .container-button .button4, header .container-button .button3, header .container-button .button2, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button, .earnSection-content-title .earnSection-button-container-default, header .container-button .button1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,13 +112,13 @@ header .container-button .button4, header .container-button .button3, header .co
   /*SET INFO STYLE*/
   /*SET CONNECT STYLE*/
 }
-.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button, header .container-button .button1 {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button, .earnSection-content-title .earnSection-button-container-default, header .container-button .button1 {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
   /*SET DEFOULT STYLE HOVER*/
 }
-.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button:hover, header .container-button .button1:hover {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button:hover, .earnSection-content-title .earnSection-button-container-default:hover, header .container-button .button1:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
@@ -475,46 +481,75 @@ header .container-button {
   background-color: rgba(0, 0, 0, 0.589);
 }
 /* SWITCH*/
-.earnSectionContainer {
+.earnSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 62.2rem;
+}
+.earnSection-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92rem;
+  height: 43rem;
+}
+.earnSection-content-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 23.2rem;
+  width: 42.8rem;
+}
+.earnSection-content-title h2 {
+  font-size: 4rem;
+  color: #280d5f;
+  margin-bottom: 2.4rem;
+}
+.earnSection-content-title h2 span {
+  color: #7645d9;
+}
+.earnSection-content-title-subtitle .subTitle {
+  margin-bottom: 2.4rem;
+}
+.earnSection-content-title .earnSection-button-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.earnSection-content-title .earnSection-button-container-default {
+  margin-right: 1.6rem;
+  width: 12.9rem;
+}
+.earnSection-content-title .earnSection-button-container-link {
+  color: rgb(31, 199, 212);
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.earnSection-content-title .earnSection-button-container-link:hover {
+  text-decoration: underline;
+}
+.earnSection-content-images {
+  display: flex;
+  flex-direction: unset;
+  justify-content: end;
+  align-items: center;
   position: relative;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-  padding: 48px 0px;
-  background: rgba(0, 0, 0, 0) linear-gradient(111.68deg, rgb(242, 236, 242) 0%, rgb(232, 242, 246) 100%) repeat scroll 0% 0%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 42.8rem;
 }
-.earnSectionContainer .flex {
-  display: flex;
+.earnSection-content-images .img1 {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
-.earnSectionContainer .divider {
-  z-index: -1;
-  overflow: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  right: 0px;
-  top: 0px;
-}
-.earnSectionContainer .inner-divider {
-  position: absolute;
-  display: flex;
-  width: 100%;
-  top: 0px;
-}
-
-.earnSectionContent {
-  display: flex;
-  flex-direction: column;
-}
-.earnSectionContent .earnSectionContentInner {
-  align-items: center;
-  flex-direction: row-reverse;
-}
-.earnSectionContent .earnSectionContentInnerFlex {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 0%;
-  align-self: flex-start;
+.earnSection-content-images .img2 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 #bettingSection {

@@ -543,6 +543,35 @@ header .container-button {
   width: fit-content;
   height: 42.8rem;
 }
+.earnSection-content-images img {
+  -webkit-animation: bouncing 3s ease-in-out 0.66s infinite normal none running;
+          animation: bouncing 3s ease-in-out 0.66s infinite normal none running;
+  position: absolute;
+  height: 42.8rem;
+  width: 42.8rem;
+}
+@-webkit-keyframes bouncing {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes bouncing {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(5px, 10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
 .earnSection-content-images .img1 {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;

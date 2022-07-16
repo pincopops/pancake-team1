@@ -101,12 +101,12 @@
          width: fit-content;
          height: 42.8rem;
 
-            // img{
-            // @include bouncing;
-            // position: absolute;
-            // height: 42.8rem;
-            // width: 42.8rem;
-            // }
+            img{
+            @include bouncing;
+            position: absolute;
+            height: 42.8rem;
+            width: 42.8rem;
+            }
 
             .img1{
                 animation-delay: 1.5s;

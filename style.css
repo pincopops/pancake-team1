@@ -510,6 +510,12 @@ header .container-button {
   align-items: center;
   flex-direction: row-reverse;
 }
+.earnSectionContent .earnSectionContentInnerFlex {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  align-self: flex-start;
+}
 
 #bettingSection {
   background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);

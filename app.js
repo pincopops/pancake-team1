@@ -407,7 +407,7 @@ const buttonMaker = (button) => {
 	 buttonPreviewActived.classList.add(`button-${button.name}-actived`)
 	 buttonPreviewActived.innerHTML = `<span>${button.name}</span>`
 	 buttonPreviewContainer.appendChild(buttonPreviewActived)
-	//console.log(Object.entries(button.properties))
+
 
 	Object.entries(button.properties).forEach((el) => {
 		const elWrapper = document.createElement("div");

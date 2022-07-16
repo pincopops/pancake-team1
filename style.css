@@ -475,6 +475,42 @@ header .container-button {
   background-color: rgba(0, 0, 0, 0.589);
 }
 /* SWITCH*/
+.earnSectionContainer {
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  padding: 48px 0px;
+  background: rgba(0, 0, 0, 0) linear-gradient(111.68deg, rgb(242, 236, 242) 0%, rgb(232, 242, 246) 100%) repeat scroll 0% 0%;
+}
+.earnSectionContainer .flex {
+  display: flex;
+}
+.earnSectionContainer .divider {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0px;
+  top: 0px;
+}
+.earnSectionContainer .inner-divider {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 0px;
+}
+
+.earnSectionContent {
+  display: flex;
+  flex-direction: column;
+}
+.earnSectionContent .earnSectionContentInner {
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
 #bettingSection {
   background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);
   display: flex;
@@ -631,6 +667,13 @@ p.last-child {
 .icon.magic-sphere {
   -webkit-mask: url("assets/asset 55.svg") no-repeat 50% 50%;
   mask: url("assets/asset 55.svg") no-repeat 50% 50%;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+.icon.left-divider {
+  -webkit-mask: url("assets/asset 53.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 53.svg") no-repeat 50% 50%;
   width: 50px;
   height: 50px;
   background-color: black;

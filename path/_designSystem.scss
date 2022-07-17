@@ -1,15 +1,26 @@
+body{
+	@include flexCenter;
+}
+
 .wrapper {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	gap: 2rem;
-	grid-template: "typography colors icons";
+	// display: grid;
+	// grid-template-columns: 1fr 1fr;
+	// grid-template-rows: 1fr 1fr;
+	// gap: 2rem;
+	// grid-template: "typography colors icons";
+	// max-width: 80rem;
+	@include flexCenter;
+	flex-direction: column;
+	gap: 4rem;
+	background-color: aqua;
+	width: 80rem;
 
 	&-typography {
 		@include flex(column, start, start);
 		width: 50rem;
 		gap: 2rem;
 		height: min-content;
+		padding: 2rem;
 
 		&-unitContainer {
 			@include flexStart;
@@ -23,6 +34,7 @@
 
 	.colors-container {
 		@include flex(column, start, start);
+		padding: 2rem;
 
 		.wrapper-colors {
 			grid-area: colors;
@@ -58,13 +70,11 @@
 
 	&-icons {
 		grid-area: icons;
-		display: flex;
-		flex-direction: row;
+		@include flex(row, space-around, center);
 		flex-wrap: wrap;
-		justify-content: space-around;
-		align-items: center;
 		height: fit-content;
 		width: 50rem;
+
 
 
 		h1 {
@@ -73,12 +83,13 @@
 
 		&-unit {
 			width: fit-content;
-			height: 3rem;
+			height: 4rem;
 			position: relative;
 
 			img {
 				height: 100%;
 				width: 100%;
+				padding: .5rem;
 
 				&:hover {
 					cursor: pointer;

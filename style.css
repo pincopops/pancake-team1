@@ -436,12 +436,20 @@ header .container-button {
   background-color: rgba(0, 0, 0, 0.589);
 }
 /* SWITCH*/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 2rem;
-  grid-template: "typography colors icons";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  background-color: aqua;
+  width: 80rem;
 }
 .wrapper-typography {
   display: flex;
@@ -453,6 +461,7 @@ header .container-button {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+  padding: 2rem;
 }
 .wrapper-typography-unitContainer {
   display: flex;
@@ -473,6 +482,7 @@ header .container-button {
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  padding: 2rem;
 }
 .wrapper .colors-container .wrapper-colors {
   grid-area: colors;
@@ -511,9 +521,9 @@ header .container-button {
   grid-area: icons;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -526,12 +536,13 @@ header .container-button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 3rem;
+  height: 4rem;
   position: relative;
 }
 .wrapper-icons-unit img {
   height: 100%;
   width: 100%;
+  padding: 0.5rem;
 }
 .wrapper-icons-unit img:hover {
   cursor: pointer;

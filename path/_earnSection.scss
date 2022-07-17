@@ -38,6 +38,8 @@
 
     &-content{
         @include flexSpaceBetween;
+        flex-direction: row-reverse;
+        justify-content: normal;
         width: 92rem;
         height: 43rem;
         

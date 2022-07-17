@@ -37,7 +37,7 @@
   <main>
     <section id="theMoonSection"></section>
     <section id="feedbackSection"></section>
-     <section id="earnSection">
+    <section class="earnSection">
       <div class="earnSection-content">
         <div class="earnSection-content-title">
           <h2><span>Earn</span> passive income with crypto.</h2>
@@ -50,13 +50,55 @@
           </div>
         </div>
         <div class="earnSection-content-images">
-          <img class="img1" src="assets/asset 12.png" alt="">
-          <img src="assets/asset 13.png" alt="">
-          <img class="img2" src="assets/asset 14.png" alt="">
+          <img class="img1" src="assets/asset 15.png" alt="">
+          <img src="assets/asset 16.png" alt="">
+          <img class="img2" src="assets/asset 17.png" alt="">
         </div>
 
 
+
       </div>
+
+      <div class='poster' data-id="1">
+        <input type='hidden' value='1'>
+        Some text1
+        </div>
+        
+        <div class='poster'  data-id="2">
+        <input type='hidden' value='2' >
+        Some text2
+        </div>
+        
+        <div class='poster'  data-id="3">
+        <input type='hidden' value='3'>
+        Some text3
+        </div>
+        
+        <div class='poster'  data-id="">
+        <input type='hidden' value='4'>
+        Some text4
+        </div>
+
+      <script>
+        function refresh(){
+    $('.poster').each(function(){
+        var post_id = this.dataset.id; // $("#post_id", this).val();
+        var self = _this;
+        setInterval(function(){
+ $('input:hidden').each(function() {
+ var post_id = $(this).attr('id');
+ refresh_post(post_id)
+});
+}, 5000);
+    });
+}
+      </script>
+
+
+
+
+
+
     </section>
     <section id="bettingSection">
       <div class="bettingSectionContainer">
@@ -76,7 +118,7 @@
                 </div>
                 <div class="CardP">
                   <p class="first-child">Prediction</p>
-                  <h2 class ="first-child">$130 billion</h2>
+                  <h2 class="first-child">$130 billion</h2>
                   <p class="first-child">in BNB + CAKE won so far</p>
                   <span class="first-child">Predict the price trend of BNB or CAKE to win</span>
                 </div>
@@ -101,7 +143,8 @@
                   <p class="last-child">in CAKE prizes this round</p>
                   <span class="last-child">Buy tickets with CAKE, win CAKE if your numbers match</span>
                 </div>
-                <div class="cardButton"><a href=""><button>Buy Tickets<i class="icon arrow-right"></i></button></a></div>
+                <div class="cardButton"><a href=""><button>Buy Tickets<i class="icon arrow-right"></i></button></a>
+                </div>
               </div>
             </div>
 

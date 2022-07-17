@@ -491,6 +491,8 @@ header .container-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row-reverse;
+  justify-content: normal;
   width: 92rem;
   height: 43rem;
 }

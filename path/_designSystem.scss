@@ -82,6 +82,37 @@
 	}
 
 	&-form-tab {
+
+		padding-inline: 5rem;
+		@include flex(column, start, start);
+
+		.input-text-container{
+			@include flex(row, space-between, baseline);
+			width: 50rem;
+			height: fit-content;
+			gap: 1rem;
+			font-size: 1.2rem;
+		}
+
+		.input-checkbox-container{
+			@include flex(row, space-between, baseline);
+			width: 50rem;
+			height: fit-content;
+			gap: 0.5rem;
+			font-size: 1.2rem;
+			
+			.checkbox-input {
+			@extend %checkbox;
+			}
+		}
+		
+		.input-radio-container{
+			@include flex(row, space-between, baseline);
+			width: 50rem;
+			height: fit-content;
+			font-size: 1.2rem;
+			
+		}
 	}
 
 	&-button {

@@ -302,7 +302,7 @@ input[type=text]:focus {
 }
 
 /*checkbox input*/
-header .checkbox {
+.wrapper-form-tab .input-checkbox-container .checkbox-input, header .checkbox {
   width: 2.4rem;
   height: 2.4rem;
   border-radius: 0.8rem;
@@ -313,10 +313,10 @@ header .checkbox {
   -webkit-appearance: none;
   padding: 0px 6px;
 }
-header .checkbox:checked {
+.wrapper-form-tab .input-checkbox-container .checkbox-input:checked, header .checkbox:checked {
   background-color: #29910d;
 }
-header .checkbox:checked::before {
+.wrapper-form-tab .input-checkbox-container .checkbox-input:checked::before, header .checkbox:checked::before {
   content: "✓";
   position: absolute;
   font-weight: bolder;
@@ -531,6 +531,48 @@ header .container-button {
 .wrapper-icons-unit img {
   height: 100%;
   width: 100%;
+}
+.wrapper-form-tab {
+  padding-inline: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.wrapper-form-tab .input-text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 50rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.wrapper-form-tab .input-checkbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 50rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+.wrapper-form-tab .input-radio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 50rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.2rem;
 }
 .wrapper-button {
   width: -webkit-fit-content;

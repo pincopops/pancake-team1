@@ -532,6 +532,33 @@ header .container-button {
   height: 100%;
   width: 100%;
 }
+.wrapper-icons-unit img:hover {
+  cursor: pointer;
+  -webkit-animation: zoomIn 0.2s ease-in forwards;
+          animation: zoomIn 0.2s ease-in forwards;
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
 .wrapper-form-tab {
   padding-inline: 5rem;
   display: flex;

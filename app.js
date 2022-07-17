@@ -197,7 +197,7 @@ console.log(iconsArr);
 iconsArr.forEach((item, i) => {
 	const itemIcon = document.createElement("div");
 	itemIcon.classList.add("wrapper-icons-unit");
-	itemIcon.innerHTML = `<img src="${iconsArr[i].url}" alt="${iconsArr[i].name}">`;
+	itemIcon.innerHTML = `<img src="${iconsArr[i].url}" alt="${iconsArr[i].name}" class ="icon-img">`;
 	wrapperIcons.appendChild(itemIcon);
 });
 

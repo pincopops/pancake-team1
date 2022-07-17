@@ -205,7 +205,6 @@ iconsArr.forEach((item, i) => {
 		toolTip.classList.add("icon-tooltip");
 		toolTip.innerHTML = `<p>${iconsArr[i].name}</p>`;
 		wrapperIcons.appendChild(toolTip);
-		console.log(event);
 });
 	itemIcon.addEventListener("mouseout", () => {
 		wrapperIcons.removeChild(wrapperIcons.lastChild);

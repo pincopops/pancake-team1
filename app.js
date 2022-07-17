@@ -199,7 +199,19 @@ iconsArr.forEach((item, i) => {
 	itemIcon.classList.add("wrapper-icons-unit");
 	itemIcon.innerHTML = `<img src="${iconsArr[i].url}" alt="${iconsArr[i].name}" class ="icon-img">`;
 	wrapperIcons.appendChild(itemIcon);
+
+	itemIcon.addEventListener("mouseover", (event) => {
+		const toolTip = document.createElement("div");
+		toolTip.classList.add("icon-tooltip");
+		toolTip.innerHTML = `<p>${iconsArr[i].name}</p>`;
+		wrapperIcons.appendChild(toolTip);
+		console.log(event);
 });
+	itemIcon.addEventListener("mouseout", () => {
+		wrapperIcons.removeChild(wrapperIcons.lastChild);
+	})
+	})
+	
 
 /**
  * ?typography

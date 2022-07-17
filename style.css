@@ -527,6 +527,7 @@ header .container-button {
   width: -moz-fit-content;
   width: fit-content;
   height: 3rem;
+  position: relative;
 }
 .wrapper-icons-unit img {
   height: 100%;
@@ -558,6 +559,16 @@ header .container-button {
   100% {
     transform: scale(1.5);
   }
+}
+.wrapper-icons .icon-tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+}
+.wrapper-icons .icon-tooltip p {
+  font-size: 2rem;
+  color: white;
+  padding: 0.5rem;
 }
 .wrapper-form-tab {
   padding-inline: 5rem;

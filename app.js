@@ -367,47 +367,63 @@ const buttonArr = [buttonDefault, buttonAlternative, buttonInfo, buttonConnect];
 console.log(buttonArr);
 
 const buttonContainer = document.createElement("div");
-buttonContainer.classList.add('wrapper-button-container')
+buttonContainer.classList.add("wrapper-button-container");
 
 buttonWrapper.appendChild(buttonContainer);
 
 const buttonMaker = (button) => {
 	const buttonContainerUnitWrapper = document.createElement("div");
 	buttonContainerUnitWrapper.innerHTML = `<h1>${button.name}</h1>`;
-	buttonContainerUnitWrapper.classList.add('wrapper-button-container-content')
+	buttonContainerUnitWrapper.classList.add("wrapper-button-container-content");
 	buttonContainer.appendChild(buttonContainerUnitWrapper);
-
 
 	const buttonContentWrapper = document.createElement("div");
 	buttonContainerUnitWrapper.appendChild(buttonContentWrapper);
-	buttonContentWrapper.classList.add('wrapper-button-container-content-wrapper')
+	buttonContentWrapper.classList.add("wrapper-button-container-content-wrapper");
 
 	const buttonPropertiesContainer = document.createElement("div");
 	buttonPropertiesContainer.innerHTML = `<h4>PROPERTIES:</h4>`;
-	buttonPropertiesContainer.classList.add('wrapper-button-container-content-wrapper-properties')
+	buttonPropertiesContainer.classList.add(
+		"wrapper-button-container-content-wrapper-properties"
+	);
 	buttonContentWrapper.appendChild(buttonPropertiesContainer);
-	
 
 	const buttonTypefaceContainer = document.createElement("div");
 	buttonTypefaceContainer.innerHTML = `<h4>TYPEFACE:</h4>`;
-	buttonTypefaceContainer.classList.add('wrapper-button-container-content-wrapper-typeface')
+	buttonTypefaceContainer.classList.add(
+		"wrapper-button-container-content-wrapper-typeface"
+	);
 	buttonContentWrapper.append(buttonTypefaceContainer);
 
 	const buttonColorContainer = document.createElement("div");
 	buttonColorContainer.innerHTML = `<h4>COLORS:</h4>`;
 	buttonContentWrapper.append(buttonColorContainer);
-	buttonColorContainer.classList.add('wrapper-button-container-content-wrapper-color')
+	buttonColorContainer.classList.add(
+		"wrapper-button-container-content-wrapper-color"
+	);
 
-     const buttonPreviewContainer = document.createElement("div");
-     buttonContentWrapper.append(buttonPreviewContainer);
-	 buttonPreviewContainer.classList.add('wrapper-button-container-content-wrapper-button')
+	const buttonPreviewContainer = document.createElement("div");
+	buttonContentWrapper.append(buttonPreviewContainer);
+	buttonPreviewContainer.classList.add(
+		"wrapper-button-container-content-wrapper-button"
+	);
 
+	const buttonPreviewActived = document.createElement("div");
+	buttonPreviewActived.classList.add(`button-${button.name}`);
+	buttonPreviewActived.setAttribute("data-status", "actived");
+	buttonPreviewActived.innerHTML = `<span>${button.name}</span>`;
 
-     const buttonPreviewActived = document.createElement("div");
-	 buttonPreviewActived.classList.add(`button-${button.name}-actived`)
-	 buttonPreviewActived.innerHTML = `<span>${button.name}</span>`
-	 buttonPreviewContainer.appendChild(buttonPreviewActived)
+	const buttonPreviewDeactived = document.createElement("div");
+	buttonPreviewDeactived.setAttribute("data-status", "deactived");
+	buttonPreviewDeactived.classList.add(`button-${button.name}`);
+	buttonPreviewDeactived.innerHTML = `<span>${button.name}</span>`;
 
+	document.querySelectorAll('[data-status="deactived"').forEach((el) => {
+		console.log(el);
+		return (el.disabled = true);
+	});
+
+	buttonPreviewContainer.append(buttonPreviewActived, buttonPreviewDeactived);
 
 	Object.entries(button.properties).forEach((el) => {
 		const elWrapper = document.createElement("div");
@@ -441,3 +457,67 @@ const buttonMaker = (button) => {
 };
 
 buttonArr.map((button) => buttonMaker(button));
+
+/**
+ * ?CAROUSEL OF BUTTONS PREVIEW
+ */
+
+const ButtonInfoPreview = document.querySelectorAll(
+	".wrapper-button-container-content"
+);
+
+let counter = 0;
+const maxCounter = ButtonInfoPreview.length - 1;
+
+const carouselButtonPreviw = (elements) => {
+	elements.forEach((el, i) => {
+		if (i === counter) {
+			el.classList.remove("hide");
+		} else {
+			el.classList.add("hide");
+		}
+	});
+};
+
+carouselButtonPreviw(ButtonInfoPreview);
+
+const carouselButtonNext = () => {
+	if (counter < maxCounter) {
+		ButtonInfoPreview[counter].classList.add("hide");
+		counter++;
+		ButtonInfoPreview[counter].classList.remove("hide");
+		console.log(counter);
+	} else if (counter === maxCounter) {
+		ButtonInfoPreview[counter].classList.add("hide");
+		counter = 0;
+		ButtonInfoPreview[counter].classList.remove("hide");
+		console.log(counter);
+	}
+};
+
+const carouselButtonPrev = () => {
+	if (counter > 0) {
+		ButtonInfoPreview[counter].classList.add("hide");
+		counter--;
+		ButtonInfoPreview[counter].classList.remove("hide");
+		console.log(counter);
+	} else if (counter === 0) {
+		ButtonInfoPreview[counter].classList.add("hide");
+		counter = maxCounter;
+		ButtonInfoPreview[counter].classList.remove("hide");
+		console.log(counter);
+	}
+};
+
+const buttonNext = document.createElement("div");
+buttonNext.classList.add("button-next");
+buttonNext.innerHTML = `<span>></span>`;
+buttonContainer.appendChild(buttonNext);
+
+const buttonPrev = document.createElement("div");
+buttonPrev.classList.add("button-prev");
+buttonPrev.innerHTML = `<span><</span>`;
+buttonContainer.appendChild(buttonPrev);
+
+buttonNext.addEventListener("click", ()=>carouselButtonNext());
+buttonPrev.addEventListener("click", ()=>carouselButtonPrev());

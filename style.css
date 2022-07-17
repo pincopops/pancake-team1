@@ -87,7 +87,7 @@ a {
 /*MARGINS*/
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
-.wrapper-button-container-content-wrapper .button-connect-actived, header .container-button .button4, .wrapper-button-container-content-wrapper .button-info-actived, header .container-button .button3, .wrapper-button-container-content-wrapper .button-alternative-actived, header .container-button .button2, .wrapper-button-container-content-wrapper .button-default-actived, header .container-button .button1 {
+.wrapper-button-container-content-wrapper .button-connect, header .container-button .button4, .wrapper-button-container-content-wrapper .button-info, header .container-button .button3, .wrapper-button-container-content-wrapper .button-alternative, header .container-button .button2, .wrapper-button-container-content-wrapper .button-default, .wrapper-button-container .button-prev, .wrapper-button-container .button-next, header .container-button .button1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,27 +106,27 @@ a {
   /*SET INFO STYLE*/
   /*SET CONNECT STYLE*/
 }
-.wrapper-button-container-content-wrapper .button-default-actived, header .container-button .button1 {
+.wrapper-button-container-content-wrapper .button-default, .wrapper-button-container .button-prev, .wrapper-button-container .button-next, header .container-button .button1 {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
   /*SET DEFOULT STYLE HOVER*/
 }
-.wrapper-button-container-content-wrapper .button-default-actived:hover, header .container-button .button1:hover {
+.wrapper-button-container-content-wrapper .button-default:hover, .wrapper-button-container .button-prev:hover, .wrapper-button-container .button-next:hover, header .container-button .button1:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
-.wrapper-button-container-content-wrapper .button-alternative-actived, header .container-button .button2 {
+.wrapper-button-container-content-wrapper .button-alternative, header .container-button .button2 {
   color: #1fc7d4;
   border: 2px solid #1fc7d4;
   background-color: rgba(0, 0, 0, 0);
   /*SET ALT STYLE HOVER*/
 }
-.wrapper-button-container-content-wrapper .button-alternative-actived:hover, header .container-button .button2:hover {
+.wrapper-button-container-content-wrapper .button-alternative:hover, header .container-button .button2:hover {
   background-color: rgba(8, 6, 11, 0.65);
   transition: 400ms;
 }
-.wrapper-button-container-content-wrapper .button-info-actived, header .container-button .button3 {
+.wrapper-button-container-content-wrapper .button-info, header .container-button .button3 {
   height: 4.8rem;
   max-width: 4.1rem;
   min-width: 4rem;
@@ -138,11 +138,11 @@ a {
   background-color: rgba(8, 6, 11, 0);
   /*SET INFO STYLE HOVER*/
 }
-.wrapper-button-container-content-wrapper .button-info-actived:hover, header .container-button .button3:hover {
+.wrapper-button-container-content-wrapper .button-info:hover, header .container-button .button3:hover {
   background-color: rgba(8, 6, 11, 0.65);
   transition: 400ms;
 }
-.wrapper-button-container-content-wrapper .button-connect-actived, header .container-button .button4 {
+.wrapper-button-container-content-wrapper .button-connect, header .container-button .button4 {
   height: 3.2rem;
   max-width: 10.7rem;
   min-width: 12rem;
@@ -153,7 +153,7 @@ a {
   background-color: #1fc7d4;
   /*SET CONNECT STYLE HOVER*/
 }
-.wrapper-button-container-content-wrapper .button-connect-actived:hover, header .container-button .button4:hover {
+.wrapper-button-container-content-wrapper .button-connect:hover, header .container-button .button4:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
@@ -542,10 +542,30 @@ header .container-button {
   flex-direction: row;
   justify-content: space-between;
   align-items: top;
+  width: 58rem;
+  gap: 20px;
+  position: relative;
+}
+.wrapper-button-container .hide {
+  display: none;
+}
+.wrapper-button-container .button-next {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  gap: 20px;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  padding: 1rem;
+}
+.wrapper-button-container .button-prev {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  padding: 1rem;
+  right: 102%;
 }
 .wrapper-button-container-content {
   display: flex;
@@ -560,6 +580,10 @@ header .container-button {
   align-items: top;
   gap: 2rem;
 }
-.wrapper-button-container-content-wrapper .wrapper-button-container-content-paragraph {
-  padding: 1rem;
+.wrapper-button-container-content-wrapper [data-status=deactived] {
+  margin-top: 2rem;
+  opacity: 40%;
+}
+.wrapper-button-container-content-wrapper [data-status=deactived]:hover {
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */

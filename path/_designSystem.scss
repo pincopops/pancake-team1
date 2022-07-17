@@ -87,40 +87,72 @@
 	&-button {
 		width: fit-content;
 
+		
+
 		&-container {
 			@include flex(row, space-between, top);
-			width: fit-content;
+			width: 58rem;
 			gap: 20px;
+			position: relative;
+
+			.hide {
+				display: none;
+			}
+	
+			.button{
+				&-next {
+					@include b-selector(default);
+					width: fit-content;
+					position: absolute;
+					left: 100%;
+					top: 50%;
+					padding: 1rem;
+				}
+	
+				&-prev {
+					@include b-selector(default);
+					width: fit-content;
+					position: absolute;
+					top: 50%;
+					padding: 1rem;
+					right: 102%;
+				}
+			}
 
 			&-content {
 				@include flex(column, space-between, top);
 
-                &-wrapper{
+				&-wrapper {
+					@include flex(row, space-between, top);
 
-                    @include flex(row, space-between, top);
+					gap: 2rem;
 
-                    gap: 2rem;
-                   .button-default-actived {
-					@include b-selector(default);
+					.button{
+
+						&-alternative {
+							@include b-selector(alternative);
+						}
+						&-default {
+							@include b-selector(default);
+						}
+						&-info {
+							@include b-selector(info);
+						}
+						&-connect {
+							@include b-selector(connect);
+						}
+					}
+
+					[data-status="deactived"]{
+
+							margin-top: 2rem;
+							opacity:40%;
+							&:hover{
+								pointer-events: none;
+							}
+						}
+
 				}
-
-				.button-alternative-actived {
-					@include b-selector(alternative);
-				}
-				.button-info-actived {
-					@include b-selector(info);
-				}
-
-				.button-connect-actived {
-					@include b-selector(connect);
-				}
-
-                .wrapper-button-container-content-paragraph{
-                    padding : 1rem;
-                } 
-                }
-
-				
 			}
 		}
 	}

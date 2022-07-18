@@ -212,15 +212,27 @@ body{
 		}
 	}
 
-	&-horizontal-tab {
+	&-tab{
+
+		width: 100%;
+		padding: 5rem;
+
+	&-horizontal {
 	}
 
-	&-tab-vertical {
+	&-vertical {
+		width: 100%;
+		display: grid;
+		grid : "title title"
+				"img info";
+		gap: 2rem;
 
-		
+		h1{
+			grid-area: title ;
+		}
 
 		.tab{
-
+			grid-area: img;
 			.hide {
 			display: none;
 		}
@@ -235,12 +247,21 @@ body{
 			@extend %triangle;
 			}
 		}
+
 		
-		
+		.infoWrapper{
+			@include flex (row,center,baseline);
+			gap: 2rem;
+			grid-area: info;
+		}
 	}
 
 	&-vertical-menu {
 	}
+
+	}
+
+
 
 	&-card {
 	}

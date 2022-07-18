@@ -27,7 +27,7 @@
     &%tabContent {
       @include flex(column, left, center);
       // display: none;
-      position: absolute;
+      // position: absolute;
       border-bottom-left-radius: 0.8rem;
       border-bottom-right-radius: 0.8rem;
       border: 0.1rem solid #262130;

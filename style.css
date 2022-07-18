@@ -221,7 +221,6 @@ header .menu * *:hover {
   flex-direction: column;
   justify-content: left;
   align-items: center;
-  position: absolute;
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
   border: 0.1rem solid #262130;
@@ -670,6 +669,30 @@ body {
 .wrapper-button-container-content-wrapper [data-status=deactived]:hover {
   pointer-events: none;
 }
+.wrapper-tab {
+  width: 100%;
+  padding: 5rem;
+}
+.wrapper-tab-vertical {
+  width: 100%;
+  display: grid;
+  grid: "title title" "img info";
+  gap: 2rem;
+}
+.wrapper-tab-vertical h1 {
+  grid-area: title;
+}
+.wrapper-tab-vertical .tab {
+  grid-area: img;
+}
 .wrapper-tab-vertical .tab .hide {
   display: none;
+}
+.wrapper-tab-vertical .infoWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  grid-area: info;
 }/*# sourceMappingURL=style.css.map */

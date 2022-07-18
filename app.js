@@ -58,8 +58,7 @@ const colorsArr = [
 	new Color("$greenBrand", "#29910d").colorMaker(),
 	new Color("$trasparency", "#00000000").colorMaker(),
 	new Color("$hoverEffect", "#08060b00").colorMaker(),
-	// new Color("$hoverEffect", "#08060b00").colorMaker(),
-	new Color("$hoverEffect", "#ffb237").colorMaker(),
+	new Color("$ocra2", "#ffcd51").colorMaker(),
 ];
 
 const unitColor = document.querySelectorAll(".wrapper-colors-unit");

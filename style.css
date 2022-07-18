@@ -438,9 +438,24 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 4rem;
-  background-color: aqua;
-  width: 80rem;
+  width: 90rem;
+  background-color: grey;
+}
+.wrapper *[data-id=section] {
+  width: 100%;
+  padding: 10rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .separator-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .separator-wrapper .separator-img {
+  max-width: 100%;
 }
 .wrapper-typography {
   display: flex;
@@ -448,11 +463,13 @@ body {
   justify-content: start;
   align-items: start;
   width: 50rem;
-  gap: 2rem;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  padding: 2rem;
+  height: 50rem;
+  position: relative;
+  background-color: #f4eeff;
+}
+.wrapper-typography .separator-wrapper {
+  position: absolute;
+  bottom: 0;
 }
 .wrapper-typography-unitContainer {
   display: flex;
@@ -469,11 +486,9 @@ body {
   font-size: 1.2rem;
 }
 .wrapper .colors-container {
-  display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
   padding: 2rem;
+  background-color: white;
 }
 .wrapper .colors-container .wrapper-colors {
   grid-area: colors;
@@ -573,7 +588,6 @@ body {
   padding: 0.5rem;
 }
 .wrapper-form-tab {
-  padding-inline: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: start;

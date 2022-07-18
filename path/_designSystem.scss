@@ -5,16 +5,33 @@ body{
 .wrapper {
 	@include flexCenter;
 	flex-direction: column;
-	gap: 4rem;
-	background-color: aqua;
-	width: 80rem;
+	width: 90rem;
+	background-color: grey;
+	*[data-id="section"]{
+		width: 100%;
+		padding: 10rem 5rem;
+		@include flexCenter
+	}
+
+	.separator-wrapper{
+		width: 100%;
+		@include flexCenter;
+		.separator-img{
+			max-width: 100%
+		}
+	}
 
 	&-typography {
 		@include flex(column, start, start);
 		width: 50rem;
-		gap: 2rem;
-		height: min-content;
-		padding: 2rem;
+		height: 50rem;
+		position:relative;
+		background-color: $lightViolet;
+
+		.separator-wrapper{
+			position: absolute;
+			bottom: 0;
+		}
 
 		&-unitContainer {
 			@include flexStart;
@@ -27,8 +44,9 @@ body{
 	}
 
 	.colors-container {
-		@include flex(column, start, start);
+		flex-direction: column;
 		padding: 2rem;
+		background-color: white;
 
 		.wrapper-colors {
 			grid-area: colors;
@@ -107,7 +125,6 @@ body{
 
 	&-form-tab {
 
-		padding-inline: 5rem;
 		@include flex(column, start, start);
 
 		.input-text-container{

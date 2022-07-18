@@ -190,7 +190,7 @@ header .menu * *:hover {
 
 /*Vertical Tabs*/
 /*set vertical tab*/
-header .tab {
+.wrapper-tab-vertical .tab, header .tab {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -202,10 +202,7 @@ header .tab {
   /*set vertical tab hover*/
   /*set all childs of verticalTab*/
 }
-header .tab:hover .tabHeader {
-  border-radius: 0.8rem 0.8rem 0rem 0rem;
-}
-header .tab * {
+.wrapper-tab-vertical .tab *, header .tab * {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -219,12 +216,11 @@ header .tab * {
   /*set all childs of childs */
   /*set child 'with bookmark %triangle' of childs of verticalTab */
 }
-header .tab .tabContent {
+.wrapper-tab-vertical .tab .tabContent, header .tab .tabContent {
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: center;
-  display: none;
   position: absolute;
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
@@ -238,17 +234,17 @@ header .tab .tabContent {
   /*set tabContent hover*/
   /*set tabContent's childs hover*/
 }
-header .tab .tabContent :last-child {
+.wrapper-tab-vertical .tab .tabContent :last-child, header .tab .tabContent :last-child {
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
-header .tab *.tabContent:hover {
+.wrapper-tab-vertical .tab *.tabContent:hover, header .tab *.tabContent:hover {
   display: block;
 }
-header .tab .tabContent :hover {
+.wrapper-tab-vertical .tab .tabContent :hover, header .tab .tabContent :hover {
   background-color: #262130;
 }
-header .tab .tabHeader {
+.wrapper-tab-vertical .tab .tabHeader, header .tab .tabHeader {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -260,18 +256,14 @@ header .tab .tabHeader {
   font-size: 1.6rem;
   /*set tabHeader hover*/
 }
-header .tab *.tabHeader:hover {
+.wrapper-tab-vertical .tab *.tabHeader:hover, header .tab *.tabHeader:hover {
   background-color: #262130;
-  border-radius: 0.8rem 0.8rem 0rem 0rem;
   /*set tabContent effect in tabHeader hover */
 }
-header .tab *.tabHeader:hover + .tabContent {
-  display: block;
-}
-header .tab * * {
+.wrapper-tab-vertical .tab * *, header .tab * * {
   padding-left: 0.5rem;
 }
-header .tab * .triangolo {
+.wrapper-tab-vertical .tab * .triangle, .wrapper-tab-vertical .tab * header .tab .triangolo, header .tab * .triangolo {
   content: "";
   width: 0;
   height: 0;
@@ -677,4 +669,7 @@ body {
 }
 .wrapper-button-container-content-wrapper [data-status=deactived]:hover {
   pointer-events: none;
+}
+.wrapper-tab-vertical .tab .hide {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

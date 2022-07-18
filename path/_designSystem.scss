@@ -3,12 +3,6 @@ body{
 }
 
 .wrapper {
-	// display: grid;
-	// grid-template-columns: 1fr 1fr;
-	// grid-template-rows: 1fr 1fr;
-	// gap: 2rem;
-	// grid-template: "typography colors icons";
-	// max-width: 80rem;
 	@include flexCenter;
 	flex-direction: column;
 	gap: 4rem;
@@ -221,7 +215,28 @@ body{
 	&-horizontal-tab {
 	}
 
-	&-vertical-tab {
+	&-tab-vertical {
+
+		
+
+		.tab{
+
+			.hide {
+			display: none;
+		}
+			@extend %verticalTab;
+			.tabHeader{
+				@extend %tabHeader;
+			}
+			.tabContent{
+				@extend %tabContent;
+			}
+			.triangle{
+			@extend %triangle;
+			}
+		}
+		
+		
 	}
 
 	&-vertical-menu {

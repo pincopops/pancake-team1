@@ -44,6 +44,11 @@ unitColor.forEach((item, i) => {
 	const itemInfo = item.querySelector(".wrapper-colors-unit-info");
 	itemInfo.innerHTML = `<p>${colorsArr[i].name}</p>
     <p>${colorsArr[i].hex}</p>`;
+
+	itemPalette.addEventListener("click", () => {
+		navigator.clipboard.writeText(colorsArr[i].hex);
+		alert("HEX copiato negli appunti: " + colorsArr[i].hex);
+	});
 });
 
 const colorsWrapperEl = document.querySelector(".colors-container");
@@ -192,7 +197,6 @@ const iconsArr = [
 	new Icon(120, 120, "tradeAssets/asset 41.svg"),
 ];
 
-console.log(iconsArr);
 
 iconsArr.forEach((item, i) => {
 	const itemIcon = document.createElement("div");
@@ -205,12 +209,11 @@ iconsArr.forEach((item, i) => {
 		toolTip.classList.add("icon-tooltip");
 		toolTip.innerHTML = `<p>${iconsArr[i].name}</p>`;
 		wrapperIcons.appendChild(toolTip);
-});
+	});
 	itemIcon.addEventListener("mouseout", () => {
 		wrapperIcons.removeChild(wrapperIcons.lastChild);
-	})
-	})
-	
+	});
+});
 
 /**
  * ?typography
@@ -253,7 +256,7 @@ const typographyArr = [
 	new Typography("subP", "12px", "18px", "normal"),
 ];
 
-console.log(typographyArr);
+
 
 typographyArr.forEach((item, i) => {
 	const itemTypography = document.createElement("div");
@@ -375,7 +378,7 @@ const buttonConnect = new Button(
 buttonConnect.properties.height = "32px";
 
 const buttonArr = [buttonDefault, buttonAlternative, buttonInfo, buttonConnect];
-console.log(buttonArr);
+
 
 const buttonContainer = document.createElement("div");
 buttonContainer.classList.add("wrapper-button-container");
@@ -430,7 +433,7 @@ const buttonMaker = (button) => {
 	buttonPreviewDeactived.innerHTML = `<span>${button.name}</span>`;
 
 	document.querySelectorAll('[data-status="deactived"').forEach((el) => {
-		console.log(el);
+
 		return (el.disabled = true);
 	});
 
@@ -497,12 +500,12 @@ const carouselButtonNext = () => {
 		ButtonInfoPreview[counter].classList.add("hide");
 		counter++;
 		ButtonInfoPreview[counter].classList.remove("hide");
-		console.log(counter);
+
 	} else if (counter === maxCounter) {
 		ButtonInfoPreview[counter].classList.add("hide");
 		counter = 0;
 		ButtonInfoPreview[counter].classList.remove("hide");
-		console.log(counter);
+
 	}
 };
 
@@ -511,12 +514,12 @@ const carouselButtonPrev = () => {
 		ButtonInfoPreview[counter].classList.add("hide");
 		counter--;
 		ButtonInfoPreview[counter].classList.remove("hide");
-		console.log(counter);
+
 	} else if (counter === 0) {
 		ButtonInfoPreview[counter].classList.add("hide");
 		counter = maxCounter;
 		ButtonInfoPreview[counter].classList.remove("hide");
-		console.log(counter);
+
 	}
 };
 
@@ -571,7 +574,6 @@ class Input {
 					boxShadow: "0px 0px 0px 1px #7645d9 0px 0px 0px 4px #7645d9",
 				},
 			};
-
 		} else if (this.name === "checkbox") {
 			this.properties = {
 				width: "24px",
@@ -589,7 +591,7 @@ class Input {
 			this.effect = {
 				checked: {
 					backgroundColor: "#31d0aa",
-				}
+				},
 			};
 		} else if (this.name === "radio") {
 			this.properties = {
@@ -607,9 +609,9 @@ class Input {
 				checked: {
 					border: "2px solid #31d0aa",
 				},
-				focus:{	
+				focus: {
 					boxShadow: "0px 0px 0px 1px #7645d9 0px 0px 0px 4px #7645d9",
-				}
+				},
 			};
 		}
 
@@ -617,7 +619,6 @@ class Input {
 		input.setAttribute("type", this.type);
 		input.setAttribute("name", this.name);
 		InputContainer.appendChild(input);
-
 
 		const InputProperties = document.createElement("div");
 		InputProperties.classList.add(`input-${this.name}-properties`);
@@ -640,17 +641,17 @@ class Input {
 		if (this.typeface) {
 			InputTypeface.classList.add(`input-${this.name}-typeface`);
 			InputTypeface.innerHTML = `<h4>TYPEFACE</h4>`;
-		Object.entries(this.typeface).forEach((el) => {
-			const elWrapper = document.createElement("div");
-			elWrapper.classList.add(`input-${this.name}-typeface-unit`);
-			el.map((el) => {
-				const elContainer = document.createElement("div");
-				elContainer.innerText = `${el}`;
-				elWrapper.appendChild(elContainer);
+			Object.entries(this.typeface).forEach((el) => {
+				const elWrapper = document.createElement("div");
+				elWrapper.classList.add(`input-${this.name}-typeface-unit`);
+				el.map((el) => {
+					const elContainer = document.createElement("div");
+					elContainer.innerText = `${el}`;
+					elWrapper.appendChild(elContainer);
+				});
+				InputTypeface.appendChild(elWrapper);
 			});
-			InputTypeface.appendChild(elWrapper);
-		})
-		} 
+		}
 
 		InputContainer.appendChild(InputTypeface);
 
@@ -666,7 +667,7 @@ class Input {
 				elWrapper.appendChild(elContainer);
 			});
 			InputColors.appendChild(elWrapper);
-		})
+		});
 
 		InputContainer.appendChild(InputColors);
 
@@ -675,7 +676,6 @@ class Input {
 			InputContainer.insertBefore(cloneRadio, InputContainer.firstChild);
 		}
 	}
-
 }
 
 const formWrapper = document.querySelector(".wrapper-form-tab");
@@ -688,4 +688,86 @@ const radioInput = new Input("radio", "radio", formWrapper);
 
 document.querySelector("[type=checkbox]").classList.add("checkbox-input");
 
-console.log(inputText);
+
+
+/**
+ * ?VERTICAL TAB PREVIEW
+ */
+
+const verticalTabWrapper = document.querySelector(".wrapper-tab-vertical");
+
+class Vercialtab {
+
+	constructor (list){
+
+			this.list = list
+
+		const verticalTab = document.createElement('div')
+		verticalTab.classList.add("tab")
+		verticalTabWrapper.appendChild(verticalTab)
+		
+
+		const tabHeader = document.createElement('div')
+		tabHeader.classList.add("tabHeader")
+		verticalTab.appendChild(tabHeader)
+		tabHeader.innerHTML = "<span>Tab</span>"
+
+		const triangle = document.createElement('div')
+		triangle.classList.add("triangle")
+		tabHeader.appendChild(triangle)
+
+		const tabContent = document.createElement("div")
+		verticalTab.appendChild(tabContent)
+		tabContent.classList.add("tabContent", "hide")
+
+
+		this.list.forEach(item => {
+			const itemEl = document.createElement("div")
+			itemEl.innerHTML = `<span>${item}</span>`
+			console.log(itemEl);
+			tabContent.appendChild(itemEl)
+		});
+
+		tabHeader.addEventListener("click", () => {
+			if (tabContent.classList.contains("hide")) {
+				tabContent.classList.remove("hide")
+				tabHeader.style.borderRadius = "0.8rem 0.8rem 0rem 0rem"
+			} else  {
+				tabContent.classList.add("hide")
+				tabHeader.style.borderRadius = "0.8rem 0.8rem 0.8rem 0.8rem"
+			}
+		})
+
+	}
+
+	properties = {
+		padding: "8px 16px",
+		borderRadius: "8px",
+	};
+
+	typeface={
+			fontSize: "16px",
+			lineHeight: "16px",
+			textAlign: "start",
+			letterSpacing: "normal",
+			color: "#f4eeff",
+	}
+
+	colors = {
+		border: "1px solid #262130",
+		backgroundColor: "#37f4600",
+	};
+
+	effect = {
+		hover : {
+			backgroundColor : "#262130" 
+		}
+	}
+
+}
+
+const arr = ["ciao","bye","ola"]
+
+const newTab = new Vercialtab(arr)
+
+

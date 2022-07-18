@@ -12,7 +12,7 @@
 /*set vertical tab hover*/
   &:hover{
     %tabHeader{
-      border-radius: 0.8rem 0.8rem 0rem 0rem;
+      //border-radius: 0.8rem 0.8rem 0rem 0rem;
     }
   }
 
@@ -26,7 +26,7 @@
 /*set child of verticalTab with bookmark %tabContent */
     &%tabContent {
       @include flex(column, left, center);
-      display: none;
+      // display: none;
       position: absolute;
       border-bottom-left-radius: 0.8rem;
       border-bottom-right-radius: 0.8rem;
@@ -63,11 +63,11 @@
 /*set tabHeader hover*/
       &:hover {
         background-color: $borderBlack;
-        border-radius: 0.8rem 0.8rem 0rem 0rem;
+        //border-radius: 0.8rem 0.8rem 0rem 0rem;
 /*set tabContent effect in tabHeader hover */
-        + %tabContent {
-          display: block;
-        }
+        // + %tabContent {
+        //   display: block;
+        // }
       }
     }
 

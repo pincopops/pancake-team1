@@ -7,11 +7,11 @@ class Color {
 	colorMaker() {
 		
 		const itemPalette = document.createElement('div')
-		itemPalette.classList.add(".wrapper-colors-unit-palette");
+		itemPalette.classList.add("wrapper-colors-unit-palette");
 		itemPalette.style.backgroundColor = this.hex
 
 		const itemInfo = document.createElement('div')
-		itemInfo.classList.add(".wrapper-colors-unit-info");
+		itemInfo.classList.add("wrapper-colors-unit-info");
 		itemInfo.innerHTML = `<p>${this.name}</p>
 			<p>${this.hex}</p>`;
 
@@ -59,6 +59,7 @@ const colorsArr = [
 	new Color("$trasparency", "#00000000"),
 	new Color("$hoverEffect", "#08060b00"),
 	new Color("$hoverEffect", "#08060b00").colorMaker(),
+	new Color("$hoverEffect", "#ffb237").colorMaker(),
 ];
 
 const unitColor = document.querySelectorAll(".wrapper-colors-unit");

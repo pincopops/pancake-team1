@@ -3,7 +3,32 @@ class Color {
 		this.name = name;
 		this.hex = hex;
 	}
+
+	colorMaker() {
+		
+		const itemPalette = document.createElement('div')
+		itemPalette.classList.add(".wrapper-colors-unit-palette");
+		itemPalette.style.backgroundColor = this.hex
+
+		const itemInfo = document.createElement('div')
+		itemInfo.classList.add(".wrapper-colors-unit-info");
+		itemInfo.innerHTML = `<p>${this.name}</p>
+			<p>${this.hex}</p>`;
+
+		itemPalette.addEventListener("click", () => {
+			navigator.clipboard.writeText(this.hex);
+			alert("HEX copiato negli appunti: " + this.hex);
+		});
+
+		const colorUnitWrapper = document.createElement("div");
+		colorUnitWrapper.classList.add("wrapper-colors-unit")
+		colorUnitWrapper.append(itemPalette, itemInfo);
+		const wrapperColors = document.querySelector(".wrapper-colors");
+		wrapperColors.append(colorUnitWrapper);
+	}
+
 }
+
 const colorsArr = [
 	new Color("$primary", "#666171"),
 	new Color("$darkBlack", "#08060b"),
@@ -33,6 +58,7 @@ const colorsArr = [
 	new Color("$greenBrand", "#29910d"),
 	new Color("$trasparency", "#00000000"),
 	new Color("$hoverEffect", "#08060b00"),
+	new Color("$hoverEffect", "#08060b00").colorMaker(),
 ];
 
 const unitColor = document.querySelectorAll(".wrapper-colors-unit");
@@ -197,7 +223,6 @@ const iconsArr = [
 	new Icon(120, 120, "tradeAssets/asset 41.svg"),
 ];
 
-
 iconsArr.forEach((item, i) => {
 	const itemIcon = document.createElement("div");
 	itemIcon.classList.add("wrapper-icons-unit");
@@ -255,8 +280,6 @@ const typographyArr = [
 	new Typography("p", "14px", "21px", "normal"),
 	new Typography("subP", "12px", "18px", "normal"),
 ];
-
-
 
 typographyArr.forEach((item, i) => {
 	const itemTypography = document.createElement("div");
@@ -379,7 +402,6 @@ buttonConnect.properties.height = "32px";
 
 const buttonArr = [buttonDefault, buttonAlternative, buttonInfo, buttonConnect];
 
-
 const buttonContainer = document.createElement("div");
 buttonContainer.classList.add("wrapper-button-container");
 
@@ -433,7 +455,6 @@ const buttonMaker = (button) => {
 	buttonPreviewDeactived.innerHTML = `<span>${button.name}</span>`;
 
 	document.querySelectorAll('[data-status="deactived"').forEach((el) => {
-
 		return (el.disabled = true);
 	});
 
@@ -500,12 +521,10 @@ const carouselButtonNext = () => {
 		ButtonInfoPreview[counter].classList.add("hide");
 		counter++;
 		ButtonInfoPreview[counter].classList.remove("hide");
-
 	} else if (counter === maxCounter) {
 		ButtonInfoPreview[counter].classList.add("hide");
 		counter = 0;
 		ButtonInfoPreview[counter].classList.remove("hide");
-
 	}
 };
 
@@ -514,12 +533,10 @@ const carouselButtonPrev = () => {
 		ButtonInfoPreview[counter].classList.add("hide");
 		counter--;
 		ButtonInfoPreview[counter].classList.remove("hide");
-
 	} else if (counter === 0) {
 		ButtonInfoPreview[counter].classList.add("hide");
 		counter = maxCounter;
 		ButtonInfoPreview[counter].classList.remove("hide");
-
 	}
 };
 
@@ -624,7 +641,6 @@ class Input {
 		InputProperties.classList.add(`input-${this.name}-properties`);
 		InputProperties.innerHTML = `<h4>PROPERTIES</h4>`;
 
-	
 		Object.entries(this.properties).forEach((el) => {
 			const elContainer = document.createElement("div");
 			elContainer.classList.add(`input-${this.name}-properties-unit`);
@@ -690,77 +706,69 @@ const radioInput = new Input("radio", "radio", formWrapper);
 
 document.querySelector("[type=checkbox]").classList.add("checkbox-input");
 
-
-
 /**
  * ?VERTICAL TAB PREVIEW
  */
 
 const verticalTabWrapper = document.querySelector(".wrapper-tab-vertical");
-verticalTabWrapper.innerHTML = "<h1>Vertical Tab</h1>"
-
+verticalTabWrapper.innerHTML = "<h1>Vertical Tab</h1>";
 
 class Vercialtab {
+	constructor(list) {
+		this.list = list;
 
-	constructor (list){
+		const verticalTab = document.createElement("div");
+		verticalTab.classList.add("tab");
+		verticalTabWrapper.appendChild(verticalTab);
 
-			this.list = list
+		const tabHeader = document.createElement("div");
+		tabHeader.classList.add("tabHeader");
+		verticalTab.appendChild(tabHeader);
+		tabHeader.innerHTML = "<span>Tab</span>";
 
-		const verticalTab = document.createElement('div')
-		verticalTab.classList.add("tab")
-		verticalTabWrapper.appendChild(verticalTab)
-		
+		const triangle = document.createElement("div");
+		triangle.classList.add("triangle");
+		tabHeader.appendChild(triangle);
 
-		const tabHeader = document.createElement('div')
-		tabHeader.classList.add("tabHeader")
-		verticalTab.appendChild(tabHeader)
-		tabHeader.innerHTML = "<span>Tab</span>"
+		const tabContent = document.createElement("div");
+		verticalTab.appendChild(tabContent);
+		tabContent.classList.add("tabContent", "hide");
 
-		const triangle = document.createElement('div')
-		triangle.classList.add("triangle")
-		tabHeader.appendChild(triangle)
-
-		const tabContent = document.createElement("div")
-		verticalTab.appendChild(tabContent)
-		tabContent.classList.add("tabContent", "hide")
-
-
-		this.list.forEach(item => {
-			const itemEl = document.createElement("div")
-			itemEl.innerHTML = `<span>${item}</span>`
+		this.list.forEach((item) => {
+			const itemEl = document.createElement("div");
+			itemEl.innerHTML = `<span>${item}</span>`;
 			console.log(itemEl);
-			tabContent.appendChild(itemEl)
+			tabContent.appendChild(itemEl);
 		});
 
 		tabHeader.addEventListener("click", () => {
 			if (tabContent.classList.contains("hide")) {
-				tabContent.classList.remove("hide")
-				tabHeader.style.borderRadius = "0.8rem 0.8rem 0rem 0rem"
-			} else  {
-				tabContent.classList.add("hide")
-				tabHeader.style.borderRadius = "0.8rem 0.8rem 0.8rem 0.8rem"
+				tabContent.classList.remove("hide");
+				tabHeader.style.borderRadius = "0.8rem 0.8rem 0rem 0rem";
+			} else {
+				tabContent.classList.add("hide");
+				tabHeader.style.borderRadius = "0.8rem 0.8rem 0.8rem 0.8rem";
 			}
-		})
+		});
 
-		tabContent.addEventListener("click", (item,i) => {
-			tabHeader.innerHTML = `<span>${item.target.textContent}</span>`
-			tabContent.classList.add("hide")
-			tabHeader.style.borderRadius = "0.8rem 0.8rem 0.8rem 0.8rem"
-			tabHeader.appendChild(triangle)
-			
-		})
+		tabContent.addEventListener("click", (item, i) => {
+			tabHeader.innerHTML = `<span>${item.target.textContent}</span>`;
+			tabContent.classList.add("hide");
+			tabHeader.style.borderRadius = "0.8rem 0.8rem 0.8rem 0.8rem";
+			tabHeader.appendChild(triangle);
+		});
 
-		const infoWrapper = document.createElement("div")
-		infoWrapper.classList.add("infoWrapper")
+		const infoWrapper = document.createElement("div");
+		infoWrapper.classList.add("infoWrapper");
 
-		const propertiesEl = document.createElement("div")
-		propertiesEl.classList.add(`${this.name}-properties`)
-		propertiesEl.innerHTML = `<h4>PROPERTIES:</h4>`
-		verticalTabWrapper.appendChild(infoWrapper)
-		infoWrapper.appendChild(propertiesEl)
+		const propertiesEl = document.createElement("div");
+		propertiesEl.classList.add(`${this.name}-properties`);
+		propertiesEl.innerHTML = `<h4>PROPERTIES:</h4>`;
+		verticalTabWrapper.appendChild(infoWrapper);
+		infoWrapper.appendChild(propertiesEl);
 
-		Object.entries(this.properties).forEach(el => {
-			console.log(el)
+		Object.entries(this.properties).forEach((el) => {
+			console.log(el);
 			const elWrapper = document.createElement("div");
 			elWrapper.classList.add(`input-${this.name}-properties-unit`);
 			el.map((el) => {
@@ -769,15 +777,15 @@ class Vercialtab {
 				elWrapper.appendChild(elContainer);
 			});
 			propertiesEl.appendChild(elWrapper);
-		})
+		});
 
-		const typefaceEl = document.createElement("div")
-		typefaceEl.classList.add(`${this.name}-typeface`)
-		typefaceEl.innerHTML = `<h4>TYPEFACE:</h4>`
-		infoWrapper.appendChild(typefaceEl)
-		
-		Object.entries(this.typeface).forEach(el => {
-			console.log(el)
+		const typefaceEl = document.createElement("div");
+		typefaceEl.classList.add(`${this.name}-typeface`);
+		typefaceEl.innerHTML = `<h4>TYPEFACE:</h4>`;
+		infoWrapper.appendChild(typefaceEl);
+
+		Object.entries(this.typeface).forEach((el) => {
+			console.log(el);
 			const elWrapper = document.createElement("div");
 			elWrapper.classList.add(`input-${this.name}-typeface-unit`);
 			el.map((el) => {
@@ -786,15 +794,15 @@ class Vercialtab {
 				elWrapper.appendChild(elContainer);
 			});
 			typefaceEl.appendChild(elWrapper);
-		})
+		});
 
-		const colorEl = document.createElement("div")
-		colorEl.classList.add(`${this.name}-colors`)
-		colorEl.innerHTML = `<h4>COLORS:</h4>`
-		infoWrapper.appendChild(colorEl)
+		const colorEl = document.createElement("div");
+		colorEl.classList.add(`${this.name}-colors`);
+		colorEl.innerHTML = `<h4>COLORS:</h4>`;
+		infoWrapper.appendChild(colorEl);
 
-		Object.entries(this.colors).forEach(el => {
-			console.log(el)
+		Object.entries(this.colors).forEach((el) => {
+			console.log(el);
 			const elWrapper = document.createElement("div");
 			elWrapper.classList.add(`input-${this.name}-typeface-unit`);
 			el.map((el) => {
@@ -803,15 +811,15 @@ class Vercialtab {
 				elWrapper.appendChild(elContainer);
 			});
 			colorEl.appendChild(elWrapper);
-		})
+		});
 
-		const effectEl = document.createElement("div")
-		effectEl.classList.add(`${this.name}-effects`)
-		effectEl.innerHTML = `<h4>EFFECT:</h4>`
-		infoWrapper.appendChild(effectEl)
+		const effectEl = document.createElement("div");
+		effectEl.classList.add(`${this.name}-effects`);
+		effectEl.innerHTML = `<h4>EFFECT:</h4>`;
+		infoWrapper.appendChild(effectEl);
 
-		Object.entries(this.effect.hover).forEach(el => {
-			console.log(el)
+		Object.entries(this.effect.hover).forEach((el) => {
+			console.log(el);
 			const elWrapper = document.createElement("div");
 			elWrapper.classList.add(`input-${this.name}-typeface-unit`);
 			el.map((el) => {
@@ -820,25 +828,23 @@ class Vercialtab {
 				elWrapper.appendChild(elContainer);
 			});
 			effectEl.appendChild(elWrapper);
-		})
-
-
+		});
 	}
 
-	name = "verticalTab"
+	name = "verticalTab";
 
 	properties = {
 		padding: "8px 16px",
 		borderRadius: "8px",
 	};
 
-	typeface={
-			fontSize: "16px",
-			lineHeight: "16px",
-			textAlign: "start",
-			letterSpacing: "normal",
-			color: "#f4eeff",
-	}
+	typeface = {
+		fontSize: "16px",
+		lineHeight: "16px",
+		textAlign: "start",
+		letterSpacing: "normal",
+		color: "#f4eeff",
+	};
 
 	colors = {
 		border: "1px solid #262130",
@@ -846,16 +852,33 @@ class Vercialtab {
 	};
 
 	effect = {
-		hover : {
-			backgroundColor : "#262130" 
-		}
-	}
-
-
+		hover: {
+			backgroundColor: "#262130",
+		},
+	};
 }
 
-const arr = ["ciao","bye","ola"]
+const arr = ["ciao", "bye", "ola"];
 
-const newTab = new Vercialtab(arr)
+const newTab = new Vercialtab(arr);
 
+//*************************************************************
 
+let tokenArr = [];
+
+const binancePublicEndpoint = "https://api.binance.com";
+const exchangeInfoEndpoint = binancePublicEndpoint + "/api/v3/exchangeInfo";
+const tickersEndpoint = binancePublicEndpoint + "/api/v3/ticker/price";
+
+componentDidMount = async () => {
+	const resToken = await fetch("https://api.pancakeswap.info/api/v2/pairs");
+	const dataToken = await resToken.json();
+
+	const tokens = Object.values(dataToken.data);
+
+	return tokens;
+};
+
+componentDidMount().then((tokens) => {
+	tokens.forEach((token) => console.log(token));
+});

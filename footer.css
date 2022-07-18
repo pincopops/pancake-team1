@@ -26,7 +26,7 @@
 
 .footerSection-content-top {
   margin: 0 0 36px 0;
-  border: 1px solid red;
+
   height: 240px;
   width: 1200px;
   display: flex;
@@ -71,4 +71,82 @@ a:hover {
   border-bottom: 1px solid rgb(56, 50, 65);
   display: flex;
   order: 2;
+}
+
+.footerSection-content-bottom {
+  width: 1200px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  order: 3;
+}
+.switch-container {
+  width: 56px;
+  height: 32px;
+  display: inline-flex;
+}
+.button-container {
+  width: 94px;
+  height: 48px;
+  display: inline-flex;
+}
+button {
+  cursor: pointer;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  padding: 0 24px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+}
+.world {
+  margin-right: 0.5rem;
+}
+button:last-child {
+  font-size: 16px;
+}
+.footerSection-content-bottomRight {
+  width: 276px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cake-container {
+  margin-right: 20px;
+}
+.cake-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.price {
+  color: rgb(184, 173, 210);
+  font-weight: 600;
+  margin-left: 8px;
+}
+.buy {
+  background-color: rgb(31, 199, 212);
+  border-radius: 16px;
+  letter-spacing: 0.03em;
+  height: 32px;
+  padding: 0 16px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.buy svg {
+  margin-left: 0.5rem;
+  fill: rgb(255, 255, 255);
+  align-self: center;
+}
+.buy:hover {
+  text-decoration: none;
 }

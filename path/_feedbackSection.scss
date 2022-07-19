@@ -47,17 +47,18 @@ h2 {
         @extend %card-wrapper;
 
         .card-container {
-          @extend %card-container;
+          @extend %card-wrapper-container;
 
           .card-content {
 
-            @extend %card-content;
+            @extend %card-wrapper-container-content;
 
             .card-title {
 
               &.marginBottom{
                 @extend %mediumMargin;
               }
+              
             }
 
             .card-subTitle {
@@ -65,7 +66,7 @@ h2 {
             }
 
             .card-image {
-                @extend %card-image
+                @extend %card-wrapper-container-content-image
             }
           }
         }
@@ -88,5 +89,6 @@ h2 {
 
 }
 }
+
 
 

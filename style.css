@@ -109,7 +109,7 @@ a {
 
 /*Buttons*/
 /*BOOKMARK BUTTON STYLE*/
-header .container-button .button4, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
+header .container-button .button4, header .container-button .button3, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button2, header .container-button .button2, .bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,13 +128,13 @@ header .container-button .button4, header .container-button .button3, .theMoonSe
   /*SET INFO STYLE*/
   /*SET CONNECT STYLE*/
 }
-.tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button, .tradeSection-content-title .tradeSection-button-container-default, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1, header .container-button .button1 {
   color: #fff;
   background-color: #1fc7d4;
   border: 0px #fff;
   /*SET DEFOULT STYLE HOVER*/
 }
-.tradeSection-content-title .tradeSection-button-container-default:hover, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button:hover, .tradeSection-content-title .tradeSection-button-container-default:hover, .theMoonSection-wrapper .theMoonSection-external-container .theMoonSection-leftTitle-container .theMoonSection-buttons-container .theMoonSection-button1:hover, header .container-button .button1:hover {
   background-color: rgba(31, 200, 212, 0.637);
   transition: 400ms;
 }
@@ -436,7 +436,7 @@ label {
   transition: transform 0.4s;
 }
 
-.feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper {
+.bettingSectionDoubleCard .bettingSectionCardWrapper, .feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -448,7 +448,7 @@ label {
   margin-bottom: 16px;
   background: #e7e3eb none repeat scroll 0% 0%;
 }
-.feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper .card-container {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardContainer, .feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper .card-container {
   width: 100%;
   height: 100%;
   overflow: inherit;
@@ -456,7 +456,7 @@ label {
   padding: 2.4rem;
   background: #ffffff none repeat scroll 0% 0%;
 }
-.feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardContainer .CardContent, .feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -468,7 +468,7 @@ label {
   margin-top: 6.4rem;
   min-height: 16.8rem;
 }
-.feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-image {
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardImg, .feedbackSection-wrapper #feedbackSection .external-container .card-external-container .card-wrapper .card-container .card-content .card-image {
   position: absolute;
   top: 2.4rem;
   right: 2.4rem;
@@ -791,4 +791,165 @@ h2 {
 .tradeSection-content-images .img2 {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+}
+
+#bettingSection {
+  background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0px;
+}
+
+.bettingSectionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  flex-direction: column;
+  width: 50%;
+  border-radius: 72px;
+  border: 1px solid #e7e3eb;
+  padding: 40px;
+}
+.bettingSectionContainer h2 {
+  color: #280d5f;
+}
+.bettingSectionContainer span {
+  color: #7645d9;
+}
+.bettingSectionContainer p {
+  color: #7a6eaa;
+}
+
+.bettingSectionContainerDescription p {
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+}
+h2.first-child {
+  color: #280d5f;
+}
+h2.last-child {
+  background: linear-gradient(#ffd800 0%, #fdab32 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+span {
+  color: #280d5f;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+p.first-child {
+  color: #b8add2;
+}
+p.last-child {
+  color: #ffffff;
+}
+
+.bettingSectionDoubleCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper {
+  max-width: 275px;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper.first-child {
+  transform: rotate(-2.36deg);
+  background-color: #ffb237;
+  display: flex;
+  flex: 1 1 0%;
+  margin-right: 24px;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper.first-child .CardContainer {
+  background: linear-gradient(#ffb237 0%, #ffcd51 51.17%, #ffe76a 100%);
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper.last-child {
+  transform: rotate(1.43deg);
+  background-color: #3c1786;
+  display: flex;
+  flex: 1 1 0%;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper.last-child .CardContainer {
+  background: linear-gradient(#7645d9 0%, #5121b1 100%);
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardP p {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardP p.first-child {
+  color: #280d5f;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardP p.last-child {
+  color: #ffffff;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardP span {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardP span.first-child {
+  color: #280d5f;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .CardP span.last-child {
+  color: #ffffff;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton {
+  margin-top: 40px;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton button {
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  width: 100%;
+}
+.bettingSectionDoubleCard .bettingSectionCardWrapper .cardButton a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: normal;
+}
+.bettingSectionDoubleCard .bettingSectionSecondCard {
+  background: #3c1786;
+}
+.bettingSectionDoubleCard .bettingSectionSecondCard .secondCardRotate {
+  transform: rotate(2.36deg);
+}
+
+.icon {
+  display: inline-block;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: white;
+}
+.icon.arrow-right {
+  -webkit-mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 46.svg") no-repeat 50% 50%;
+  width: 20px;
+  height: 20px;
+}
+.icon.ticket {
+  -webkit-mask: url("assets/asset 57.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 57.svg") no-repeat 50% 50%;
+  width: 50px;
+  height: 50px;
+}
+.icon.magic-sphere {
+  -webkit-mask: url("assets/asset 55.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 55.svg") no-repeat 50% 50%;
+  width: 50px;
+  height: 50px;
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */

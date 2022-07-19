@@ -13,7 +13,7 @@
   background: $bgCardWrapper;
 
 
-  %card-container {
+  &-container {
     width: 100%;
     height: 100%;
     overflow: inherit;
@@ -21,14 +21,14 @@
     padding: 2.4rem;
     background: $bgCardContainer;
 
-    %card-content {
+    &-content {
       @include flex(column, flex-end, unset);
       min-width: 232px;
       width: fit-content;
       margin-top: 6.4rem;
       min-height: 16.8rem;
 
-      %card-image {
+      &-image {
         position: absolute;
         top: 2.4rem;
         right: 2.4rem;

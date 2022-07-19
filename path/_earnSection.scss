@@ -121,22 +121,150 @@
         }
     }
 
-    .earnSection-switch-div{
-        display: flex;
-        flex-direction: column;
-    }
 
-    .earnSection-container-content{
+
+}
+.earnTopContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    z-index: 3;
+    width: 100%;
+
+    .earnTopTitle {
         display: flex;
         margin-bottom: 24px;
+
+
+        h2 {
+            color: rgb(40, 13, 95);
+            font-size: 20px;
+        }
+
+        span {
+            color: rgb(118, 69, 217);
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        button {
+            box-shadow: none;
+            background-color: transparent;
+            border-color: transparent;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
     }
+
+    .earnTopContent {
+        height: 80px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .earnFirstContent,
+        .earnSecondContent {
+            display: grid;
+            gap: 32x;
+            grid-template-columns: repeat(5, auto);
+            position: absolute;
+            opacity: 1;
+            margin-top: 0px;
+            transition: opacity 0s ease 0s, margin-top 0s ease 0s, all 0.4s ease-out 0s;
+            width: 100%;
+
+            &.hideEarn {
+                opacity: 0;
+                margin-top: 68px;
+            }
+
+            .earnCard {
+                display: flex;
+                width: 100%;
+
+                .earnCardColumn {
+                    display: flex;
+                    flex-direction: column;
+
+                    .earnCardTitle {
+                        display: flex;
+                        color: rgb(118, 69, 217);
+                        font-weight: 600;
+                        line-height: 1.5;
+                        margin-bottom: 8px;
+                        font-size: 12px;
+                        width: 100%;
+                    }
+
+                    .earnCardNumbers {
+                        display: flex;
+                        gap: 5px;
+                        span {
+                            display: flex;
+                            color: rgb(40, 13, 95);
+                            font-weight: 600;
+                            line-height: 1.1;
+                        }
+                    }
+
+                    .earnCardApy {
+                        display: flex;
+                        color: rgb(122, 110, 170);
+                        font-weight: 400;
+                        line-height: 1.5;
+                        font-size: 16px;
+                    }
+                }
+
+                .secondCardE,
+                .thirdCardE,
+                .fourthCardE,
+                .fifthCardE {
+                    display: flex;
+                    height: 80px;
+                    top: 0px;
+                    padding-left: 16px;
+                    border-left: 1px solid rgb(215, 202, 236);
+                    
+
+                }
+            }
+        }
+    }
+
 }
 
-.container-value{
-    height: 80px;
+//ANIMATION
+@mixin floatAnimation ($animationName, $xDir, $yDir, $speed, $delay){
+    animation: $animationName $speed ease-in-out $delay infinite normal none running ;
+    -webkit-animation: $animationName $speed ease-in-out $delay infinite normal none running ;
+
+    @keyframes #{$animationName} {
+        0% {
+            transform: translate(0px, 0px);
+            -webkit-transform: translate(0px, 0px);
+            -moz-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            -o-transform: translate(0px, 0px);
+        }
+        50% {
+            transform: translate($xDir, $yDir);
+            -webkit-transform: translate($xDir, $yDir);
+            -moz-transform: translate($xDir, $yDir);
+            -ms-transform: translate($xDir, $yDir);
+            -o-transform: translate($xDir, $yDir);
+        }
+        100% {
+            transform: translate(0px, 0px);
+            -webkit-transform: translate(0px, 0px);
+            -moz-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            -o-transform: translate(0px, 0px);
+        }
+    }
 }
-    
-    
-    
-    
-   

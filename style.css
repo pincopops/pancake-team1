@@ -583,17 +583,113 @@ header .container-button {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
-.earnSection .earnSection-switch-div {
+
+.earnTopContainer {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  z-index: 3;
+  width: 100%;
 }
-.earnSection .earnSection-container-content {
+.earnTopContainer .earnTopTitle {
   display: flex;
   margin-bottom: 24px;
 }
-
-.container-value {
+.earnTopContainer .earnTopTitle h2 {
+  color: rgb(40, 13, 95);
+  font-size: 20px;
+}
+.earnTopContainer .earnTopTitle span {
+  color: rgb(118, 69, 217);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+.earnTopContainer .earnTopTitle button {
+  box-shadow: none;
+  background-color: transparent;
+  border-color: transparent;
+}
+.earnTopContainer .earnTopTitle button:hover {
+  cursor: pointer;
+}
+.earnTopContainer .earnTopContent {
   height: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.earnTopContainer .earnTopContent .earnFirstContent,
+.earnTopContainer .earnTopContent .earnSecondContent {
+  display: grid;
+  gap: 32x;
+  grid-template-columns: repeat(5, auto);
+  position: absolute;
+  opacity: 1;
+  margin-top: 0px;
+  transition: opacity 0s ease 0s, margin-top 0s ease 0s, all 0.4s ease-out 0s;
+  width: 100%;
+}
+.earnTopContainer .earnTopContent .earnFirstContent.hideEarn,
+.earnTopContainer .earnTopContent .earnSecondContent.hideEarn {
+  opacity: 0;
+  margin-top: 68px;
+}
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard {
+  display: flex;
+  width: 100%;
+}
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .earnCardColumn,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .earnCardColumn {
+  display: flex;
+  flex-direction: column;
+}
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .earnCardColumn .earnCardTitle,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .earnCardColumn .earnCardTitle {
+  display: flex;
+  color: rgb(118, 69, 217);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-size: 12px;
+  width: 100%;
+}
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .earnCardColumn .earnCardNumbers,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .earnCardColumn .earnCardNumbers {
+  display: flex;
+  gap: 5px;
+}
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .earnCardColumn .earnCardNumbers span,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .earnCardColumn .earnCardNumbers span {
+  display: flex;
+  color: rgb(40, 13, 95);
+  font-weight: 600;
+  line-height: 1.1;
+}
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .earnCardColumn .earnCardApy,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .earnCardColumn .earnCardApy {
+  display: flex;
+  color: rgb(122, 110, 170);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .secondCardE,
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .thirdCardE,
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .fourthCardE,
+.earnTopContainer .earnTopContent .earnFirstContent .earnCard .fifthCardE,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .secondCardE,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .thirdCardE,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .fourthCardE,
+.earnTopContainer .earnTopContent .earnSecondContent .earnCard .fifthCardE {
+  display: flex;
+  height: 80px;
+  top: 0px;
+  padding-left: 16px;
+  border-left: 1px solid rgb(215, 202, 236);
 }
 
 #bettingSection {

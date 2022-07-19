@@ -486,6 +486,7 @@ header .container-button {
   justify-content: center;
   align-items: center;
   height: 62.2rem;
+  flex-direction: column;
 }
 .earnSection-content {
   display: flex;
@@ -581,6 +582,18 @@ header .container-button {
 .earnSection-content-images .img2 {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
+}
+.earnSection .earnSection-switch-div {
+  display: flex;
+  flex-direction: column;
+}
+.earnSection .earnSection-container-content {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.container-value {
+  height: 80px;
 }
 
 #bettingSection {
@@ -746,6 +759,13 @@ p.last-child {
 .icon.left-divider {
   -webkit-mask: url("assets/asset 53.svg") no-repeat 50% 50%;
   mask: url("assets/asset 53.svg") no-repeat 50% 50%;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+.icon.switch {
+  -webkit-mask: url("assets/asset 54.svg") no-repeat 50% 50%;
+  mask: url("assets/asset 54.svg") no-repeat 50% 50%;
   width: 50px;
   height: 50px;
   background-color: black;

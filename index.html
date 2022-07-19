@@ -3,169 +3,166 @@
 
 
 <head>
-  <!--meta tag per caratteri, compatibilità Edge e -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--meta tag per caratteri, compatibilità Edge e -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!--meta tag per il titolo della pagina-->
-  <title>PancakeSwap</title>
+    <!--meta tag per il titolo della pagina-->
+    <title>PancakeSwap</title>
 
-  <!--meta tag per autore e descrizione -->
-  <meta name="author" content="Team1-FullStack3-Develhope" />
-  <meta name="description" content="PancakeSwap website" />
+    <!--meta tag per autore e descrizione -->
+    <meta name="author" content="Team1-FullStack3-Develhope" />
+    <meta name="description" content="PancakeSwap website" />
 
-  <!--link tag per la favicon-->
-  <link rel="shortcut icon" href="" type="image/x-icon" />
+    <!--link tag per la favicon-->
+    <link rel="shortcut icon" href="" type="image/x-icon" />
 
-  <!--link foglio di stile-->
-  <link rel="stylesheet" href="style.css">
+    <!--link foglio di stile-->
+    <link rel="stylesheet" href="style.css">
 
-  <!--meta tag per open graph protocol -->
-  <meta property="og:title" content="PancakeSwap website" />
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="soluzione esercizio Head Francesco Cristini" />
-  <meta property="og:image" content="" />
-  <meta property="og:url" content="https://www.***.it" />
-  
+    <!--meta tag per open graph protocol -->
+    <meta property="og:title" content="PancakeSwap website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="soluzione esercizio Head Francesco Cristini" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="https://www.***.it" />
+
 </head>
 
 <body>
-  <header id="header">
-    <section id="navbar"></section>
-  </header>
-  <main>
-    <section id="theMoonSection"></section>
-    <section id="feedbackSection"></section>
-    <section class="earnSection">
-      <div class="earnSection-content">
-        <div class="earnSection-content-title">
-          <h2><span>Earn</span> passive income with crypto.</h2>
-          <div class="earnSection-content-title-subtitle">
-            <p class="subTitle">PancakeSwap makes it easy to make your crypto work for you.</p>
-          </div>
-          <div class="earnSection-button-container">
-            <div class="earnSection-button-container-default">Trade now</div>
-            <a class="earnSection-button-container-link" href="">Learn</a>
-          </div>
-        </div>
-        <div class="earnSection-content-images">
-          <img class="img1" src="assets/asset 15.png" alt="">
-          <img src="assets/asset 16.png" alt="">
-          <img class="img2" src="assets/asset 17.png" alt="">
-        </div>
+    <header id="header">
+        <section id="navbar"></section>
+    </header>
+    <main>
+        <section id="theMoonSection"></section>
+        <section id="feedbackSection"></section>
+        <section class="earnSection">
+            <div class="earnSection-content">
+                <div class="earnSection-content-title">
+                    <h2><span>Earn</span> passive income with crypto.</h2>
+                    <div class="earnSection-content-title-subtitle">
+                        <p class="subTitle">PancakeSwap makes it easy to make your crypto work for you.</p>
+                    </div>
+                    <div class="earnSection-button-container">
+                        <div class="earnSection-button-container-default">Trade now</div>
+                        <a class="earnSection-button-container-link" href="">Learn</a>
+                    </div>
+                </div>
+                <div class="earnSection-content-images">
+                    <img class="img1" src="assets/asset 15.png" alt="">
+                    <img src="assets/asset 16.png" alt="">
+                    <img class="img2" src="assets/asset 17.png" alt="">
+                </div>
 
 
+            </div>
+            <div class="earnSection-switch-div">
+                <div class="earnSection-container-content">
+                    <div>
 
-      </div>
 
-      <div class='poster' data-id="1">
-        <input type='hidden' value='1'>
-        Some text1
-        </div>
-        
-        <div class='poster'  data-id="2">
-        <input type='hidden' value='2' >
-        Some text2
-        </div>
-        
-        <div class='poster'  data-id="3">
-        <input type='hidden' value='3'>
-        Some text3
-        </div>
-        
-        <div class='poster'  data-id="">
-        <input type='hidden' value='4'>
-        Some text4
-        </div>
+                        <div id="div1" style="visibility: visible">
+                            <h2 style="font-size: 20px;">Top <span>Syrup Pools</span><i class="icon switch"></i></h2>
+                        </div>
+                        
+                        <div class="container-value">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="div2" style="visibility: hidden">
+                    Show a DIV after 30 seconds.
+                </div>
+            </div>
 
-      <script>
-        function refresh(){
-    $('.poster').each(function(){
-        var post_id = this.dataset.id; // $("#post_id", this).val();
-        var self = _this;
-        setInterval(function(){
- $('input:hidden').each(function() {
- var post_id = $(this).attr('id');
- refresh_post(post_id)
-});
-}, 5000);
-    });
-}
-      </script>
+</body>
+<!-- <script type="text/javascript">
+            function showDiv1() {
+              document.getElementById("div1").style.visibility = "hidden";
+            }
+            setTimeout("showDiv1()", 3000); // after 15 sec
+            function showDiv2() {
+              document.getElementById("div2").style.visibility = "visible";
+            }
+            setTimeout("showDiv2()", 5000); // after 30 secs
+           </script>
+ -->
 
 
 
 
 
-
-    </section>
-    <section id="bettingSection">
-      <div class="bettingSectionContainer">
+</section>
+<section id="bettingSection">
+    <div class="bettingSectionContainer">
         <h2><span>Win</span> millions in prizes</h2>
         <div class="bettingSectionContainerDescription">
-          <p>Provably fair, on-chain games.</p>
-          <p style="margin-bottom: 40px;">Win big with PancakeSwap.</p>
+            <p>Provably fair, on-chain games.</p>
+            <p style="margin-bottom: 40px;">Win big with PancakeSwap.</p>
         </div>
         <div class="bettingSectionDoubleCard">
-          <div class="bettingSectionCardWrapper first-child">
+            <div class="bettingSectionCardWrapper first-child">
 
 
-            <div class="CardContainer first-child">
-              <div class="CardContent">
-                <div class="CardImg">
-                  <i class=" icon magic-sphere"></i>
+                <div class="CardContainer first-child">
+                    <div class="CardContent">
+                        <div class="CardImg">
+                            <i class=" icon magic-sphere"></i>
+                        </div>
+                        <div class="CardP">
+                            <p class="first-child">Prediction</p>
+                            <h2 class="first-child">$130 billion</h2>
+                            <p class="first-child">in BNB + CAKE won so far</p>
+                            <span class="first-child">Predict the price trend of BNB or CAKE to win</span>
+                        </div>
+                        <div class="cardButton"><a href=""><button>Play<i class="icon arrow-right"></i></button></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="CardP">
-                  <p class="first-child">Prediction</p>
-                  <h2 class="first-child">$130 billion</h2>
-                  <p class="first-child">in BNB + CAKE won so far</p>
-                  <span class="first-child">Predict the price trend of BNB or CAKE to win</span>
-                </div>
-                <div class="cardButton"><a href=""><button>Play<i class="icon arrow-right"></i></button></a></div>
-              </div>
+
+
             </div>
 
-
-          </div>
-
-          <div class="bettingSectionCardWrapper last-child">
+            <div class="bettingSectionCardWrapper last-child">
 
 
-            <div class="CardContainer last-child">
-              <div class="CardContent">
-                <div class="CardImg">
-                  <i class="icon ticket"></i>
+                <div class="CardContainer last-child">
+                    <div class="CardContent">
+                        <div class="CardImg">
+                            <i class="icon ticket"></i>
+                        </div>
+                        <div class="CardP">
+                            <p class="last-child">Lottery</p>
+                            <h2 class="last-child">$74,726</h2>
+                            <p class="last-child">in CAKE prizes this round</p>
+                            <span class="last-child">Buy tickets with CAKE, win CAKE if your numbers
+                                match</span>
+                        </div>
+                        <div class="cardButton"><a href=""><button>Buy Tickets<i
+                                        class="icon arrow-right"></i></button></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="CardP">
-                  <p class="last-child">Lottery</p>
-                  <h2 class="last-child">$74,726</h2>
-                  <p class="last-child">in CAKE prizes this round</p>
-                  <span class="last-child">Buy tickets with CAKE, win CAKE if your numbers match</span>
-                </div>
-                <div class="cardButton"><a href=""><button>Buy Tickets<i class="icon arrow-right"></i></button></a>
-                </div>
-              </div>
+
+
             </div>
-
-
-          </div>
 
 
         </div>
-      </div>
+    </div>
 
-    </section>
-    <section id="buyCakeSection"></section>
-    <section id="loginSection"></section>
-  </main>
-  <footer id="footer">
+</section>
+<section id="buyCakeSection"></section>
+<section id="loginSection"></section>
+</main>
+<footer id="footer">
 
-  </footer>
+</footer>
 
-  
-    <script src="./api.js"></script>
-  
+
+<script src="./api.js"></script>
+
 </body>
 
 </html>

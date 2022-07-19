@@ -35,6 +35,7 @@
 .earnSection{
     @include flexCenter;
     height: 62.2rem;
+    flex-direction: column;
 
     &-content{
         @include flexSpaceBetween;
@@ -119,6 +120,20 @@
             }
         }
     }
+
+    .earnSection-switch-div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .earnSection-container-content{
+        display: flex;
+        margin-bottom: 24px;
+    }
+}
+
+.container-value{
+    height: 80px;
 }
     
     

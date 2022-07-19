@@ -5,11 +5,12 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
+  font-weight: 300;
 }
 
 #footer {
   background: rgb(39, 38, 44) none repeat scroll 0% 0%;
-  height: 500px;
+  height: 540px;
   width: 100vw;
   padding: 56px 40px 32px 40px;
   display: flex;
@@ -17,7 +18,7 @@
 }
 
 .footerSection-content {
-  height: 411px;
+  height: 452px;
   width: 1200px;
   display: flex;
   flex-direction: column;
@@ -26,8 +27,7 @@
 
 .footerSection-content-top {
   margin: 0 0 36px 0;
-
-  height: 240px;
+  height: 280px;
   width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -36,6 +36,7 @@
 
 .content-info {
   list-style: none;
+  margin-bottom: 40px;
 }
 
 li:first-child {
@@ -47,9 +48,16 @@ li:first-child {
 span {
   color: rgb(244, 238, 255);
 }
+li {
+  margin-bottom: 8px;
+  text-transform: capitalize;
+  display: flex;
+  width: fit-content;
+}
+
 li a {
   color: white;
-  line-height: 1.8;
+  line-height: 1.5;
   text-decoration: none;
 }
 .contacts a {
@@ -70,7 +78,25 @@ a:hover {
   height: 55px;
   border-bottom: 1px solid rgb(56, 50, 65);
   display: flex;
+  justify-content: flex-start;
   order: 2;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  gap: 25px;
+}
+.social-container {
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+}
+.content-link {
+  display: flex;
+  width: fit-content;
+}
+.content-link svg {
+  cursor: pointer;
+  align-self: center;
+  fill: rgb(184, 173, 210);
 }
 
 .footerSection-content-bottom {
@@ -80,20 +106,69 @@ a:hover {
   justify-content: space-between;
   order: 3;
 }
+.footerSection-content-bottomLeft {
+  display: flex;
+  align-items: center;
+}
 .switch-container {
   width: 56px;
   height: 32px;
   display: inline-flex;
+  align-items: center;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 200ms ease 0s;
+  box-shadow: rgba(74, 74, 104, 0.1) 0px 2px 2px -1px inset;
+  background-color: rgb(189, 194, 196);
+  position: relative;
+}
+.switch-container input {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+}
+.sun-container {
+  cursor: pointer;
+  height: 26px;
+  left: 3px;
+  top: 3px;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 26px;
+  transition: left 200ms ease-in 0s;
+}
+.sun-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.sun-container div svg {
+  fill: rgb(255, 178, 55);
 }
 .button-container {
   width: 94px;
   height: 48px;
   display: inline-flex;
 }
+.img-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.img-container svg {
+  fill: rgb(255, 255, 255);
+}
 button {
   cursor: pointer;
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
   letter-spacing: 0.03em;
@@ -103,11 +178,14 @@ button {
   background-color: transparent;
   border: none;
 }
-.world {
+button svg {
   margin-right: 0.5rem;
+  fill: rgb(184, 173, 210);
 }
 button:last-child {
   font-size: 16px;
+  font-weight: 400;
+  color: rgb(184, 173, 210);
 }
 .footerSection-content-bottomRight {
   width: 276px;
@@ -123,6 +201,12 @@ button:last-child {
   display: flex;
   align-items: center;
   text-decoration: none;
+}
+.pancake svg {
+  transition: transform 0.3s ease 0s;
+}
+.pancake svg:hover {
+  transform: scale(1.2);
 }
 .price {
   color: rgb(184, 173, 210);
@@ -141,6 +225,8 @@ button:last-child {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
 }
 .buy svg {
   margin-left: 0.5rem;
@@ -149,4 +235,5 @@ button:last-child {
 }
 .buy:hover {
   text-decoration: none;
+  opacity: 0.65;
 }

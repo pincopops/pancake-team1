@@ -1,3 +1,9 @@
+
+/**
+ * *INIZIALIZZO LA CLASSE COLOR PER GESTIRE LE VARIABILI DEI COLORI CON UN ARRAY
+ */
+
+
 class Color {
 	constructor(name, hex) {
 		this.name = name;
@@ -82,8 +88,10 @@ const colorsTitle = document.createElement("h1");
 colorsTitle.innerText = "Colors";
 colorsWrapperEl.insertBefore(colorsTitle, colorsWrapperEl.firstChild);
 
+
+
 /**
- * ?Icons
+ * *CLASSE ICONE ***************************************************************************************
  */
 
 const wrapperIcons = document.querySelector(".wrapper-icons");
@@ -241,7 +249,7 @@ iconsArr.forEach((item, i) => {
 });
 
 /**
- * ?typography
+ * *CLASSE TIPOGRAFIA*****************************************************************************
  */
 
 const typographyEl = document.querySelector(".wrapper-typography");
@@ -309,7 +317,7 @@ typographyArr.forEach((item, i) => {
 });
 
 /**
- * ?BUTTONS
+ * *CLASSE BOTTINI************************************************************************************
  */
 
 const buttonWrapper = document.querySelector(".wrapper-button");
@@ -407,6 +415,10 @@ buttonContainer.classList.add("wrapper-button-container");
 
 buttonWrapper.appendChild(buttonContainer);
 
+
+/**
+ * ?FUNZIONE PER CRERARE I BOTTONI*************************************************************************
+ */
 const buttonMaker = (button) => {
 	const buttonContainerUnitWrapper = document.createElement("div");
 	buttonContainerUnitWrapper.innerHTML = `<h1>${button.name}</h1>`;
@@ -494,7 +506,7 @@ const buttonMaker = (button) => {
 buttonArr.map((button) => buttonMaker(button));
 
 /**
- * ?CAROUSEL OF BUTTONS PREVIEW
+ * ?CAROUSEL OF BUTTONS PREVIEW********************************************************************************
  */
 
 const ButtonInfoPreview = document.querySelectorAll(
@@ -554,7 +566,7 @@ buttonNext.addEventListener("click", () => carouselButtonNext());
 buttonPrev.addEventListener("click", () => carouselButtonPrev());
 
 /**
- * ?FORM PREVIEW
+ * *CLASSE INPUT******************************************************************************
  */
 
 class Input {
@@ -637,6 +649,11 @@ class Input {
 		input.setAttribute("name", this.name);
 		InputContainer.appendChild(input);
 
+		const infocontainer = document.createElement('div')
+		infocontainer.classList.add(`info-${this.name}-container`);
+		InputContainer.appendChild(infocontainer)
+
+
 		const InputProperties = document.createElement("div");
 		InputProperties.classList.add(`input-${this.name}-properties`);
 		InputProperties.innerHTML = `<h4>PROPERTIES</h4>`;
@@ -652,7 +669,7 @@ class Input {
 			InputProperties.appendChild(elContainer);
 		});
 
-		InputContainer.appendChild(InputProperties);
+		infocontainer.appendChild(InputProperties);
 		wrapper.appendChild(InputContainer);
 
 		const InputTypeface = document.createElement("div");
@@ -671,7 +688,7 @@ class Input {
 			});
 		}
 
-		InputContainer.appendChild(InputTypeface);
+		infocontainer.appendChild(InputTypeface);
 
 		const InputColors = document.createElement("div");
 		InputColors.classList.add(`input-${this.name}-colors`);
@@ -687,7 +704,7 @@ class Input {
 			InputColors.appendChild(elWrapper);
 		});
 
-		InputContainer.appendChild(InputColors);
+		infocontainer.appendChild(InputColors);
 
 		if (this.name === "radio") {
 			const cloneRadio = input.cloneNode(true);
@@ -707,7 +724,7 @@ const radioInput = new Input("radio", "radio", formWrapper);
 document.querySelector("[type=checkbox]").classList.add("checkbox-input");
 
 /**
- * ?VERTICAL TAB PREVIEW
+ * *CLASSE VERTICAL TAB*******************************************************************************
  */
 
 const verticalTabWrapper = document.querySelector(".wrapper-tab-vertical");
@@ -884,6 +901,10 @@ const newTab = new Vercialtab(arr);
 // });
 
 //******************************************************************** */
+
+/**
+ * ?MAKER PER I SEPARATORI FRA LE SEZIONI
+ */
 
 const sections = document.querySelectorAll('div')
 

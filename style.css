@@ -443,10 +443,7 @@ body {
 }
 .wrapper *[data-id=section] {
   width: 100%;
-  padding: 10rem 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 5rem 5rem;
 }
 .wrapper .separator-wrapper {
   width: 100%;
@@ -598,40 +595,63 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  width: 50rem;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   gap: 1rem;
   font-size: 1.2rem;
 }
+.wrapper-form-tab .info-text-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 50%;
+}
 .wrapper-form-tab .input-checkbox-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  width: 50rem;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   gap: 0.5rem;
   font-size: 1.2rem;
 }
+.wrapper-form-tab .info-checkbox-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 50%;
+}
 .wrapper-form-tab .input-radio-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  width: 50rem;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   font-size: 1.2rem;
 }
+.wrapper-form-tab .info-radio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 50%;
+}
 .wrapper-button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
 }
 .wrapper-button-container {
   display: flex;
@@ -650,7 +670,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
-  left: 100%;
+  left: 101%;
   top: 50%;
   padding: 1rem;
 }
@@ -668,6 +688,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: top;
+  width: 50rem;
 }
 .wrapper-button-container-content-wrapper {
   display: flex;

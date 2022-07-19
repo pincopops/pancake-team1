@@ -9,8 +9,7 @@ body{
 	background-color: grey;
 	*[data-id="section"]{
 		width: 100%;
-		padding: 10rem 5rem;
-		@include flexCenter
+		padding: 5rem 5rem;
 	}
 
 	.separator-wrapper{
@@ -125,39 +124,59 @@ body{
 
 	&-form-tab {
 
-		@include flex(column, start, start);
+		@include flex(column, start, start); 
+
 
 		.input-text-container{
 			@include flex(row, space-between, baseline);
-			width: 50rem;
+			width: 100%;
 			height: fit-content;
 			gap: 1rem;
 			font-size: 1.2rem;
+			
+		}
+
+		.info-text-container{
+			@include flex(row, space-between, baseline);
+			width: 50%;
 		}
 
 		.input-checkbox-container{
 			@include flex(row, space-between, baseline);
-			width: 50rem;
+			width: 100%;
 			height: fit-content;
 			gap: 0.5rem;
 			font-size: 1.2rem;
 			
 			.checkbox-input {
 			@extend %checkbox;
+			
 			}
+		}
+
+		.info-checkbox-container{
+			@include flex(row, space-between, baseline);
+			width: 50%;
 		}
 		
 		.input-radio-container{
 			@include flex(row, space-between, baseline);
-			width: 50rem;
+			width: 100%;
 			height: fit-content;
 			font-size: 1.2rem;
 			
 		}
+
+		.info-radio-container{
+			@include flex(row, space-between, baseline);
+			width: 50%;
+		}
 	}
 
 	&-button {
-		width: fit-content;
+		width: 70%;
+
+		@include flex(row, space-between, top);
 
 		
 
@@ -176,7 +195,7 @@ body{
 					@include b-selector(default);
 					width: fit-content;
 					position: absolute;
-					left: 100%;
+					left: 101%;
 					top: 50%;
 					padding: 1rem;
 				}
@@ -193,10 +212,10 @@ body{
 
 			&-content {
 				@include flex(column, space-between, top);
+				width: 50rem;
 
 				&-wrapper {
 					@include flex(row, space-between, top);
-
 					gap: 2rem;
 
 					.button{
@@ -227,6 +246,12 @@ body{
 				}
 			}
 		}
+
+		.separator-img{
+
+		}
+
+
 	}
 
 	&-tab{

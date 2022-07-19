@@ -79,6 +79,9 @@
   color: white;
   background-color: rgb(31, 199, 212);
 }
+.content-text button:hover {
+  opacity: 0.65;
+}
 
 #footer {
   background: rgb(39, 38, 44) none repeat scroll 0% 0%;
@@ -170,7 +173,45 @@ a:hover {
   align-self: center;
   fill: rgb(184, 173, 210);
 }
-
+.telegram {
+  position: relative;
+}
+.language-container {
+  height: 0px;
+  transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  bottom: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(25, 19, 38, 0.1) 0px 2px 12px -8px,
+    rgba(25, 19, 38, 0.05) 0px 1px 1px;
+  border-radius: 4px;
+  padding: 16px;
+  position: absolute;
+  transform: translate(-50%);
+  overflow: hidden;
+  opacity: 0;
+}
+.language-container:hover {
+  opacity: 1;
+  height: 400px;
+  overflow-y: auto;
+  transition: max-height 0s ease 0s, opacity 0.3s ease-in-out 0s;
+}
+.language-container a {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  color: rgb(122, 110, 170);
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.language-container a:hover {
+  text-decoration: underline;
+}
 .footerSection-content-bottom {
   width: 1200px;
   height: 48px;

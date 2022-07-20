@@ -791,6 +791,9 @@ h2 {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
+.tradeSection-content-images .img3 {
+  z-index: -1;
+}
 
 .earnSection {
   display: flex;

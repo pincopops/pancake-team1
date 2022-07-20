@@ -588,9 +588,9 @@ header .container-button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: 55px;
   z-index: 3;
-  width: 100%;
+  width: 92rem;
 }
 .earnTopContainer .earnTopTitle {
   display: flex;
@@ -698,6 +698,7 @@ header .container-button {
   justify-content: center;
   align-items: center;
   padding: 48px 0px;
+  margin-top: 60px;
 }
 
 .bettingSectionContainer {

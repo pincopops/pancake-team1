@@ -2,7 +2,7 @@
     background: linear-gradient(#6fb6f1 0%, #eaf2f6 100%);
     @include flexCenter;
     padding: 48px 0px;
-    margin-top: 60px;
+    
 }
 
 .bettingSectionContainer {
@@ -234,5 +234,13 @@
         width: 50px;
         height: 50px;
         background-color: black;
+    }
+
+    &.world{
+        -webkit-mask: url("assets/asset 44.svg") no-repeat 50% 50%;
+        mask: url("assets/asset 44.svg") no-repeat 50% 50%;
+        width: 50px;
+        height: 50px;
+        background-color: #b8add2;
     }
 }

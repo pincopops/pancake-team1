@@ -34,8 +34,10 @@
 
 .earnSection{
     @include flexCenter;
-    height: 62.2rem;
+    
     flex-direction: column;
+    background-color: $greyMouse;
+    padding-bottom: 60px;
 
     &-content{
         @include flexSpaceBetween;

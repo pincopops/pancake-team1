@@ -31,6 +31,7 @@
     position: fixed;
     width: 100%;
     background: linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+    z-index: 99;
 }
 
 .nav-over-roundedbox {
@@ -47,6 +48,7 @@
     height: 56px;
     background-color: white;
     border-bottom: 1px solid rgb(231, 227, 235);
+    z-index: 99;
 }
 .nav-sub-container {
     height: 100%;

@@ -3,7 +3,6 @@
 
 <!--link foglio di stile-->
 <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="footer.css" />
 
 
 <!--meta tag per open graph protocol -->
@@ -941,5 +940,27 @@
             </div>
     </footer>
 </body>
+<script>
+    const exit = document.querySelector('.nav-exit');
+    const bunnyPopup = document.querySelector('.nav-over'); 
+    const nav = document.querySelector('nav');
+    const navContent = document.querySelector('.navbar-section-container')
+
+    exit.addEventListener('click', function(){
+        bunnyPopup.style = "display: none;"
+        nav.style = "top: 0;"
+    })
+
+    window.addEventListener("scroll", ()=>{
+        if (window.scrollY>= 200){
+            navContent.style = "display: none;"
+        }
+        else {
+            navContent.style = "display: block;"
+        }
+    })
+
+
+    </script>
 
 </html>

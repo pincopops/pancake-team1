@@ -248,7 +248,7 @@ body{
 		}
 
 		.separator-img{
-
+				@include noGravity;
 		}
 
 
@@ -265,8 +265,8 @@ body{
 	&-vertical {
 		width: 100%;
 		display: grid;
-		grid : "title title"
-				"img info";
+		grid : "title title separator"
+				"img info sepoarator";
 		gap: 2rem;
 
 		h1{
@@ -295,6 +295,11 @@ body{
 			@include flex (row,center,baseline);
 			gap: 2rem;
 			grid-area: info;
+		}
+
+		.separator-img{
+			@include noGravity;
+			grid-area: separator;
 		}
 	}
 

@@ -45,16 +45,16 @@ h2 {
       .card-wrapper {
         @extend %card-wrapper;
 
-        &-container {
+        .card-container {
           @extend %card-wrapper-container;
 
-          &-content {
+          .card-content {
 
             @extend %card-wrapper-container-content;
 
             .card-title {
 
-              &.marginBottom{
+              .marginBottom{
                 @extend %mediumMargin;
               }
             }

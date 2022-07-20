@@ -169,18 +169,16 @@
 
         .cardButton {
             margin-top: 40px;
-            button {
-                @include b-selector(defoult);
-                color: $whiteBrand;
-                font-weight: 600;
-                line-height: 1.5;
-                font-size: 16px;
-                width: 100%;
-
-            }
+           
 
             a {
                 @include flex(row, center, normal);
+                width: 100%;
+                button {
+                    @include b-selector(default);
+                    width: 100%
+    
+                }
             }
 
 

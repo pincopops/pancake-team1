@@ -31,6 +31,6 @@
  separatorMaker(onlysection, "./assets/asset 0.png", "wrapper-icons");
  separatorMaker(onlysection, "./assets/asset 6.png", "wrapper-form-tab");
  separatorMaker(onlysection, "./assets/asset 8.png", "wrapper-button");
- separatorMaker(onlysection, "./assets/asset 29.png", "wrapper-tab");
+ separatorMaker(onlysection, "./assets/asset 29.png", "wrapper-tab-vertical");
  separatorMaker(onlysection, "./assets/asset 13.png", "wrapper-card");
  

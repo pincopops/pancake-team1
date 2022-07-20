@@ -704,6 +704,32 @@ body {
 .wrapper-button-container-content-wrapper [data-status=deactived]:hover {
   pointer-events: none;
 }
+.wrapper-button .separator-img {
+  -webkit-animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
+          animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
+}
+@-webkit-keyframes noGravity {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes noGravity {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
 .wrapper-tab {
   width: 100%;
   padding: 5rem;
@@ -711,7 +737,7 @@ body {
 .wrapper-tab-vertical {
   width: 100%;
   display: grid;
-  grid: "title title" "img info";
+  grid: "title title separator" "img info sepoarator";
   gap: 2rem;
 }
 .wrapper-tab-vertical h1 {
@@ -730,4 +756,20 @@ body {
   align-items: baseline;
   gap: 2rem;
   grid-area: info;
+}
+.wrapper-tab-vertical .separator-img {
+  -webkit-animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
+          animation: noGravity 3.5s ease-in-out 0s infinite normal none running;
+  grid-area: separator;
+}
+@keyframes noGravity {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
 }/*# sourceMappingURL=style.css.map */

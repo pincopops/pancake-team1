@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
+@keyframes noGravity {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-5px, -10px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes noGravity2 {
+  0% {
+    transform: translate(-5px, 10px);
+  }
+  50% {
+    transform: translate(-5px, -15px);
+  }
+  100% {
+    transform: translate(-5px, 10px);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -15,7 +36,6 @@
     0% 0%;
 }
 .loginSection-container {
-  width: 1512px;
   height: 428px;
   display: flex;
   flex-direction: column;
@@ -51,8 +71,8 @@
   height: 1712px;
 }
 .svg-coin-container {
-  width: 100%;
-  height: 100%;
+  width: 1200px;
+  height: 428px;
   top: 0px;
   left: 50%;
   position: absolute;
@@ -68,16 +88,53 @@
   top: 0px;
   display: flex;
 }
-.coin1 {
-  position: relative;
-  max-height: 256px;
+
+.svg-coin-bottom {
+  width: 240px;
+  height: 256px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
 }
+.svg-coin-flex-container {
+  max-height: 256px;
+  width: 256px;
+  position: relative;
+}
+.coin-item-top {
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.animation-1 {
+  animation: noGravity2 3s ease-in-out 1s infinite normal running;
+}
+.animation-2 {
+  animation: noGravity 3s ease-in-out 0.66s infinite normal running;
+}
+.animation-3 {
+  animation: noGravity 3s ease-in-out 0.33s infinite normal running;
+}
+.coin-item-top img {
+  animation: noGravity 3s ease-in-out 0.66s infinite normal running;
+}
+.coin-item-bottom {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.coin-item-bottom img {
+  animation: noGravity 3s ease-in-out 0.66s infinite normal running;
+}
+
 .content-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   position: relative;
   z-index: 1;
 }
@@ -135,16 +192,15 @@
 
 #footer {
   background: rgb(39, 38, 44) none repeat scroll 0% 0%;
-  height: 540px;
+  height: 499px;
   width: 100vw;
-  padding: 56px 40px 32px 40px;
+  padding: 56px 40px 32px;
   display: flex;
   justify-content: center;
 }
 
 .footerSection-content {
-  height: 452px;
-  width: 1200px;
+  height: 411px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +208,7 @@
 
 .footerSection-content-top {
   margin: 0 0 36px 0;
-  height: 280px;
+  height: 240px;
   width: 1200px;
   display: flex;
   justify-content: space-between;
@@ -162,9 +218,10 @@
 .content-info {
   list-style: none;
   margin-bottom: 40px;
+  height: 240px;
 }
 
-li:first-child {
+.info-title {
   color: rgb(154, 106, 255);
   text-transform: uppercase;
   font-weight: 600;
@@ -174,7 +231,7 @@ span {
   color: rgb(244, 238, 255);
 }
 li {
-  margin-bottom: 8px;
+  margin-bottom: 7px;
   text-transform: capitalize;
   display: flex;
   width: fit-content;
@@ -313,6 +370,10 @@ a:hover {
 }
 .sun-container div svg {
   fill: rgb(255, 178, 55);
+}
+.sun-container:hover {
+  box-shadow: rgb(118, 69, 217) 0px 0px 0px 1px,
+    rgba(118, 69, 217, 0.6) 0px 0px 0px 4px;
 }
 .button-container {
   width: 94px;

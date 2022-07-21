@@ -29,7 +29,7 @@
          this.list.forEach((item) => {
              const itemEl = document.createElement("div");
              itemEl.innerHTML = `<span>${item}</span>`;
-             console.log(itemEl);
+
              tabContent.appendChild(itemEl);
          });
  
@@ -60,7 +60,6 @@
          infoWrapper.appendChild(propertiesEl);
  
          Object.entries(this.properties).forEach((el) => {
-             console.log(el);
              const elWrapper = document.createElement("div");
              elWrapper.classList.add(`input-${this.name}-properties-unit`);
              el.map((el) => {
@@ -77,7 +76,7 @@
          infoWrapper.appendChild(typefaceEl);
  
          Object.entries(this.typeface).forEach((el) => {
-             console.log(el);
+            
              const elWrapper = document.createElement("div");
              elWrapper.classList.add(`input-${this.name}-typeface-unit`);
              el.map((el) => {
@@ -94,7 +93,7 @@
          infoWrapper.appendChild(colorEl);
  
          Object.entries(this.colors).forEach((el) => {
-             console.log(el);
+             
              const elWrapper = document.createElement("div");
              elWrapper.classList.add(`input-${this.name}-typeface-unit`);
              el.map((el) => {
@@ -111,7 +110,7 @@
          infoWrapper.appendChild(effectEl);
  
          Object.entries(this.effect.hover).forEach((el) => {
-             console.log(el);
+           
              const elWrapper = document.createElement("div");
              elWrapper.classList.add(`input-${this.name}-typeface-unit`);
              el.map((el) => {

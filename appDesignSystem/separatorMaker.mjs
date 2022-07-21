@@ -10,7 +10,7 @@
      (section) => section.dataset.id === "section"
  );
  
- console.log(onlysection);
+
  
  export const separatorMaker = (array, imgurl, sec) => {
      array.find((section) => {

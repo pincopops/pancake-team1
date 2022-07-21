@@ -4,7 +4,7 @@
 
 import { colorsArr } from "./appDesignSystem/colors.mjs";
 
-console.log(colorsArr);
+
 
 colorsArr.forEach((color) => color.colorMaker());
 
@@ -49,24 +49,25 @@ import { newTab } from "./appDesignSystem/verticalTab.mjs";
 
 //**************************************************************/
 
-// let tokenArr = [];
+let tokenArr = [];
 
-// const binancePublicEndpoint = "https://api.binance.com";
-// const exchangeInfoEndpoint = binancePublicEndpoint + "/api/v3/exchangeInfo";
-// const tickersEndpoint = binancePublicEndpoint + "/api/v3/ticker/price";
+const binancePublicEndpoint = "https://api.binance.com";
+const exchangeInfoEndpoint = binancePublicEndpoint + "/api/v3/exchangeInfo";
+const tickersEndpoint = binancePublicEndpoint + "/api/v3/ticker/price";
 
-// componentDidMount = async () => {
-// 	const resToken = await fetch("https://api.pancakeswap.info/api/v2/pairs");
-// 	const dataToken = await resToken.json();
+const componentDidMount = async () => {
+	const resToken = await fetch("https://api.thegraph.com/subgraphs/name/pancakeswap/lottery");
+	const dataToken = await resToken.json();
 
-// 	const tokens = Object.values(dataToken.data);
+	const tokens = Object.values(dataToken.data);
 
-// 	return tokens;
-// };
+	return tokens;
+};
 
-// componentDidMount().then((tokens) => {
-// 	tokens.forEach((token) => console.log(token));
-// });
+componentDidMount().then((tokens) => {
+	console.log(tokens);
+});
+
 
 //******************************************************************** */
 
@@ -75,3 +76,12 @@ import { newTab } from "./appDesignSystem/verticalTab.mjs";
  */
 
 import { separatorMaker } from "./appDesignSystem/separatorMaker.mjs";
+
+/** 
+ * BANNER MAKER
+*/
+
+import { bannerMaker } from "./appDesignSystem/banner.mjs";
+
+export const wrapperEl = document.getElementById("wrapper")
+

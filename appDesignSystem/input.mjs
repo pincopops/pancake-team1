@@ -162,7 +162,6 @@ const checkboxInput = new Input("checkbox", "checkbox", formWrapper);
 checkboxInput.inputMaker()
 const radioInput = new Input("radio", "radio", formWrapper);
 radioInput.inputMaker()
-console.log(radioInput);
 
 export {inputText,checkboxInput,radioInput}
 

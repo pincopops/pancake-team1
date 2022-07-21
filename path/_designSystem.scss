@@ -1,5 +1,78 @@
-body{
+body {
 	@include flexCenter;
+}
+
+#lotteryContainer {
+	@include flex(column, center, unset);
+	width: 100rem;
+	height: 100%;
+	background: $violetBrand;
+	border-radius: 35px;
+
+.lottery-banner {
+		@include flex(column, center, unset);
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 3rem;
+		
+
+		.lottery-banner-content {
+			width: fit-content;
+			position: relative;
+
+			.lottery-title {
+				padding-bottom: 0.8rem;
+				width: fit-content;
+			}
+
+			.lottery-counter {
+				padding-bottom: 1.6rem;
+				position: relative;
+				width: fit-content;
+
+				.lottery-counter-title{
+					width: fit-content;
+				}
+
+				.lottery-counter-background{
+					position: absolute;
+					width: 110%;
+					bottom: 31%;
+					left: -6%;
+				}
+
+			}
+
+			.lottery-button {
+				@include b-selector(default);
+			}
+		}
+
+		.lottery-image-container {
+
+			.lottery-image-container-background {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+
+			.lottery-image {
+				position: absolute;
+				inset: 0px 10px;
+				padding: 0px;
+				border: medium none;
+				margin: auto;
+				display: block;
+				width: 0px;
+				height: 0px;
+				min-width: 100%;
+				max-width: 100%;
+				min-height: 100%;
+				max-height: 100%;
+			}
+		}
+	}
 }
 
 .wrapper {
@@ -7,16 +80,16 @@ body{
 	flex-direction: column;
 	width: 90rem;
 	background-color: grey;
-	*[data-id="section"]{
+	*[data-id="section"] {
 		width: 100%;
 		padding: 5rem 5rem;
 	}
 
-	.separator-wrapper{
+	.separator-wrapper {
 		width: 100%;
 		@include flexCenter;
-		.separator-img{
-			max-width: 100%
+		.separator-img {
+			max-width: 100%;
 		}
 	}
 
@@ -24,10 +97,10 @@ body{
 		@include flex(column, start, start);
 		width: 50rem;
 		height: 50rem;
-		position:relative;
+		position: relative;
 		background-color: $lightViolet;
 
-		.separator-wrapper{
+		.separator-wrapper {
 			position: absolute;
 			bottom: 0;
 		}
@@ -86,8 +159,6 @@ body{
 		height: fit-content;
 		width: 50rem;
 
-
-
 		h1 {
 			width: 100%;
 		}
@@ -100,7 +171,7 @@ body{
 			img {
 				height: 100%;
 				width: 100%;
-				padding: .5rem;
+				padding: 0.5rem;
 
 				&:hover {
 					cursor: pointer;
@@ -108,13 +179,12 @@ body{
 				}
 			}
 		}
-		
-		.icon-tooltip{
-			
+
+		.icon-tooltip {
 			position: absolute;
-			background-color: rgba(0,0,0,0.5);
+			background-color: rgba(0, 0, 0, 0.5);
 			border-radius: 0.3rem;
-			p{
+			p {
 				font-size: 2rem;
 				color: white;
 				padding: 0.5rem;
@@ -123,51 +193,46 @@ body{
 	}
 
 	&-form-tab {
+		@include flex(column, start, start);
 
-		@include flex(column, start, start); 
-
-
-		.input-text-container{
+		.input-text-container {
 			@include flex(row, space-between, baseline);
 			width: 100%;
 			height: fit-content;
 			gap: 1rem;
 			font-size: 1.2rem;
-			
 		}
 
-		.info-text-container{
+		.info-text-container {
 			@include flex(row, space-between, baseline);
 			width: 50%;
 		}
 
-		.input-checkbox-container{
+		.input-checkbox-container {
 			@include flex(row, space-between, baseline);
 			width: 100%;
 			height: fit-content;
 			gap: 0.5rem;
 			font-size: 1.2rem;
-			
+
 			.checkbox-input {
-			@extend %checkbox;
-			
+				@extend %checkbox;
 			}
 		}
 
-		.info-checkbox-container{
+		.info-checkbox-container {
 			@include flex(row, space-between, baseline);
 			width: 50%;
 		}
-		
-		.input-radio-container{
+
+		.input-radio-container {
 			@include flex(row, space-between, baseline);
 			width: 100%;
 			height: fit-content;
 			font-size: 1.2rem;
-			
 		}
 
-		.info-radio-container{
+		.info-radio-container {
 			@include flex(row, space-between, baseline);
 			width: 50%;
 		}
@@ -178,8 +243,6 @@ body{
 
 		@include flex(row, space-between, top);
 
-		
-
 		&-container {
 			@include flex(row, space-between, top);
 			width: 58rem;
@@ -189,8 +252,8 @@ body{
 			.hide {
 				display: none;
 			}
-	
-			.button{
+
+			.button {
 				&-next {
 					@include b-selector(default);
 					width: fit-content;
@@ -199,7 +262,7 @@ body{
 					top: 50%;
 					padding: 1rem;
 				}
-	
+
 				&-prev {
 					@include b-selector(default);
 					width: fit-content;
@@ -218,8 +281,7 @@ body{
 					@include flex(row, space-between, top);
 					gap: 2rem;
 
-					.button{
-
+					.button {
 						&-alternative {
 							@include b-selector(alternative);
 						}
@@ -234,81 +296,73 @@ body{
 						}
 					}
 
-					[data-status="deactived"]{
-
-							margin-top: 2rem;
-							opacity:40%;
-							&:hover{
-								pointer-events: none;
-							}
+					[data-status="deactived"] {
+						margin-top: 2rem;
+						opacity: 40%;
+						&:hover {
+							pointer-events: none;
 						}
-
+					}
 				}
 			}
 		}
 
-		.separator-img{
-				@include noGravity;
+		.separator-img {
+			@include noGravity;
 		}
-
-
 	}
 
-	&-tab{
-
+	&-tab {
 		width: 100%;
 		padding: 5rem;
 
-	&-horizontal {
-	}
+		&-horizontal {
+		}
 
-	&-vertical {
-		width: 100%;
-		display: grid;
-		grid : "title title separator"
+		&-vertical {
+			width: 100%;
+			display: grid;
+			grid:
+				"title title separator"
 				"img info sepoarator";
-		gap: 2rem;
-
-		h1{
-			grid-area: title ;
-		}
-
-		.tab{
-			grid-area: img;
-			.hide {
-			display: none;
-		}
-			@extend %verticalTab;
-			.tabHeader{
-				@extend %tabHeader;
-			}
-			.tabContent{
-				@extend %tabContent;
-			}
-			.triangle{
-			@extend %triangle;
-			}
-		}
-
-		
-		.infoWrapper{
-			@include flex (row,center,baseline);
 			gap: 2rem;
-			grid-area: info;
+
+			h1 {
+				grid-area: title;
+			}
+
+			.tab {
+				grid-area: img;
+				.hide {
+					display: none;
+				}
+				@extend %verticalTab;
+				.tabHeader {
+					@extend %tabHeader;
+				}
+				.tabContent {
+					@extend %tabContent;
+				}
+				.triangle {
+					@extend %triangle;
+				}
+			}
+
+			.infoWrapper {
+				@include flex(row, center, baseline);
+				gap: 2rem;
+				grid-area: info;
+			}
+
+			.separator-img {
+				@include noGravity;
+				grid-area: separator;
+			}
 		}
 
-		.separator-img{
-			@include noGravity;
-			grid-area: separator;
+		&-vertical-menu {
 		}
 	}
-
-	&-vertical-menu {
-	}
-
-	}
-
-
 
 	&-card {
 	}

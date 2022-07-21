@@ -56,16 +56,19 @@ const exchangeInfoEndpoint = binancePublicEndpoint + "/api/v3/exchangeInfo";
 const tickersEndpoint = binancePublicEndpoint + "/api/v3/ticker/price";
 
 const componentDidMount = async () => {
-	const resToken = await fetch("https://api.thegraph.com/subgraphs/name/pancakeswap/lottery");
+	const resToken = await fetch("https://api.pancakeswap.info/api/v2/summary");
 	const dataToken = await resToken.json();
 
 	const tokens = Object.values(dataToken.data);
 
+	console.log(dataToken);
+
 	return tokens;
+
 };
 
 componentDidMount().then((tokens) => {
-	console.log(tokens);
+	tokens.forEach((token) => console.log(token))
 });
 
 

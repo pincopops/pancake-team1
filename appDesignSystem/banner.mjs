@@ -18,10 +18,14 @@ const countDownMaker = (dateCountDown, containerId) => {
     document.getElementById(containerId).innerHTML = hours + "h "
       + minutes + "m " + seconds + "s ";
 
+    var countdownDate = [hours,minutes,seconds]
+
     if (distance < 0) {
       clearInterval(x);
       document.getElementById(containerId).innerHTML = "EXPIRED";
     }
+
+    return countdownDate
   }, 1000);
 }
 
